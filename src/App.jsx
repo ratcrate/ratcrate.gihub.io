@@ -1,270 +1,487 @@
 // src/App.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer,
-  LineChart, Line
-} from 'recharts';
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip
+} from "recharts";
 
-// ---- Helper utilities ----
+/* -------------------------
+   Helpers
+   ------------------------- */
+const safeNum = (v) => (typeof v === "number" ? v : 0);
+
 const formatNumber = (n) => (n || 0).toLocaleString();
 
-const getIsoDateString = (d) => {
-  if (!d) return '';
+const formatDateDDMMYYYY = (d) => {
+  if (!d) return "N/A";
   const dt = new Date(d);
-  return dt.toLocaleString(); // localized human readable
+  const two = (n) => n.toString().padStart(2, "0");
+  return `${two(dt.getDate())}/${two(dt.getMonth() + 1)}/${dt.getFullYear()}, ${two(
+    dt.getHours()
+  )}:${two(dt.getMinutes())}:${two(dt.getSeconds())}`;
 };
 
-// ---- HomePage component ----
+const parsePkgDate = (pkg) => {
+  const d = pkg.updated_at || pkg.created_at;
+  const parsed = d ? new Date(d) : null;
+  return parsed && !isNaN(parsed) ? parsed : null;
+};
+
+/* Custom tooltip used for bars */
+const DownloadsTooltip = ({ active, payload }) => {
+  if (!active || !payload || !payload.length) return null;
+  const p = payload[0].payload;
+  const downloads = p.Downloads ?? p.downloads ?? 0;
+  const updated = p.updated ?? p.updated_at ?? p.created_at ?? null;
+  return (
+    <div
+      className="bg-gray-800 text-gray-100 p-3 rounded shadow-lg"
+      style={{ border: "none", boxShadow: "0 6px 18px rgba(2,6,23,0.6)" }}
+    >
+      <div className="font-semibold mb-1">{p.name}</div>
+      <div className="text-sm">
+        Downloads: <span className="font-mono">{Number(downloads).toLocaleString()}</span>
+      </div>
+      <div className="text-xs text-gray-400 mt-1">
+        Last update: {updated ? new Date(updated).toLocaleString() : "N/A"}
+      </div>
+    </div>
+  );
+};
+
+/* -------------------------
+   CoreLibraries component
+   - fixed min/max widths so cards are same size
+   ------------------------- */
+const CoreLibraries = ({ corePackages }) => {
+  if (!corePackages || corePackages.length === 0) return null;
+
+  return (
+    <section id="core-libraries" className="container mx-auto px-4 py-8">
+      <h2 className="text-2xl font-semibold text-white mb-4 text-center">Core Libraries</h2>
+
+      <div className="flex justify-center">
+        <div className="flex flex-wrap justify-center gap-6">
+          {corePackages.map((pkg) => (
+            <div
+              key={pkg.id}
+              className="group relative bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex flex-col justify-between"
+              style={{ minWidth: 320, maxWidth: 384 }} // fixed sizing for consistent widths
+            >
+              {/* small hover tooltip above card */}
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs bg-gray-900 px-3 py-1 rounded">
+                Downloads: <span className="text-green-400 font-medium">{formatNumber(pkg.downloads)}</span>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2 text-center">{pkg.name}</h3>
+                <p className="text-gray-400 text-sm mb-3 line-clamp-4">{pkg.description || "—"}</p>
+
+                <div className="text-sm text-gray-500 mb-3 text-center">
+                  <div>Weekly: <span className="text-green-400 font-medium">{formatNumber(pkg.recent_downloads)}</span></div>
+                  <div>Version: <span className="text-purple-400 font-medium">{pkg.newest_version || pkg.version || "N/A"}</span></div>
+                </div>
+
+                <div className="bg-gray-700 p-2 rounded-md text-sm font-mono text-gray-200 overflow-x-auto whitespace-nowrap text-center">
+                  <code className="select-all">cargo add {pkg.name}{pkg.newest_version ? `@${pkg.newest_version}` : ""}</code>
+                </div>
+              </div>
+
+              <div className="flex gap-3 mt-4 pt-3 border-t border-gray-700 justify-center">
+                {pkg.repository && <a href={pkg.repository} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline text-sm">Repo</a>}
+                {pkg.documentation && <a href={pkg.documentation} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline text-sm">Docs</a>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* -------------------------
+   HomePage component (hero + stats)
+   ------------------------- */
 const HomePage = ({ allPackages, newsletterEmail, setNewsletterEmail, handleNewsletterSignup }) => {
-  // Total packages & last updated
+  // total packages
   const totalPackages = allPackages.length;
-  // compute latest updated_at across all packages
-  const lastUpdated = allPackages.reduce((acc, pkg) => {
-    const d = new Date(pkg.updated_at || pkg.created_at);
+
+  // find last updated across all packages
+  const lastUpdatedDate = allPackages.reduce((acc, p) => {
+    const d = parsePkgDate(p);
+    if (!d) return acc;
     return acc > d ? acc : d;
   }, new Date(0));
 
-  // Packages Uploaded Over Time (6-month intervals)
+  // Packages uploaded over time (6-month intervals)
   const getPackagesUploadedOverTime = (packages) => {
     const data = {};
     const startYear = 2023;
     const currentYear = new Date().getFullYear();
 
-    packages.forEach(pkg => {
+    packages.forEach((pkg) => {
       const createdDate = new Date(pkg.created_at || pkg.updated_at);
-      const year = createdDate.getFullYear();
-      const month = createdDate.getMonth(); // 0-11
-      if (year >= startYear) {
-        let periodLabel = month < 6 ? `${year}-H1` : `${year}-H2`;
-        data[periodLabel] = (data[periodLabel] || 0) + 1;
+      if (isNaN(createdDate)) return;
+      const y = createdDate.getFullYear();
+      const m = createdDate.getMonth();
+      if (y >= startYear) {
+        const label = m < 6 ? `${y}-H1` : `${y}-H2`;
+        data[label] = (data[label] || 0) + 1;
       }
     });
 
     const chartData = [];
     for (let y = startYear; y <= currentYear; y++) {
       chartData.push({ name: `${y}-H1`, Count: data[`${y}-H1`] || 0 });
-      // add H2 only if present or if we've passed H2 in current year
-      chartData.push({ name: `${y}-H2`, Count: data[`${y}-H2`] || 0 });
+      const includeH2 = (y < currentYear) || (y === currentYear && new Date().getMonth() >= 6);
+      if (includeH2) chartData.push({ name: `${y}-H2`, Count: data[`${y}-H2`] || 0 });
     }
     return chartData;
   };
 
-  // Category distribution
-  const getCategoriesDistribution = (packages) => {
-    const categoryCounts = {};
-    packages.forEach(pkg => {
-      if (pkg.categories && Array.isArray(pkg.categories)) {
-        pkg.categories.forEach(category => {
-          categoryCounts[category] = (categoryCounts[category] || 0) + 1;
-        });
-      }
-    });
-
-    return Object.keys(categoryCounts).map(category => ({
-      name: category,
-      Count: categoryCounts[category],
-    })).sort((a, b) => b.Count - a.Count);
-  };
-
-  // Top 5 in last 1 month, and next 5 in last 6 months (exclude core libs)
+  // Top recent crates (non-core) - last 1 month and next 5 in last 6 months
   const getTopRecent = (packages) => {
     const now = new Date();
-    const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-    const sixMonthsAgo = new Date(now.getTime() - 180 * 24 * 60 * 60 * 1000);
+    const oneMonthAgo = new Date(now);
+    oneMonthAgo.setMonth(now.getMonth() - 1);
+    const sixMonthsAgo = new Date(now);
+    sixMonthsAgo.setMonth(now.getMonth() - 6);
 
-    const nonCore = packages.filter(p => !p.is_core_library);
+    const nonCore = packages.filter((p) => p.is_core_library !== true);
 
-    const lastMonthCandidates = nonCore.filter(p => {
-      const d = new Date(p.updated_at || p.created_at);
-      return d >= oneMonthAgo;
+    const mapped = nonCore.map((p) => ({
+      ...p,
+      when: parsePkgDate(p),
+      score: safeNum(p.recent_downloads || p.downloads || 0)
+    }));
+
+    const lastMonth = mapped.filter((m) => m.when && m.when >= oneMonthAgo).sort((a, b) => b.score - a.score).slice(0, 5);
+    const lastMonthIds = new Set(lastMonth.map((m) => m.id));
+    const lastSix = mapped.filter((m) => m.when && m.when >= sixMonthsAgo && !lastMonthIds.has(m.id)).sort((a, b) => b.score - a.score).slice(0, 5);
+
+    const monthData = lastMonth.map((p) => ({ name: p.name, Downloads: p.score, updated: p.when ? p.when.toISOString().slice(0, 10) : null }));
+    const sixData = lastSix.map((p) => ({ name: p.name, Downloads: p.score, updated: p.when ? p.when.toISOString().slice(0, 10) : null }));
+
+    return { monthData, sixData };
+  };
+
+  // Top categories as text list (to replace the cluttered chart)
+  const getTopCategories = (packages, topN = 10) => {
+    const counts = {};
+    packages.forEach((p) => {
+      if (!Array.isArray(p.categories)) return;
+      p.categories.forEach((c) => (counts[c] = (counts[c] || 0) + 1));
     });
-
-    const lastMonthTop5 = lastMonthCandidates
-      .sort((a, b) => (b.recent_downloads || 0) - (a.recent_downloads || 0))
-      .slice(0, 5)
-      .map(p => ({ name: p.name, downloads: p.recent_downloads || p.downloads || 0 }));
-
-    // For 6 months: include those updated in last 6 months but exclude ones already in lastMonthTop5
-    const last6Candidates = nonCore.filter(p => {
-      const d = new Date(p.updated_at || p.created_at);
-      return d >= sixMonthsAgo;
-    }).filter(p => !lastMonthTop5.find(x => x.name === p.name));
-
-    const next5 = last6Candidates
-      .sort((a, b) => (b.recent_downloads || 0) - (a.recent_downloads || 0))
-      .slice(0, 5)
-      .map(p => ({ name: p.name, downloads: p.recent_downloads || p.downloads || 0 }));
-
-    return { lastMonthTop5, next5 };
+    return Object.entries(counts)
+      .map(([name, Count]) => ({ name, Count }))
+      .sort((a, b) => b.Count - a.Count)
+      .slice(0, topN);
   };
 
   const packagesOverTimeData = getPackagesUploadedOverTime(allPackages);
-  const categoriesDistributionData = getCategoriesDistribution(allPackages);
-  const { lastMonthTop5, next5 } = getTopRecent(allPackages);
+  const { monthData, sixData } = getTopRecent(allPackages);
+  const topCategories = getTopCategories(allPackages, 8);
 
   return (
     <>
-      {/* Hero Section */}
-      <header className="py-20 text-center bg-gradient-to-br from-gray-900 to-gray-800 rounded-b-3xl shadow-xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 animate-fade-in-down">
-          Explore the Ratatui Ecosystem
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up">
-          Discover libraries and tools built with Ratatui for powerful terminal user interfaces.
-        </p>
+      {/* HERO */}
+      <header className="py-12 text-center bg-gradient-to-br from-gray-900 to-gray-800 rounded-b-2xl shadow-xl">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Explore the Ratatui Ecosystem</h1>
+        <p className="text-sm text-gray-300 max-w-2xl mx-auto mb-4">Discover libraries and tools built with Ratatui for powerful terminal user interfaces.</p>
 
-        <div className="mt-6 flex items-center justify-center gap-6">
-          <div className="text-sm text-gray-400">
-            <div>Total packages: <span className="text-white font-semibold">{formatNumber(totalPackages)}</span></div>
-            <div className="mt-1">Data last updated: <span className="text-white font-medium">{getIsoDateString(lastUpdated)}</span></div>
-            <div className="text-xs text-gray-500 mt-1">This data is refreshed every 24 hours.</div>
-          </div>
-
+        {/* Centered smaller button */}
+        <div className="mt-4 flex flex-col items-center gap-2">
           <button
-            onClick={() => window.location.hash = '#package-list-page'}
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg text-sm"
+            onClick={() => (window.location.hash = "#package-list-page")}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-sm shadow"
           >
             View All Packages
           </button>
+
+          {/* small info lines below the button */}
+          <div className="text-xs text-gray-400 mt-2 text-center space-y-1">
+            <div>Total packages: <span className="text-white font-medium">{formatNumber(totalPackages)}</span></div>
+            <div>Data last updated: <span className="text-white font-medium">{formatDateDDMMYYYY(lastUpdatedDate)}</span></div>
+            <div className="text-gray-500">This data is refreshed every 24 hours.</div>
+          </div>
         </div>
       </header>
 
-      {/* Key Statistics Section */}
-      <section id="stats" className="container mx-auto px-4 py-16 mt-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 text-center">Key Statistics</h2>
+      {/* Key Statistics */}
+      <section id="stats" className="container mx-auto px-4 py-10 mt-8">
+        <h2 className="text-2xl font-semibold text-white mb-6 text-center">Key Statistics</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Packages Over Time */}
-          <div className="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-            <h3 className="text-xl font-semibold text-white mb-4 text-center">Packages Uploaded Over Time</h3>
-            <div style={{ width: '100%', height: 260 }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Left: Packages Over Time */}
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+            <h3 className="text-sm text-gray-200 mb-3 text-center font-medium">Packages Uploaded (6-Month Intervals)</h3>
+            <div style={{ width: "100%", height: 220 }}>
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={packagesOverTimeData} margin={{ top: 10, right: 10, left: -10, bottom: 50 }}>
-                  <XAxis dataKey="name" stroke="#9CA3AF" angle={-30} textAnchor="end" height={60} />
+                <LineChart data={packagesOverTimeData} margin={{ top: 10, left: 4, right: 4, bottom: 10 }}>
+                  <XAxis dataKey="name" stroke="#9CA3AF" />
                   <YAxis stroke="#9CA3AF" allowDecimals={false} />
-                  <Tooltip contentStyle={{ backgroundColor: '#111827', border: 'none', borderRadius: 8 }} itemStyle={{ color: '#E5E7EB' }} labelStyle={{ color: '#9CA3AF' }} />
-                  <Line type="monotone" dataKey="Count" stroke="#3B82F6" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 6 }} />
+                  <Tooltip contentStyle={{ backgroundColor: "#0B1220", border: "none", borderRadius: 8 }} />
+                  <Line type="monotone" dataKey="Count" stroke="#3B82F6" strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
           </div>
 
-          {/* Categories Distribution */}
-          <div className="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-            <h3 className="text-xl font-semibold text-white mb-4 text-center">Package Categories Distribution</h3>
-            <div style={{ width: '100%', height: 260 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={categoriesDistributionData} margin={{ top: 10, right: 10, left: -10, bottom: 80 }}>
-                  <XAxis dataKey="name" stroke="#9CA3AF" angle={-45} textAnchor="end" height={60} interval={0} />
-                  <YAxis stroke="#9CA3AF" allowDecimals={false} />
-                  <Tooltip contentStyle={{ backgroundColor: '#111827', border: 'none', borderRadius: 8 }} itemStyle={{ color: '#E5E7EB' }} labelStyle={{ color: '#9CA3AF' }} />
-                  <Bar dataKey="Count" fill="#10B981" barSize={24} radius={[8, 8, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+          {/* Middle: Top 5 last 1 month (non-core) */}
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+            <h3 className="text-sm text-gray-200 mb-3 text-center font-medium">Top 5 (Last 1 Month) — non-core</h3>
+            {monthData && monthData.length > 0 ? (
+              <div style={{ width: "100%", height: 220 }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={monthData} margin={{ top: 8, right: 8, left: 8, bottom: 48 }}>
+                    <XAxis dataKey="name" stroke="#9CA3AF" angle={-35} textAnchor="end" height={60} label={{ value: "Downloads", position: "bottom", offset: 8, style: { textAnchor: "middle" } }} />
+                    <YAxis stroke="#9CA3AF" allowDecimals={false} />
+                    <Tooltip content={<DownloadsTooltip />} wrapperStyle={{ border: "none", background: "transparent" }} cursor={{ fill: "transparent" }} />
+                    <Bar dataKey="Downloads" fill="#10B981" barSize={26} radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            ) : (
+              <p className="text-center text-gray-400 text-sm">No recent non-core updates</p>
+            )}
           </div>
 
-          {/* Top recent downloads (1 month & next 6 months) */}
-          <div className="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-            <h3 className="text-xl font-semibold text-white mb-4 text-center">Top recent crates</h3>
-
-            <div className="mb-6">
-              <p className="text-sm text-gray-300 mb-2">Top 5 updated in last 1 month (excluding core libraries)</p>
-              <ul className="space-y-2">
-                {lastMonthTop5.length === 0 && <li className="text-gray-400">No packages updated in the last month</li>}
-                {lastMonthTop5.map((p, idx) => (
-                  <li key={`m1-${idx}`} className="flex justify-between items-center bg-gray-800 p-2 rounded">
-                    <span className="text-white font-medium">{p.name}</span>
-                    <span className="text-green-400 text-sm">{formatNumber(p.downloads)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-300 mb-2">Next 5 (updated in last 6 months)</p>
-              <ul className="space-y-2">
-                {next5.length === 0 && <li className="text-gray-400">No packages updated in the last 6 months</li>}
-                {next5.map((p, idx) => (
-                  <li key={`m6-${idx}`} className="flex justify-between items-center bg-gray-800 p-2 rounded">
-                    <span className="text-white font-medium">{p.name}</span>
-                    <span className="text-green-400 text-sm">{formatNumber(p.downloads)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Right: Next 5 since 6 months (non-core) */}
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+            <h3 className="text-sm text-gray-200 mb-3 text-center font-medium">Next 5 (Since Last 6 Months) — non-core</h3>
+            {sixData && sixData.length > 0 ? (
+              <div style={{ width: "100%", height: 220 }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={sixData} margin={{ top: 8, right: 8, left: 8, bottom: 48 }}>
+                    <XAxis dataKey="name" stroke="#9CA3AF" angle={-35} textAnchor="end" height={60} label={{ value: "Downloads", position: "bottom", offset: 8, style: { textAnchor: "middle" } }} />
+                    <YAxis stroke="#9CA3AF" allowDecimals={false} />
+                    <Tooltip content={<DownloadsTooltip />} wrapperStyle={{ border: "none", background: "transparent" }} cursor={{ fill: "transparent" }} />
+                    <Bar dataKey="Downloads" fill="#60A5FA" barSize={26} radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            ) : (
+              <p className="text-center text-gray-400 text-sm">No additional non-core updates</p>
+            )}
           </div>
+        </div>
+
+        {/* Replace categories chart with compact text list */}
+        <div className="mt-6 bg-gray-900 p-4 rounded-lg border border-gray-700">
+          <h3 className="text-sm text-gray-200 mb-3 font-medium">Top Categories</h3>
+          {topCategories.length === 0 ? (
+            <p className="text-gray-400 text-sm">No category data available</p>
+          ) : (
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
+              {topCategories.map((c) => (
+                <li key={c.name} className="flex justify-between px-2 py-1 bg-gray-800 rounded">
+                  <span className="truncate">{c.name}</span>
+                  <span className="text-green-400 font-medium">{c.Count}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* New sections: Trending & New releases */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TrendingBlock allPackages={allPackages} />
+          <NewReleasesBlock allPackages={allPackages} />
         </div>
       </section>
 
-      {/* Documentation / Newsletter / Contact same as before but trimmed for brevity */}
-      <section id="documentation-section" className="container mx-auto px-4 py-12">
-        <div className="bg-gray-900 p-8 rounded-lg shadow-inner border border-gray-700 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Comprehensive Documentation</h2>
-          <p className="text-gray-300 mb-4">Dive deep into the Ratatui framework and its ecosystem.</p>
-          <a href="https://quarto.org/" target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
-            Explore Docs
-          </a>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section id="newsletter" className="container mx-auto px-4 py-12">
-        <div className="bg-gray-900 p-6 rounded-lg shadow-inner border border-gray-700 max-w-xl mx-auto">
-          <h3 className="text-xl text-white font-semibold mb-2">Stay updated</h3>
-          <form onSubmit={handleNewsletterSignup} className="flex gap-3">
-            <input type="email" required placeholder="Your email" className="flex-grow p-3 rounded bg-gray-800 text-white" value={newsletterEmail} onChange={(e) => setNewsletterEmail(e.target.value)} />
-            <button className="bg-blue-600 px-4 py-2 rounded">Subscribe</button>
-          </form>
+      {/* Documentation + newsletter simplified */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 text-center">
+          <h4 className="text-white font-semibold mb-2">Documentation</h4>
+          <p className="text-gray-300 text-sm mb-3">Explore docs and examples.</p>
+          <a href="https://quarto.org/" target="_blank" rel="noopener noreferrer" className="text-sm bg-purple-600 px-3 py-1 rounded">Explore Docs</a>
         </div>
       </section>
     </>
   );
 };
 
-// ---- Package List Page ----
+/* -------------------------
+   TrendingBlock - approximate growth calculation
+   ------------------------- */
+const TrendingBlock = ({ allPackages }) => {
+  // approximate growth using recent_downloads vs previous estimate
+  // prevEstimate = downloads - recent_downloads (if > 0)
+  // growthRatio = recent / prevEstimate
+  // provide note that this is an estimate
+  const candidates = allPackages
+    .map((p) => {
+      const recent = safeNum(p.recent_downloads);
+      const total = safeNum(p.downloads);
+      const prev = Math.max(0, total - recent);
+      const ratio = prev > 0 ? recent / prev : recent > 0 ? Infinity : 0;
+      const pct = prev > 0 ? ((recent - prev) / prev) * 100 : null;
+      return {
+        id: p.id,
+        name: p.name,
+        recent,
+        prev,
+        ratio,
+        pct
+      };
+    })
+    .filter((p) => p.recent > 0)
+    .sort((a, b) => {
+      // sort by ratio desc, Infinity last? we treat Infinity as large
+      const ra = a.ratio === Infinity ? Number.POSITIVE_INFINITY : a.ratio;
+      const rb = b.ratio === Infinity ? Number.POSITIVE_INFINITY : b.ratio;
+      return rb - ra;
+    })
+    .slice(0, 8);
+
+  return (
+    <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+      <h3 className="text-sm text-gray-200 mb-2 font-medium">Trending (approx.)</h3>
+      <p className="text-xs text-gray-400 mb-2">
+        Growth estimated by comparing recent downloads to earlier downloads (approximation).
+      </p>
+      <ul className="space-y-2 text-sm">
+        {candidates.length === 0 && <li className="text-gray-400">No trending data</li>}
+        {candidates.map((c) => (
+          <li key={c.id} className="flex justify-between items-center bg-gray-800 p-2 rounded">
+            <div className="truncate">
+              <div className="text-white text-sm font-medium">{c.name}</div>
+              <div className="text-xs text-gray-400">recent: {formatNumber(c.recent)} | prev est: {formatNumber(c.prev)}</div>
+            </div>
+            <div className="text-right ml-3">
+              {c.pct !== null ? (
+                <div className="text-green-400 font-medium text-sm">{c.pct >= 0 ? "+" : ""}{Math.round(c.pct)}%</div>
+              ) : (
+                <div className="text-green-400 font-medium text-sm">↑ {c.ratio === Infinity ? "∞" : c.ratio.toFixed(1) + "x"}</div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+/* -------------------------
+   NewReleasesBlock - created within last 7/30 days
+   ------------------------- */
+const NewReleasesBlock = ({ allPackages }) => {
+  const now = new Date();
+  const d7 = new Date(now);
+  d7.setDate(now.getDate() - 7);
+  const d30 = new Date(now);
+  d30.setDate(now.getDate() - 30);
+
+  const mapped = allPackages.map((p) => ({ ...p, createdDate: p.created_at ? new Date(p.created_at) : null }));
+  const last7 = mapped.filter((p) => p.createdDate && p.createdDate >= d7).sort((a, b) => b.createdDate - a.createdDate).slice(0, 6);
+  const last30 = mapped.filter((p) => p.createdDate && p.createdDate >= d30 && p.createdDate < d7).sort((a, b) => b.createdDate - a.createdDate).slice(0, 6);
+
+  return (
+    <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+      <h3 className="text-sm text-gray-200 mb-2 font-medium">New Releases</h3>
+
+      <div className="text-xs text-gray-400 mb-2">Last 7 days</div>
+      <ul className="space-y-1 text-sm mb-3">
+        {last7.length === 0 && <li className="text-gray-400">No new crates in the last 7 days</li>}
+        {last7.map((p) => (
+          <li key={p.id} className="flex justify-between items-center bg-gray-800 p-2 rounded">
+            <span className="truncate">{p.name}</span>
+            <span className="text-gray-400 text-xs">{p.createdDate ? new Date(p.createdDate).toLocaleDateString() : "N/A"}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="text-xs text-gray-400 mb-2">Last 8–30 days</div>
+      <ul className="space-y-1 text-sm">
+        {last30.length === 0 && <li className="text-gray-400">No new crates in the last 30 days</li>}
+        {last30.map((p) => (
+          <li key={p.id} className="flex justify-between items-center bg-gray-800 p-2 rounded">
+            <span className="truncate">{p.name}</span>
+            <span className="text-gray-400 text-xs">{p.createdDate ? new Date(p.createdDate).toLocaleDateString() : "N/A"}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+/* -------------------------
+   PackageListPage component (core libs centered, uniform sizes)
+   ------------------------- */
 const PackageListPage = ({ allPackages }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('recent_downloads');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("recent_downloads");
   const [displayCount, setDisplayCount] = useState(9);
   const packagesPerPage = 9;
 
-  // Search filter
-  const filteredPackages = allPackages.filter(pkg => {
-    const q = searchTerm.toLowerCase();
-    return pkg.name.toLowerCase().includes(q)
-      || (pkg.description || '').toLowerCase().includes(q)
-      || (pkg.categories || []).some(c => c.toLowerCase().includes(q));
-  });
+  const corePackages = allPackages.filter((p) => p.is_core_library === true);
 
-  // Sort
-  const sortedPackages = [...filteredPackages].sort((a, b) => {
+  const filtered = allPackages
+    .filter((p) => p.is_core_library !== true)
+    .filter((p) => {
+      const q = searchTerm.toLowerCase();
+      return p.name.toLowerCase().includes(q) || (p.description || "").toLowerCase().includes(q) || (p.categories || []).some((c) => c.toLowerCase().includes(q));
+    });
+
+  const sorted = [...filtered].sort((a, b) => {
     switch (sortBy) {
-      case 'downloads': return (b.downloads || 0) - (a.downloads || 0);
-      case 'recent_downloads': return (b.recent_downloads || 0) - (a.recent_downloads || 0);
-      case 'newest': return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
-      case 'alphabetical': return a.name.localeCompare(b.name);
-      default: return 0;
+      case "downloads":
+        return (b.downloads || 0) - (a.downloads || 0);
+      case "recent_downloads":
+        return (b.recent_downloads || 0) - (a.recent_downloads || 0);
+      case "newest":
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      case "alphabetical":
+        return a.name.localeCompare(b.name);
+      default:
+        return 0;
     }
   });
 
-  const packagesToDisplay = sortedPackages.slice(0, displayCount);
-  const hasMorePackages = displayCount < sortedPackages.length;
+  const packagesToDisplay = sorted.slice(0, displayCount);
+  const hasMore = displayCount < sorted.length;
 
-  useEffect(() => {
-    setDisplayCount(packagesPerPage);
-  }, [searchTerm, sortBy]);
+  useEffect(() => setDisplayCount(packagesPerPage), [searchTerm, sortBy]);
 
-  // Core libraries (centered)
-  const coreLibs = allPackages.filter(p => p.is_core_library);
-  // Ensure at least center layout even for 1 or 2 items
   return (
-    <section id="package-list-page" className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-white mb-6 text-center">All Ratatui Packages</h2>
+    <section className="container mx-auto px-4 py-12">
+      <h2 className="text-2xl font-semibold text-white mb-6 text-center">All Ratatui Packages</h2>
 
-      <div className="flex flex-col md:flex-row justify-between items-center mb-8 max-w-4xl mx-auto gap-4">
-        <input type="text" placeholder="Search..." className="flex-grow p-3 rounded bg-gray-800 text-white" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-gray-800 p-3 rounded text-white">
+      {/* Core Libraries centered */}
+      <div className="mb-8">
+        <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-6">
+            {corePackages.map((p) => (
+              <div key={p.id} className="group relative bg-gray-800 p-5 rounded-lg border border-gray-700" style={{ minWidth: 320, maxWidth: 384 }}>
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs bg-gray-900 px-3 py-1 rounded">
+                  Downloads: <span className="text-green-400 font-medium">{formatNumber(p.downloads)}</span>
+                </div>
+                <h4 className="text-lg text-white font-semibold mb-2 text-center">{p.name}</h4>
+                <p className="text-gray-400 text-sm mb-3 line-clamp-4">{p.description}</p>
+                <div className="text-sm text-gray-500 text-center">
+                  <div>Weekly: <span className="text-green-400">{formatNumber(p.recent_downloads)}</span></div>
+                </div>
+                <div className="mt-3 text-center">
+                  {p.repository && <a href={p.repository} className="text-blue-400 hover:underline text-sm mr-3">Repo</a>}
+                  {p.documentation && <a href={p.documentation} className="text-blue-400 hover:underline text-sm">Docs</a>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Search and sort */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 max-w-4xl mx-auto">
+        <input type="text" placeholder="Search packages..." className="flex-grow p-3 rounded bg-gray-800 text-white" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        <select className="bg-gray-800 p-2 rounded text-white" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="recent_downloads">Weekly Downloads</option>
           <option value="downloads">Total Downloads</option>
           <option value="newest">Newest</option>
@@ -272,205 +489,118 @@ const PackageListPage = ({ allPackages }) => {
         </select>
       </div>
 
-      {/* Core Libraries Section */}
-      {coreLibs.length > 0 && (
-        <div className="mb-10">
-          <h3 className="text-2xl text-white font-semibold mb-4 text-center">Core Libraries</h3>
-
-          {/* centered container */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {coreLibs.map(pkg => (
-              <div key={pkg.id} className="group relative bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 min-w-[260px] max-w-xs">
-                {/* hover tooltip showing downloads */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs bg-gray-900 px-3 py-1 rounded">
-                  Downloads: <span className="text-green-400 font-medium">{formatNumber(pkg.downloads)}</span>
-                </div>
-
-                <h4 className="text-xl text-white font-semibold mb-2 text-center">{pkg.name}</h4>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-4">{pkg.description}</p>
-
-                <div className="text-sm text-gray-500 mb-4 text-center">
-                  <div>Weekly: <span className="text-green-400 font-medium">{formatNumber(pkg.recent_downloads)}</span></div>
-                  <div>Version: <span className="text-purple-400">{pkg.newest_version || pkg.version || pkg.max_stable_version || 'N/A'}</span></div>
-                </div>
-
-                <div className="text-center mt-4">
-                  <a href={pkg.repository} className="text-blue-400 hover:underline mr-4">Repo</a>
-                  {pkg.documentation && <a href={pkg.documentation} className="text-blue-400 hover:underline">Docs</a>}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Package list grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {packagesToDisplay.length > 0 ? packagesToDisplay.map(pkg => (
-          <div key={pkg.id} className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1 border border-gray-700 flex flex-col justify-between">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-2">{pkg.name}</h3>
-              <p className="text-gray-400 text-sm mb-4 line-clamp-4">{pkg.description}</p>
-
-              {pkg.categories && pkg.categories.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {pkg.categories.map(cat => <span key={cat} className="bg-blue-800 text-blue-200 text-xs px-2 py-0.5 rounded-full">{cat}</span>)}
-                </div>
-              )}
-
-              <div className="text-sm text-gray-500 mb-4">
-                <p>Weekly Downloads: <span className="text-green-400 font-medium">{formatNumber(pkg.recent_downloads)}</span></p>
-                <p>Version: <span className="text-purple-400 font-medium">{pkg.newest_version || pkg.version || pkg.max_stable_version || 'N/A'}</span></p>
-              </div>
-
-              <div className="mb-4">
-                <p className="text-gray-300 font-semibold mb-2">Install:</p>
-                <div className="bg-gray-700 p-3 rounded-md text-sm font-mono text-gray-200 overflow-x-auto whitespace-nowrap">
-                  <code className="select-all">cargo add {pkg.name}{pkg.newest_version ? `@${pkg.newest_version}` : ''}</code>
-                </div>
-              </div>
+      {/* Package cards grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {packagesToDisplay.length === 0 && <div className="text-center text-gray-400">No packages found.</div>}
+        {packagesToDisplay.map((pkg) => (
+          <div key={pkg.id} className="bg-gray-800 p-5 rounded-lg border border-gray-700">
+            <h4 className="text-lg font-semibold text-white mb-2">{pkg.name}</h4>
+            <p className="text-gray-400 text-sm mb-3 line-clamp-4">{pkg.description}</p>
+            <div className="text-sm text-gray-500 mb-3">
+              <div>Weekly: <span className="text-green-400">{formatNumber(pkg.recent_downloads)}</span></div>
+              <div>Version: <span className="text-purple-400">{pkg.newest_version || pkg.version || "N/A"}</span></div>
             </div>
-
-            <div className="flex flex-wrap gap-3 mt-auto pt-4 border-t border-gray-700">
-              {pkg.documentation && <a href={pkg.documentation} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline text-sm">Docs</a>}
-              {pkg.repository && <a href={pkg.repository} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline text-sm">Repo</a>}
-              {pkg.homepage && <a href={pkg.homepage} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline text-sm">Homepage</a>}
+            <div className="bg-gray-700 p-2 rounded text-sm font-mono text-gray-200">{`cargo add ${pkg.name}${pkg.newest_version ? `@${pkg.newest_version}` : ""}`}</div>
+            <div className="mt-3 flex gap-3">
+              {pkg.repository && <a href={pkg.repository} className="text-blue-400 hover:underline text-sm">Repo</a>}
+              {pkg.documentation && <a href={pkg.documentation} className="text-blue-400 hover:underline text-sm">Docs</a>}
             </div>
           </div>
-        )) : (
-          <p className="col-span-full text-center text-gray-400">No packages found.</p>
-        )}
+        ))}
       </div>
 
-      {hasMorePackages && (
-        <div className="text-center mt-10">
-          <button onClick={() => setDisplayCount(c => c + packagesPerPage)} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
-            Load More
-          </button>
+      {hasMore && (
+        <div className="text-center mt-8">
+          <button onClick={() => setDisplayCount((c) => c + packagesPerPage)} className="bg-blue-600 px-4 py-2 rounded text-white">Load more</button>
         </div>
       )}
     </section>
   );
 };
 
-// ---- Main App ----
+/* -------------------------
+   App - main
+   ------------------------- */
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
-  const [activeNavLink, setActiveNavLink] = useState('home');
+  const [allPackages, setAllPackages] = useState([]);
+  const [currentPage, setCurrentPage] = useState("home");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
   const [navbarTransparent, setNavbarTransparent] = useState(false);
 
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [showMessageBox, setShowMessageBox] = useState(false);
-
-  // load data from /data/ratcrate.json (served from repo's /data folder)
-  const [allPackages, setAllPackages] = useState([]);
-
   useEffect(() => {
-    fetch('/data/ratcrate.json')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch ratcrate.json');
-        return res.json();
-      })
-      .then(json => {
-        // if the JSON is an object with 'crates' field keep that, otherwise assume it's an array
-        const crates = Array.isArray(json) ? json : (json.crates || []);
+    // fetch ratcrate.json placed under public/data/ratcrate.json
+    const load = async () => {
+      try {
+        const res = await fetch("/data/ratcrate.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load /data/ratcrate.json");
+        const json = await res.json();
+        const crates = Array.isArray(json) ? json : json.crates || [];
         setAllPackages(crates);
-      })
-      .catch(err => {
-        console.error('Error loading ratcrate.json:', err);
-        // fallback: empty list
+      } catch (e) {
+        console.error("Failed to fetch ratcrate.json", e);
         setAllPackages([]);
-      });
+      }
+    };
+    load();
   }, []);
 
-  // Message box helper
-  const showMessage = (msg) => {
-    setMessage(msg);
-    setShowMessageBox(true);
-    setTimeout(() => {
-      setShowMessageBox(false);
-      setMessage('');
-    }, 3000);
-  };
+  useEffect(() => {
+    const onScroll = () => setNavbarTransparent(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const onHash = () => {
+      const h = window.location.hash.replace("#", "");
+      if (h === "package-list-page") setCurrentPage("packages");
+      else if (h === "stats") setCurrentPage("home");
+      else setCurrentPage("home");
+    };
+    onHash();
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   const handleNewsletterSignup = (e) => {
     e.preventDefault();
     if (newsletterEmail) {
-      console.log('Newsletter signup:', newsletterEmail);
-      showMessage(`Thank you for signing up, ${newsletterEmail}!`);
-      setNewsletterEmail('');
+      // dummy behavior
+      alert(`Thanks — ${newsletterEmail}`);
+      setNewsletterEmail("");
     } else {
-      showMessage('Please enter a valid email address.');
+      alert("Enter a valid email");
     }
   };
 
-  // navbar transparency
-  useEffect(() => {
-    const handleScroll = () => {
-      setNavbarTransparent(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // hash change navigation
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (hash === 'package-list-page') {
-        setCurrentPage('package-list'); setActiveNavLink('package-list');
-      } else if (hash === 'stats') { setCurrentPage('home'); setActiveNavLink('stats'); }
-      else { setCurrentPage('home'); setActiveNavLink('home'); }
-    };
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 font-inter">
-      {/* Tailwind via CDN for now */}
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-      {showMessageBox && (
-        <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg z-50">
-          {message}
-        </div>
-      )}
-
-      <nav className={`flex justify-between items-center p-4 bg-gray-950 sticky top-0 z-40 ${navbarTransparent ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
-        <div className="text-2xl font-bold text-white cursor-pointer" onClick={() => { setCurrentPage('home'); setActiveNavLink('home'); window.location.hash = ''; }}>
+    <div className="min-h-screen w-full bg-gray-950 text-gray-100 font-inter">
+      {/* Top nav */}
+      <nav className={`flex justify-between items-center p-4 sticky top-0 z-40 bg-gray-950 ${navbarTransparent ? "bg-opacity-90" : "bg-opacity-100"}`}>
+        <div className="text-xl font-bold cursor-pointer" onClick={() => { setCurrentPage("home"); window.location.hash = ""; }}>
           Ratatui Ecosystem
         </div>
-        <div className="flex space-x-6">
-          <a href="#package-list-page" className={`text-gray-300 hover:text-white p-2 ${activeNavLink === 'package-list' ? 'text-blue-400 font-semibold' : ''}`} onClick={() => setCurrentPage('package-list')}>Package List</a>
-          <a href="#stats" className={`text-gray-300 hover:text-white p-2 ${activeNavLink === 'stats' ? 'text-blue-400 font-semibold' : ''}`} onClick={() => { setCurrentPage('home'); setActiveNavLink('stats'); }}>Stats</a>
-          <a href="#newsletter" className="text-gray-300 hover:text-white p-2">Newsletter</a>
+        <div className="flex gap-4">
+          <a href="#package-list-page" onClick={() => setCurrentPage("packages")} className="text-gray-300 hover:text-white">Package List</a>
+          <a href="#stats" onClick={() => { setCurrentPage("home"); window.location.hash = "#stats"; }} className="text-gray-300 hover:text-white">Stats</a>
+          <a href="#newsletter" className="text-gray-300 hover:text-white">Newsletter</a>
         </div>
       </nav>
 
-      {currentPage === 'home' ? (
-        <HomePage allPackages={allPackages} newsletterEmail={newsletterEmail} setNewsletterEmail={setNewsletterEmail} handleNewsletterSignup={handleNewsletterSignup} />
-      ) : (
+      {currentPage === "packages" ? (
         <PackageListPage allPackages={allPackages} />
+      ) : (
+        <HomePage allPackages={allPackages} newsletterEmail={newsletterEmail} setNewsletterEmail={setNewsletterEmail} handleNewsletterSignup={handleNewsletterSignup} />
       )}
 
-      <footer className="bg-gray-950 text-gray-500 text-center p-6 mt-16 rounded-t-lg shadow-lg">
-        <p>&copy; {new Date().getFullYear()} Ratatui Ecosystem. All rights reserved.</p>
+      <footer className="bg-gray-950 text-gray-500 text-center p-6 mt-8">
+        <div>&copy; {new Date().getFullYear()} Ratatui Ecosystem.</div>
       </footer>
 
-      {/* local animation CSS */}
+      {/* small animation css kept inline */}
       <style>{`
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0);} }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0);} }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .animate-fade-in-down { animation: fadeInDown 0.9s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 0.9s ease-out forwards; animation-delay: 0.2s; }
-        .animate-fade-in { animation: fadeIn 0.9s ease-out forwards; }
         .font-inter { font-family: 'Inter', sans-serif; }
-        .line-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-4 { display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
       `}</style>
     </div>
   );

@@ -1,5 +1,7 @@
 # Logs
 logs
+src/App.working.jsx
+
 *.log
 npm-debug.log*
 yarn-debug.log*
