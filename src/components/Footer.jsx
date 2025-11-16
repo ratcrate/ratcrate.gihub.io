@@ -56,6 +56,16 @@ const Footer = ({
       .finally(() => setLoadingCount(false));
   }, [countApiNamespace, countApiKey]);
 
+    useEffect(() => {
+      fetch("https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up")
+        .then(r => r.json())
+        .then(res => {
+          setVisitors(res.value); // your React state
+        })
+        .catch(() => {});
+    }, []);
+
+
   return (
     <footer className="bg-gray-950 text-gray-400 px-6 py-6 mt-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -107,4 +117,14 @@ const Footer = ({
 };
 
 export default Footer;
+
+// useEffect(() => {
+//   fetch("https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up")
+//     .then(r => r.json())
+//     .then(res => {
+//       setVisitors(res.value); // your React state
+//     })
+//     .catch(() => {});
+// }, []);
+//
 
