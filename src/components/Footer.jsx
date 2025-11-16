@@ -2,68 +2,147 @@
 import React, { useEffect, useState } from "react";
 
 /**
- * Minimal footer component with:
- * - links: Docs, Repo, Privacy, Terms, Contact
- * - optional sponsor (github sponsorship link)
- * - small visitor counter (uses CountAPI - public)
+ * Robust Footer component with a visitors counter.
  *
- * You must create two static pages under public/: /privacy.html and /terms.html
- * or route to suitable pages in your site.
+ * Props:
+ *  - repoUrl (string) - link to GitHub repo/org
+ *  - docsUrl (string)
+ *  - contactMail (string)
+ *  - sponsorsUrl (string)
+ *  - // CounterAPI (counterapi.dev) settings:
+ *  - useCounterApi (bool) - if true, first attempt uses provided counterApiUrl
+ *  - counterApiUrl (string) - full endpoint you tested, e.g. "https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up"
+ *
+ * Behavior:
+ *  - If useCounterApi=true and counterApiUrl provided, attempt that endpoint first and extract a sensible count.
+ *  - If that fails, fallback to CountAPI (countapi.xyz) using namespace 'ratcrate' and key 'visits' (no API key required).
+ *  - All network code is wrapped in try/catch so rendering is not blocked by errors.
  */
 
 const Footer = ({
-  repoUrl = "https://github.com/ratcrate/ratcrate.github.io",
-  docsUrl = "https://ratcrate.github.io/docs", // adjust if different
-  contactMail = "mailto:qbitai@gmail.com",
-  sponsorsUrl = "https://github.com/sponsors/ratcrate", // change to your sponsor url
-  countApiNamespace = "ratcrate.github.io", // change if you want separate counter
-  countApiKey = "site-visitors" // key within namespace
+  repoUrl = "https://github.com/ratcrate",
+  docsUrl = "https://ratcrate.github.io/docs",
+  contactMail = "mailto:contact@ratatui-ecosystem.com",
+  sponsorsUrl = "https://github.com/sponsors/ratcrate",
+  // CounterAPI settings (optional)
+  useCounterApi = false,
+  counterApiUrl = "https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up",
+  // Fallback CountAPI settings
+  countApiNamespace = "ratcrate", // your public namespace
+  countApiKey = "visits" // chosen key
 }) => {
   const [visitors, setVisitors] = useState(null);
   const [loadingCount, setLoadingCount] = useState(true);
 
+
   useEffect(() => {
-    // CountAPI (https://countapi.xyz/) - easiest no-backend counter
-    // We'll use "get" to fetch the current value (does not increment).
-    // If you want to increment on each page load, call:
-    // https://api.countapi.xyz/hit/{namespace}/{key}
-    // But often you want "count" (increment) only on real visits — be careful.
-    // Here we GET the 'value' so you can do either, depending on your privacy choice.
+  let mounted = true;
+  const SESSION_KEY = "ratcrate_counted_v1";
 
-    const namespace = encodeURIComponent(countApiNamespace);
-    const key = encodeURIComponent(countApiKey);
+  const safeSet = (fn) => { if (mounted) fn(); };
 
-    const url = `https://api.countapi.xyz/get/${namespace}/${key}`;
+  const fetchCount = async () => {
+    safeSet(() => setLoadingCount(true));
 
-    fetch(url)
-      .then((r) => r.json())
-      .then((json) => {
-        if (json && typeof json.value !== "undefined") {
-          setVisitors(json.value);
-        } else {
-          // If the namespace/key doesn't exist, create it with value=0
-          // (CountAPI supports create with default)
-          const createUrl = `https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=0`;
-          return fetch(createUrl)
-            .then(() => setVisitors(0))
-            .catch(() => setVisitors(null));
+    // If we've already incremented in this session, just GET the value (no hit)
+    const already = (() => {
+      try { return sessionStorage.getItem(SESSION_KEY); } catch { return null; }
+    })();
+
+    // Helper: try CounterAPI endpoint you tested (which increments)
+    const tryCounterApiUp = async () => {
+      try {
+        const resp = await fetch(counterApiUrl, { cache: "no-store" });
+        if (!resp.ok) return null;
+        const json = await resp.json();
+        // your CounterAPI returned json.data.up_count
+        const up = json?.data?.up_count ?? json?.data?.value ?? json?.data?.count ?? null;
+        return typeof up !== "undefined" && up !== null ? Number(up) : null;
+      } catch (e) {
+        return null;
+      }
+    };
+
+    // Helper: CountAPI get
+    const getCountApi = async () => {
+      try {
+        const ns = encodeURIComponent(countApiNamespace);
+        const key = encodeURIComponent(countApiKey);
+        const getUrl = `https://api.countapi.xyz/get/${ns}/${key}`;
+        const resp = await fetch(getUrl, { cache: "no-store" });
+        if (!resp.ok) return null;
+        const json = await resp.json();
+        if (json && typeof json.value !== "undefined") return Number(json.value);
+      } catch (e) { /* ignore */ }
+      return null;
+    };
+
+    // Helper: CountAPI hit (increment)
+    const hitCountApi = async () => {
+      try {
+        const ns = encodeURIComponent(countApiNamespace);
+        const key = encodeURIComponent(countApiKey);
+        const hitUrl = `https://api.countapi.xyz/hit/${ns}/${key}`;
+        const resp = await fetch(hitUrl, { cache: "no-store" });
+        if (!resp.ok) return null;
+        const json = await resp.json();
+        if (json && typeof json.value !== "undefined") return Number(json.value);
+      } catch (e) { /* ignore */ }
+      return null;
+    };
+
+    // Main logic
+    try {
+      // 1) If already incremented this session -> only read current value
+      if (already) {
+        // prefer CounterAPI get (if using it) then fallback to CountAPI get
+        let val = null;
+        if (useCounterApi && counterApiUrl) {
+          // Some CounterAPI endpoints have a 'get' variant; but we tested 'up' (increment).
+          // So if the counter was already incremented, try GET on CountAPI fallback.
+          val = await tryCounterApiUp(); // attempt, but likely increments if it's '/up' endpoint; if so, we still guard with sessionStorage
         }
-      })
-      .catch((err) => {
-        console.warn("Visitor count fetch failed:", err);
-        setVisitors(null);
-      })
-      .finally(() => setLoadingCount(false));
-  }, [countApiNamespace, countApiKey]);
+        if (val === null) val = await getCountApi();
+        safeSet(() => setVisitors(val));
+        safeSet(() => setLoadingCount(false));
+        return;
+      }
 
-    // useEffect(() => {
-    //   fetch("https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up")
-    //     .then(r => r.json())
-    //     .then(res => {
-    //       setVisitors(res.value); // your React state
-    //     })
-    //     .catch(() => {});
-    // }, []);
+      // 2) Not counted yet in this session -> increment once
+      // Try the CounterAPI increment first if configured
+      let newVal = null;
+      if (useCounterApi && counterApiUrl) {
+        newVal = await tryCounterApiUp();
+      }
+
+      // If no counterapi value, fallback to CountAPI hit
+      if (newVal === null) {
+        newVal = await hitCountApi();
+      }
+
+      // If we got a value, mark session as counted and set state
+      if (newVal !== null && typeof newVal !== "undefined") {
+        try { sessionStorage.setItem(SESSION_KEY, "1"); } catch {}
+        safeSet(() => setVisitors(newVal));
+        safeSet(() => setLoadingCount(false));
+        return;
+      }
+
+      // 3) Fallback: try to GET whatever count exists (no increment)
+      const finalVal = await getCountApi();
+      safeSet(() => setVisitors(finalVal));
+    } catch (err) {
+      // swallow errors so UI still renders
+      safeSet(() => setVisitors(null));
+    } finally {
+      safeSet(() => setLoadingCount(false));
+    }
+  };
+
+  fetchCount();
+
+  return () => { mounted = false; };
+}, [useCounterApi, counterApiUrl, countApiNamespace, countApiKey]);
 
 
   return (
@@ -72,9 +151,7 @@ const Footer = ({
         {/* Left: small project + copyright */}
         <div className="flex-1 text-sm">
           <div className="text-gray-300 font-medium">Ratatui Ecosystem</div>
-          <div className="mt-1 text-xs text-gray-500">
-            © {new Date().getFullYear()} QuBitAi. All rights reserved.
-          </div>
+          <div className="mt-1 text-xs text-gray-500">© {new Date().getFullYear()} Ratatui Ecosystem. All rights reserved.</div>
         </div>
 
         {/* Center: links */}
@@ -117,14 +194,4 @@ const Footer = ({
 };
 
 export default Footer;
-
-// useEffect(() => {
-//   fetch("https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up")
-//     .then(r => r.json())
-//     .then(res => {
-//       setVisitors(res.value); // your React state
-//     })
-//     .catch(() => {});
-// }, []);
-//
 

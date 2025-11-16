@@ -606,7 +606,12 @@ const App = () => {
         .line-clamp-4 { display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
       `}</style>
 
-      <div> <Footer /></div>
+      <div> <Footer 
+          useCounterApi={true}
+          counterApiUrl="https://api.counterapi.dev/v2/ratcrate-wrk/ratcrate-slug/up"
+          repoUrl="https://github.com/ratcrate"
+          sponsorsUrl="https://github.com/sponsors/ratcrate"
+      /></div>
 
     </div>
 
