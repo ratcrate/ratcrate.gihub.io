@@ -581,9 +581,9 @@ const App = () => {
           Ratatui Ecosystem
         </div>
         <div className="flex gap-4">
-          <a href="#package-list-page" onClick={() => setCurrentPage("packages")} className="text-gray-300 hover:text-white">Package List</a>
+          <a href="#package-list-page" onClick={() => setCurrentPage("packages")} className="text-gray-300 hover:text-white">Packages</a>
           <a href="#stats" onClick={() => { setCurrentPage("home"); window.location.hash = "#stats"; }} className="text-gray-300 hover:text-white">Stats</a>
-          <a href="#newsletter" className="text-gray-300 hover:text-white">Newsletter</a>
+          {/* <a href="#newsletter" className="text-gray-300 hover:text-white">Newsletter</a> */}
         </div>
       </nav>
 
