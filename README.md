@@ -31,7 +31,6 @@ Ratatui is a vibrant ecosystem. Ratcrate helps users discover, compare, and adop
 See the specific README of each repository for contribution and local dev instructions:
 - `ratcrate-cli` — usage, install
 - `ratcrate-tui` — how to run locally
-- `ratcrate.github.io` — how to run and build the website
 
 If you'd like to sponsor development or support infrastructure costs, please visit the Sponsors link above.
 
