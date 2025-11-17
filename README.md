@@ -16,7 +16,6 @@ This organization contains the core tools that power and present the Ratatui eco
 - Website: https://ratcrate.github.io  
 - Packages data: `/data/ratcrate.json` (used by the website and tools)  
 - Docs: https://ratcrate.github.io/docs (planned)  
-- Sponsor: https://github.com/sponsors/ratcrate  •  Buy me a coffee: https://buymeacoffee.com/yourname
 
 ---
 
