@@ -1,17 +1,17 @@
 {
   "metadata": {
     "version": "0.1.0",
-    "generated_at": "2025-11-17T04:52:02.952633+00:00",
-    "total_crates": 1573,
+    "generated_at": "2025-11-17T13:22:52.206467+00:00",
+    "total_crates": 1597,
     "core_libraries": 2,
-    "community_packages": 1571,
+    "community_packages": 1595,
     "data_sources": [
       "sparse_index",
       "crates_io_api"
     ],
     "statistics": {
       "etag_cache_hits": 0,
-      "etag_cache_misses": 1573,
+      "etag_cache_misses": 1597,
       "cache_hit_rate": 0.0
     }
   },
@@ -23,8 +23,8 @@
       "version": "0.6.0",
       "created_at": "2024-01-05T20:28:33.256628Z",
       "updated_at": "2025-10-31T23:29:52.049902Z",
-      "downloads": 177317,
-      "recent_downloads": 109143,
+      "downloads": 179907,
+      "recent_downloads": 111744,
       "categories": [
         "command-line-interface"
       ],
@@ -44,8 +44,8 @@
       "version": "0.2.2",
       "created_at": "2024-01-19T01:10:19.028392Z",
       "updated_at": "2025-10-31T23:27:54.480147Z",
-      "downloads": 89408,
-      "recent_downloads": 48546,
+      "downloads": 90763,
+      "recent_downloads": 49902,
       "categories": [
         "command-line-interface"
       ],
@@ -126,8 +126,8 @@
       "version": "0.1.0",
       "created_at": "2025-02-27T18:51:42.430683Z",
       "updated_at": "2025-02-27T18:51:42.430683Z",
-      "downloads": 914,
-      "recent_downloads": 208,
+      "downloads": 916,
+      "recent_downloads": 210,
       "categories": [],
       "repository": "https://github.com/sponkurtus2/Raifus",
       "homepage": "https://raifus-web.vercel.app/",
@@ -145,8 +145,8 @@
       "version": "0.1.8",
       "created_at": "2025-07-02T17:36:29.371575Z",
       "updated_at": "2025-07-03T23:41:14.764416Z",
-      "downloads": 3550,
-      "recent_downloads": 1267,
+      "downloads": 3551,
+      "recent_downloads": 1268,
       "categories": [
         "command-line-utilities"
       ],
@@ -384,8 +384,8 @@
       "version": "0.1.4",
       "created_at": "2025-08-27T08:22:58.678504Z",
       "updated_at": "2025-08-29T01:26:05.118014Z",
-      "downloads": 1645,
-      "recent_downloads": 1645,
+      "downloads": 1646,
+      "recent_downloads": 1646,
       "categories": [],
       "repository": "https://github.com/gitcoder89431/agentic",
       "homepage": "https://github.com/gitcoder89431/agentic",
@@ -667,6 +667,27 @@
       "is_core_library": false
     },
     {
+      "id": "amp-rust",
+      "name": "amp-rust",
+      "description": "A Rust client for the Blockstream AMP API, providing interfaces for asset management, user operations, and token handling on the Liquid Network.",
+      "version": "0.0.4",
+      "created_at": "2025-10-11T17:07:38.422059Z",
+      "updated_at": "2025-11-16T16:41:34.711585Z",
+      "downloads": 676,
+      "recent_downloads": 676,
+      "categories": [
+        "api-bindings"
+      ],
+      "repository": "https://github.com/satscapital-org/amp-rs",
+      "homepage": "https://github.com/satscapital-org/amp-rs",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "amusing",
       "name": "amusing",
       "description": "A Musing client",
@@ -919,6 +940,24 @@
       "is_core_library": false
     },
     {
+      "id": "arcade",
+      "name": "arcade",
+      "description": "Games with vim motion controls in the terminal",
+      "version": "0.1.1",
+      "created_at": "2025-11-15T23:55:23.962232Z",
+      "updated_at": "2025-11-16T04:11:29.842620Z",
+      "downloads": 37,
+      "recent_downloads": 37,
+      "categories": [],
+      "repository": "https://github.com/RohanAdwankar/arcade",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "architect-cli",
       "name": "architect-cli",
       "description": ">_ Architect",
@@ -932,6 +971,25 @@
         "finance"
       ],
       "homepage": "https://www.architect.co",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "arct-tui",
+      "name": "arct-tui",
+      "description": "Terminal UI for Arc Academy Terminal - interactive shell learning interface",
+      "version": "0.2.0",
+      "created_at": "2025-11-15T00:27:38.603133Z",
+      "updated_at": "2025-11-16T18:23:09.069974Z",
+      "downloads": 77,
+      "recent_downloads": 77,
+      "categories": [],
+      "repository": "https://github.com/metarobb/arc-academy-terminal",
+      "homepage": "https://arcacademy.sh",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -954,6 +1012,26 @@
       ],
       "repository": "https://github.com/JustPretender/arkanoid-tui",
       "homepage": "https://github.com/JustPretender/arkanoid-tui",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "arsvt3d",
+      "name": "arsvt3d",
+      "description": "A 3D maze game implemented with Rust and Ratatui",
+      "version": "0.1.8",
+      "created_at": "2025-11-15T06:31:14.006971Z",
+      "updated_at": "2025-11-15T06:48:53.967115Z",
+      "downloads": 43,
+      "recent_downloads": 43,
+      "categories": [],
+      "repository": "https://github.com/nlsidf/arsvt",
+      "homepage": "https://github.com/nlsidf/arsvt",
+      "documentation": "https://github.com/nlsidf/arsvt",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -989,8 +1067,8 @@
       "version": "0.3.4",
       "created_at": "2024-03-24T13:17:13.921997Z",
       "updated_at": "2024-12-21T12:59:31.978584Z",
-      "downloads": 23933,
-      "recent_downloads": 1755,
+      "downloads": 23934,
+      "recent_downloads": 1756,
       "categories": [],
       "repository": "https://github.com/chaosprint/asak.git",
       "ratatui_dependency": {
@@ -1131,8 +1209,8 @@
       "version": "0.0.8",
       "created_at": "2024-11-18T11:10:14.486243Z",
       "updated_at": "2025-10-10T10:49:25.190241Z",
-      "downloads": 7210,
-      "recent_downloads": 1592,
+      "downloads": 7214,
+      "recent_downloads": 1596,
       "categories": [],
       "repository": "https://github.com/nick42d/youtui",
       "homepage": "https://github.com/nick42d/youtui",
@@ -1150,8 +1228,8 @@
       "version": "0.22.1",
       "created_at": "2024-04-15T12:19:57.794247Z",
       "updated_at": "2025-10-18T00:08:54.589100Z",
-      "downloads": 27930,
-      "recent_downloads": 3562,
+      "downloads": 27935,
+      "recent_downloads": 3567,
       "categories": [],
       "repository": "https://github.com/Julien-cpsn/ATAC",
       "homepage": "https://github.com/Julien-cpsn/ATAC",
@@ -1227,8 +1305,8 @@
       "version": "18.10.0",
       "created_at": "2021-02-13T13:23:16.273559Z",
       "updated_at": "2025-10-22T23:58:11.617011Z",
-      "downloads": 117021,
-      "recent_downloads": 10891,
+      "downloads": 117039,
+      "recent_downloads": 10909,
       "categories": [],
       "repository": "https://github.com/atuinsh/atuin",
       "homepage": "https://atuin.sh",
@@ -1282,8 +1360,8 @@
       "version": "1.2.5",
       "created_at": "2025-10-16T23:46:33.844048Z",
       "updated_at": "2025-11-16T22:25:25.863559Z",
-      "downloads": 435,
-      "recent_downloads": 435,
+      "downloads": 437,
+      "recent_downloads": 437,
       "categories": [],
       "repository": "https://github.com/nate-craft/auditorium",
       "homepage": "https://github.com/nate-craft/auditorium",
@@ -1301,8 +1379,8 @@
       "version": "0.4.2",
       "created_at": "2025-07-09T02:35:50.406163Z",
       "updated_at": "2025-10-06T18:51:20.723921Z",
-      "downloads": 3239,
-      "recent_downloads": 2270,
+      "downloads": 3241,
+      "recent_downloads": 2272,
       "categories": [
         "authentication",
         "web-programming"
@@ -1445,8 +1523,8 @@
       "version": "0.10.0",
       "created_at": "2024-06-04T14:57:37.297612Z",
       "updated_at": "2025-11-12T02:32:02.779780Z",
-      "downloads": 25978,
-      "recent_downloads": 2840,
+      "downloads": 25979,
+      "recent_downloads": 2841,
       "categories": [],
       "repository": "https://github.com/demoray/azure-pim-cli",
       "homepage": "https://github.com/demoray/azure-pim-cli",
@@ -1508,8 +1586,8 @@
       "version": "0.1.4",
       "created_at": "2024-09-20T19:47:42.153545Z",
       "updated_at": "2025-06-25T18:32:56.593148Z",
-      "downloads": 5693,
-      "recent_downloads": 769,
+      "downloads": 5694,
+      "recent_downloads": 770,
       "categories": [
         "command-line-utilities",
         "data-structures",
@@ -1532,8 +1610,8 @@
       "version": "0.23.1",
       "created_at": "2019-12-30T20:47:25.490263Z",
       "updated_at": "2024-10-08T09:42:19.441263Z",
-      "downloads": 76541,
-      "recent_downloads": 5939,
+      "downloads": 76544,
+      "recent_downloads": 5942,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -1554,8 +1632,8 @@
       "version": "0.10.4",
       "created_at": "2025-04-30T20:06:35.554557Z",
       "updated_at": "2025-10-06T20:55:20.121600Z",
-      "downloads": 9860,
-      "recent_downloads": 4183,
+      "downloads": 9864,
+      "recent_downloads": 4187,
       "categories": [],
       "repository": "https://github.com/erikjuhani/basalt",
       "ratatui_dependency": {
@@ -1572,8 +1650,8 @@
       "version": "0.1.1",
       "created_at": "2025-03-01T06:55:46.778082Z",
       "updated_at": "2025-04-20T09:07:50.469495Z",
-      "downloads": 3013,
-      "recent_downloads": 1092,
+      "downloads": 3018,
+      "recent_downloads": 1097,
       "categories": [],
       "repository": "https://github.com/erikjuhani/basalt",
       "ratatui_dependency": {
@@ -1590,8 +1668,8 @@
       "version": "6.35.0",
       "created_at": "2025-07-07T16:31:37.763566Z",
       "updated_at": "2025-11-15T09:17:49.891065Z",
-      "downloads": 10955,
-      "recent_downloads": 10131,
+      "downloads": 10956,
+      "recent_downloads": 10132,
       "categories": [
         "development-tools",
         "command-line-utilities",
@@ -1754,8 +1832,8 @@
       "version": "0.2.0",
       "created_at": "2024-02-10T00:40:38.754629Z",
       "updated_at": "2024-02-28T12:41:16.544263Z",
-      "downloads": 6030,
-      "recent_downloads": 526,
+      "downloads": 6031,
+      "recent_downloads": 527,
       "categories": [],
       "repository": "https://github.com/tcmal/learn-tui",
       "homepage": "https://git.tardisproject.uk/tcmal/learn-tui",
@@ -1874,8 +1952,8 @@
       "version": "0.10.0",
       "created_at": "2024-02-27T06:44:49.880545Z",
       "updated_at": "2025-11-13T03:58:27.127644Z",
-      "downloads": 44283,
-      "recent_downloads": 5797,
+      "downloads": 44299,
+      "recent_downloads": 5813,
       "categories": [
         "command-line-interface"
       ],
@@ -1895,8 +1973,8 @@
       "version": "0.16.0",
       "created_at": "2024-12-23T03:36:59.031892Z",
       "updated_at": "2025-11-17T00:27:09.830801Z",
-      "downloads": 10337,
-      "recent_downloads": 1930,
+      "downloads": 10359,
+      "recent_downloads": 1952,
       "categories": [
         "command-line-interface",
         "game-engines",
@@ -1919,8 +1997,8 @@
       "version": "0.7.0",
       "created_at": "2024-06-02T11:17:37.007269Z",
       "updated_at": "2024-12-05T04:49:17.922388Z",
-      "downloads": 21526,
-      "recent_downloads": 1846,
+      "downloads": 21528,
+      "recent_downloads": 1848,
       "categories": [
         "command-line-interface",
         "game-engines",
@@ -2139,8 +2217,8 @@
       "version": "0.2.1",
       "created_at": "2024-09-11T09:07:54.835979Z",
       "updated_at": "2024-10-10T22:22:06.828682Z",
-      "downloads": 9524,
-      "recent_downloads": 1097,
+      "downloads": 9531,
+      "recent_downloads": 1104,
       "categories": [
         "command-line-utilities"
       ],
@@ -2383,8 +2461,8 @@
       "version": "0.4.1",
       "created_at": "2025-09-20T14:34:54.541866Z",
       "updated_at": "2025-10-04T07:45:51.052505Z",
-      "downloads": 2175,
-      "recent_downloads": 2175,
+      "downloads": 2178,
+      "recent_downloads": 2178,
       "categories": [],
       "repository": "https://github.com/bahdotsh/blogr",
       "ratatui_dependency": {
@@ -2419,8 +2497,8 @@
       "version": "0.8.0",
       "created_at": "2024-02-21T23:19:42.806813Z",
       "updated_at": "2025-11-13T21:28:40.886895Z",
-      "downloads": 12083,
-      "recent_downloads": 2886,
+      "downloads": 12100,
+      "recent_downloads": 2903,
       "categories": [],
       "repository": "https://github.com/pythops/bluetui",
       "homepage": "https://github.com/pythops/bluetui",
@@ -2438,8 +2516,8 @@
       "version": "0.3.0",
       "created_at": "2025-02-20T16:19:56.364934Z",
       "updated_at": "2025-03-10T12:26:11.160049Z",
-      "downloads": 2533,
-      "recent_downloads": 488,
+      "downloads": 2535,
+      "recent_downloads": 490,
       "categories": [
         "command-line-utilities"
       ],
@@ -2459,8 +2537,8 @@
       "version": "1.0.0",
       "created_at": "2023-09-18T01:19:51.410699Z",
       "updated_at": "2025-07-13T04:12:51.189744Z",
-      "downloads": 7070,
-      "recent_downloads": 932,
+      "downloads": 7072,
+      "recent_downloads": 934,
       "categories": [],
       "repository": "https://github.com/blackmagic-debug/bmputil",
       "ratatui_dependency": {
@@ -2534,8 +2612,8 @@
       "version": "0.1.2",
       "created_at": "2024-05-30T13:46:32.492293Z",
       "updated_at": "2024-08-20T13:02:10.663657Z",
-      "downloads": 3805,
-      "recent_downloads": 417,
+      "downloads": 3806,
+      "recent_downloads": 418,
       "categories": [],
       "repository": "https://github.com/valeratrades/booktyping",
       "ratatui_dependency": {
@@ -2771,8 +2849,8 @@
       "version": "0.1.0",
       "created_at": "2023-10-08T01:25:31.408007Z",
       "updated_at": "2023-10-08T01:25:31.408007Z",
-      "downloads": 4319,
-      "recent_downloads": 607,
+      "downloads": 4322,
+      "recent_downloads": 610,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -2829,8 +2907,8 @@
       "version": "0.1.3",
       "created_at": "2025-11-08T20:29:59.305090Z",
       "updated_at": "2025-11-17T00:34:11.051663Z",
-      "downloads": 62,
-      "recent_downloads": 62,
+      "downloads": 84,
+      "recent_downloads": 84,
       "categories": [
         "command-line-utilities"
       ],
@@ -2850,8 +2928,8 @@
       "version": "0.19.1",
       "created_at": "2023-02-12T20:44:31.158219Z",
       "updated_at": "2025-11-11T14:01:22.426569Z",
-      "downloads": 379636,
-      "recent_downloads": 91423,
+      "downloads": 379858,
+      "recent_downloads": 91645,
       "categories": [
         "science"
       ],
@@ -2953,8 +3031,8 @@
       "version": "0.2.0",
       "created_at": "2023-03-31T00:55:22.378274Z",
       "updated_at": "2023-09-07T04:20:47.097079Z",
-      "downloads": 5435,
-      "recent_downloads": 494,
+      "downloads": 5436,
+      "recent_downloads": 495,
       "categories": [],
       "repository": "https://github.com/cackle-rs/cackle",
       "ratatui_dependency": {
@@ -3011,8 +3089,8 @@
       "version": "0.4.8",
       "created_at": "2024-05-24T09:13:22.831858Z",
       "updated_at": "2024-12-12T07:54:26.249205Z",
-      "downloads": 4573,
-      "recent_downloads": 2024,
+      "downloads": 4577,
+      "recent_downloads": 2028,
       "categories": [],
       "repository": "https://github.com/ifd3f/caligula.git",
       "homepage": "https://github.com/ifd3f/caligula",
@@ -3095,8 +3173,8 @@
       "version": "5.3.2",
       "created_at": "2025-08-06T08:27:19.959901Z",
       "updated_at": "2025-10-10T16:12:08.704884Z",
-      "downloads": 1055,
-      "recent_downloads": 683,
+      "downloads": 1058,
+      "recent_downloads": 686,
       "categories": [
         "command-line-utilities"
       ],
@@ -3282,8 +3360,8 @@
       "version": "0.1.0",
       "created_at": "2025-04-30T23:53:54.956841Z",
       "updated_at": "2025-04-30T23:53:54.956841Z",
-      "downloads": 1351,
-      "recent_downloads": 597,
+      "downloads": 1352,
+      "recent_downloads": 598,
       "categories": [
         "command-line-utilities",
         "development-tools::cargo-plugins"
@@ -3345,8 +3423,8 @@
       "version": "0.11.0",
       "created_at": "2024-07-11T22:10:26.497496Z",
       "updated_at": "2025-09-10T03:17:16.105767Z",
-      "downloads": 14635,
-      "recent_downloads": 2200,
+      "downloads": 14636,
+      "recent_downloads": 2201,
       "categories": [],
       "repository": "https://github.com/vexide/cargo-v5",
       "homepage": "https://vexide.dev",
@@ -3511,8 +3589,8 @@
       "version": "2.6.0",
       "created_at": "2022-10-22T14:18:48.807804Z",
       "updated_at": "2025-10-13T19:04:50.864054Z",
-      "downloads": 61243,
-      "recent_downloads": 13898,
+      "downloads": 61272,
+      "recent_downloads": 13927,
       "categories": [],
       "repository": "https://github.com/catppuccin/rust",
       "homepage": "https://github.com/catppuccin/rust",
@@ -3764,8 +3842,8 @@
       "version": "0.5.3",
       "created_at": "2025-08-18T06:29:42.316996Z",
       "updated_at": "2025-08-18T14:36:25.366462Z",
-      "downloads": 777,
-      "recent_downloads": 554,
+      "downloads": 778,
+      "recent_downloads": 555,
       "categories": [
         "command-line-utilities",
         "filesystem"
@@ -3786,8 +3864,8 @@
       "version": "0.3.3",
       "created_at": "2025-11-02T16:38:31.710759Z",
       "updated_at": "2025-11-16T13:29:05.032854Z",
-      "downloads": 239,
-      "recent_downloads": 239,
+      "downloads": 325,
+      "recent_downloads": 325,
       "categories": [
         "development-tools"
       ],
@@ -3828,6 +3906,24 @@
       "recent_downloads": 184,
       "categories": [],
       "repository": "https://github.com/quyc07/chat-tui",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "chatatui",
+      "name": "chatatui",
+      "description": "TUI chat framework powered by Ratatui and tools-rs.",
+      "version": "0.0.1",
+      "created_at": "2025-11-16T21:21:57.085613Z",
+      "updated_at": "2025-11-16T21:21:57.085613Z",
+      "downloads": 17,
+      "recent_downloads": 17,
+      "categories": [],
+      "repository": "https://github.com/eggermarc/chatatui",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -3940,8 +4036,8 @@
       "version": "1.6.2",
       "created_at": "2023-12-01T13:03:02.031228Z",
       "updated_at": "2025-09-03T16:29:29.091728Z",
-      "downloads": 19429,
-      "recent_downloads": 2525,
+      "downloads": 19431,
+      "recent_downloads": 2527,
       "categories": [],
       "repository": "https://github.com/thomas-mauran/chess-tui",
       "homepage": "https://github.com/thomas-mauran/chess-tui",
@@ -3962,6 +4058,24 @@
       "downloads": 771,
       "recent_downloads": 167,
       "categories": [],
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "chloe_todo_tui",
+      "name": "chloe_todo_tui",
+      "description": "A terminal-based todo application with TUI",
+      "version": "0.1.0",
+      "created_at": "2025-11-16T20:32:11.745067Z",
+      "updated_at": "2025-11-16T20:32:11.745067Z",
+      "downloads": 16,
+      "recent_downloads": 16,
+      "categories": [],
+      "repository": "https://github.com/Chloe199719/todo_tui",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -3999,8 +4113,8 @@
       "version": "0.7.0",
       "created_at": "2025-09-06T15:11:00.648114Z",
       "updated_at": "2025-10-14T00:10:12.505228Z",
-      "downloads": 5207,
-      "recent_downloads": 5207,
+      "downloads": 5209,
+      "recent_downloads": 5209,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -4021,8 +4135,8 @@
       "version": "0.7.0",
       "created_at": "2025-10-14T00:09:59.202002Z",
       "updated_at": "2025-10-14T00:09:59.202002Z",
-      "downloads": 504,
-      "recent_downloads": 504,
+      "downloads": 507,
+      "recent_downloads": 507,
       "categories": [
         "command-line-utilities"
       ],
@@ -4346,8 +4460,8 @@
       "version": "0.6.1",
       "created_at": "2022-07-19T09:16:14.196861Z",
       "updated_at": "2025-06-07T08:47:39.571281Z",
-      "downloads": 13669,
-      "recent_downloads": 1278,
+      "downloads": 13670,
+      "recent_downloads": 1279,
       "categories": [],
       "repository": "https://github.com/race604/clock-tui",
       "homepage": "https://github.com/race604/clock-tui",
@@ -4365,8 +4479,8 @@
       "version": "0.29.0",
       "created_at": "2025-05-01T13:16:43.314592Z",
       "updated_at": "2025-11-07T21:53:01.602124Z",
-      "downloads": 8228,
-      "recent_downloads": 3471,
+      "downloads": 8232,
+      "recent_downloads": 3475,
       "categories": [
         "api-bindings",
         "asynchronous",
@@ -4389,8 +4503,8 @@
       "version": "0.29.0",
       "created_at": "2025-04-29T20:16:35.761250Z",
       "updated_at": "2025-11-07T21:50:24.798481Z",
-      "downloads": 10039,
-      "recent_downloads": 4201,
+      "downloads": 10050,
+      "recent_downloads": 4212,
       "categories": [
         "api-bindings",
         "asynchronous",
@@ -4413,8 +4527,8 @@
       "version": "0.29.0",
       "created_at": "2025-09-18T19:44:05.591824Z",
       "updated_at": "2025-11-07T21:52:42.642150Z",
-      "downloads": 937,
-      "recent_downloads": 937,
+      "downloads": 939,
+      "recent_downloads": 939,
       "categories": [
         "api-bindings",
         "asynchronous",
@@ -4437,8 +4551,8 @@
       "version": "0.29.0",
       "created_at": "2025-04-29T18:57:37.582839Z",
       "updated_at": "2025-11-07T21:49:33.365412Z",
-      "downloads": 10762,
-      "recent_downloads": 4403,
+      "downloads": 10775,
+      "recent_downloads": 4416,
       "categories": [
         "api-bindings",
         "asynchronous",
@@ -4458,11 +4572,11 @@
       "id": "clubs-diamonds",
       "name": "clubs-diamonds",
       "description": "A brute-forcer for finding short mathematical expressions in Rust, for code golf",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "created_at": "2025-10-27T00:25:52.870847Z",
-      "updated_at": "2025-11-09T11:49:22.717501Z",
-      "downloads": 271,
-      "recent_downloads": 271,
+      "updated_at": "2025-11-17T08:53:17.236070Z",
+      "downloads": 287,
+      "recent_downloads": 287,
       "categories": [],
       "repository": "https://github.com/acotis/clubs-diamonds",
       "ratatui_dependency": {
@@ -4621,8 +4735,8 @@
       "version": "4.0.2",
       "created_at": "2024-03-11T18:06:31.956493Z",
       "updated_at": "2025-09-18T11:54:48.161279Z",
-      "downloads": 19125,
-      "recent_downloads": 3396,
+      "downloads": 19127,
+      "recent_downloads": 3398,
       "categories": [],
       "repository": "https://github.com/mufeedvh/code2prompt",
       "ratatui_dependency": {
@@ -4973,8 +5087,8 @@
       "version": "0.1.0",
       "created_at": "2025-07-03T12:12:16.527446Z",
       "updated_at": "2025-07-03T12:12:16.527446Z",
-      "downloads": 561,
-      "recent_downloads": 267,
+      "downloads": 562,
+      "recent_downloads": 268,
       "categories": [],
       "repository": "https://github.com/liquidos-ai/corty",
       "ratatui_dependency": {
@@ -5154,8 +5268,8 @@
       "version": "0.5.0",
       "created_at": "2025-04-13T14:48:59.726341Z",
       "updated_at": "2025-04-29T17:07:33.226302Z",
-      "downloads": 10288,
-      "recent_downloads": 3054,
+      "downloads": 10296,
+      "recent_downloads": 3062,
       "categories": [],
       "repository": "https://github.com/WhatsApp/crashdump_viewer_cli/",
       "ratatui_dependency": {
@@ -5211,8 +5325,8 @@
       "version": "0.1.5",
       "created_at": "2025-04-11T02:34:05.060053Z",
       "updated_at": "2025-07-22T06:17:49.304867Z",
-      "downloads": 2828,
-      "recent_downloads": 750,
+      "downloads": 2829,
+      "recent_downloads": 751,
       "categories": [],
       "repository": "https://github.com/wangxdmm/crax",
       "homepage": "https://github.com/wangxdmm/crax",
@@ -5330,8 +5444,8 @@
       "version": "0.14.0",
       "created_at": "2022-03-05T16:00:19.029686Z",
       "updated_at": "2025-11-02T12:49:40.277061Z",
-      "downloads": 50534,
-      "recent_downloads": 4326,
+      "downloads": 50541,
+      "recent_downloads": 4333,
       "categories": [],
       "repository": "https://github.com/YS-L/csvlens",
       "homepage": "https://github.com/YS-L/csvlens",
@@ -5369,8 +5483,8 @@
       "version": "0.10.0",
       "created_at": "2024-10-12T19:57:20.960027Z",
       "updated_at": "2025-10-19T19:16:20.765233Z",
-      "downloads": 10138,
-      "recent_downloads": 2134,
+      "downloads": 10143,
+      "recent_downloads": 2139,
       "categories": [
         "science::robotics"
       ],
@@ -5542,8 +5656,8 @@
       "version": "0.7.1",
       "created_at": "2024-12-04T01:58:18.101616Z",
       "updated_at": "2024-12-06T00:34:11.154229Z",
-      "downloads": 2112,
-      "recent_downloads": 444,
+      "downloads": 2115,
+      "recent_downloads": 447,
       "categories": [],
       "repository": "https://github.com/4hoe8pow/digman",
       "homepage": "https://grill-ware.com",
@@ -5798,8 +5912,8 @@
       "version": "0.1.2",
       "created_at": "2025-02-09T23:36:57.006311Z",
       "updated_at": "2025-03-25T01:30:58.281720Z",
-      "downloads": 5476,
-      "recent_downloads": 1399,
+      "downloads": 5484,
+      "recent_downloads": 1407,
       "categories": [],
       "repository": "https://github.com/bgeron/deser-incomplete/",
       "ratatui_dependency": {
@@ -6046,8 +6160,8 @@
       "version": "0.7.1",
       "created_at": "2021-01-20T17:48:25.520286Z",
       "updated_at": "2025-11-06T19:30:11.109714Z",
-      "downloads": 221600,
-      "recent_downloads": 41937,
+      "downloads": 221678,
+      "recent_downloads": 42015,
       "categories": [],
       "repository": "https://github.com/DioxusLabs/dioxus/",
       "ratatui_dependency": {
@@ -6082,8 +6196,8 @@
       "version": "0.1.3",
       "created_at": "2024-05-28T09:52:34.197786Z",
       "updated_at": "2025-08-21T13:19:09.746706Z",
-      "downloads": 4130,
-      "recent_downloads": 743,
+      "downloads": 4131,
+      "recent_downloads": 744,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -6160,8 +6274,8 @@
       "version": "4.13.0",
       "created_at": "2021-03-24T02:09:10.340369Z",
       "updated_at": "2025-11-14T14:20:45.651214Z",
-      "downloads": 429164,
-      "recent_downloads": 70175,
+      "downloads": 429297,
+      "recent_downloads": 70308,
       "categories": [
         "database",
         "database-implementations",
@@ -6241,8 +6355,8 @@
       "version": "0.1.1",
       "created_at": "2025-11-10T15:05:52.932446Z",
       "updated_at": "2025-11-10T15:58:45.273180Z",
-      "downloads": 42,
-      "recent_downloads": 42,
+      "downloads": 45,
+      "recent_downloads": 45,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -6369,8 +6483,8 @@
       "version": "0.1.2",
       "created_at": "2025-08-22T14:21:37.084937Z",
       "updated_at": "2025-10-21T10:20:37.582822Z",
-      "downloads": 1554,
-      "recent_downloads": 1554,
+      "downloads": 1556,
+      "recent_downloads": 1556,
       "categories": [
         "command-line-utilities",
         "text-processing"
@@ -6392,8 +6506,8 @@
       "version": "0.7.1",
       "created_at": "2024-12-04T02:07:50.679804Z",
       "updated_at": "2024-12-06T00:36:10.622150Z",
-      "downloads": 1880,
-      "recent_downloads": 320,
+      "downloads": 1881,
+      "recent_downloads": 321,
       "categories": [],
       "repository": "https://github.com/4hoe8pow/digman",
       "homepage": "https://grill-ware.com",
@@ -6488,6 +6602,25 @@
       "is_core_library": false
     },
     {
+      "id": "dropkick",
+      "name": "dropkick",
+      "description": "A TUI for browsing and importing code samples into the workding directory defined per https://github.com/thenotary/bundlegem",
+      "version": "0.0.0",
+      "created_at": "2025-11-16T14:59:06.767387Z",
+      "updated_at": "2025-11-16T14:59:06.767387Z",
+      "downloads": 18,
+      "recent_downloads": 18,
+      "categories": [
+        "command-line-interface"
+      ],
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "ds-cli",
       "name": "ds-cli",
       "description": "ds-cli is a command line tool to talk with deepseek",
@@ -6532,8 +6665,8 @@
       "version": "0.4.3",
       "created_at": "2025-11-02T03:36:19.899385Z",
       "updated_at": "2025-11-16T22:18:41.459570Z",
-      "downloads": 359,
-      "recent_downloads": 359,
+      "downloads": 365,
+      "recent_downloads": 365,
       "categories": [],
       "repository": "https://github.com/amir20/dtop",
       "homepage": "https://github.com/amir20/dtop",
@@ -6594,8 +6727,8 @@
       "version": "0.5.4",
       "created_at": "2024-06-27T16:37:18.327328Z",
       "updated_at": "2025-10-30T17:57:25.026480Z",
-      "downloads": 23440,
-      "recent_downloads": 4062,
+      "downloads": 23442,
+      "recent_downloads": 4064,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -6709,6 +6842,28 @@
       "is_core_library": false
     },
     {
+      "id": "dz6",
+      "name": "dz6",
+      "description": "vim-like hexadecimal editor",
+      "version": "0.2.0",
+      "created_at": "2025-10-26T19:56:51.261974Z",
+      "updated_at": "2025-11-16T04:20:13.085253Z",
+      "downloads": 159,
+      "recent_downloads": 159,
+      "categories": [
+        "command-line-utilities",
+        "security"
+      ],
+      "repository": "https://github.com/mentebinaria/dz6",
+      "homepage": "https://menteb.in/dz6",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "e2020-data-viewer",
       "name": "e2020-data-viewer",
       "description": "A TUI for viewing data from ENERGY2020",
@@ -6751,8 +6906,8 @@
       "version": "0.2.2",
       "created_at": "2025-06-22T04:25:48.484440Z",
       "updated_at": "2025-10-25T06:58:53.675045Z",
-      "downloads": 5459,
-      "recent_downloads": 2355,
+      "downloads": 5463,
+      "recent_downloads": 2359,
       "categories": [
         "command-line-utilities",
         "gui",
@@ -6776,8 +6931,8 @@
       "version": "0.1.13",
       "created_at": "2025-06-20T01:52:00.091465Z",
       "updated_at": "2025-10-26T06:32:12.259984Z",
-      "downloads": 6112,
-      "recent_downloads": 2710,
+      "downloads": 6115,
+      "recent_downloads": 2713,
       "categories": [
         "command-line-utilities",
         "multimedia::audio"
@@ -6947,8 +7102,8 @@
       "version": "0.9.9",
       "created_at": "2023-11-28T16:27:24.274911Z",
       "updated_at": "2025-11-09T13:59:17.965575Z",
-      "downloads": 47423,
-      "recent_downloads": 7246,
+      "downloads": 47432,
+      "recent_downloads": 7255,
       "categories": [],
       "repository": "https://github.com/preiter93/edtui",
       "ratatui_dependency": {
@@ -6965,8 +7120,8 @@
       "version": "0.3.2",
       "created_at": "2024-03-03T21:57:09.023624Z",
       "updated_at": "2024-05-09T20:06:46.045884Z",
-      "downloads": 17383,
-      "recent_downloads": 1308,
+      "downloads": 17384,
+      "recent_downloads": 1309,
       "categories": [],
       "repository": "https://github.com/preiter93/edtui",
       "ratatui_dependency": {
@@ -7131,8 +7286,8 @@
       "version": "0.4.0",
       "created_at": "2024-10-28T08:03:21.904401Z",
       "updated_at": "2025-08-24T15:34:04.233846Z",
-      "downloads": 4000,
-      "recent_downloads": 994,
+      "downloads": 4001,
+      "recent_downloads": 995,
       "categories": [],
       "repository": "https://github.com/hepptho/entrust",
       "homepage": "https://github.com/hepptho/entrust",
@@ -7208,8 +7363,8 @@
       "version": "0.6.2",
       "created_at": "2025-08-27T08:45:51.216756Z",
       "updated_at": "2025-09-19T08:40:59.586150Z",
-      "downloads": 2897,
-      "recent_downloads": 2897,
+      "downloads": 2899,
+      "recent_downloads": 2899,
       "categories": [],
       "repository": "https://github.com/mikeleppane/envx",
       "homepage": "https://github.com/mikeleppane/envx",
@@ -7327,8 +7482,8 @@
       "version": "0.6.1",
       "created_at": "2024-10-10T10:54:02.851455Z",
       "updated_at": "2025-10-30T10:32:29.881025Z",
-      "downloads": 260512,
-      "recent_downloads": 95755,
+      "downloads": 261448,
+      "recent_downloads": 96691,
       "categories": [],
       "repository": "https://github.com/esp-rs/esp-hal",
       "documentation": "https://docs.espressif.com/projects/rust/esp-config/latest/",
@@ -7346,8 +7501,8 @@
       "version": "1.0.1",
       "created_at": "2024-11-07T13:20:31.054543Z",
       "updated_at": "2025-11-05T10:50:03.836763Z",
-      "downloads": 19326,
-      "recent_downloads": 5573,
+      "downloads": 19355,
+      "recent_downloads": 5602,
       "categories": [
         "command-line-utilities",
         "template-engine"
@@ -7385,8 +7540,8 @@
       "version": "0.1.1",
       "created_at": "2023-12-01T15:15:09.040380Z",
       "updated_at": "2023-12-01T17:44:33.127876Z",
-      "downloads": 3193,
-      "recent_downloads": 314,
+      "downloads": 3194,
+      "recent_downloads": 315,
       "categories": [],
       "repository": "https://github.com/paradigmxyz/etop",
       "homepage": "https://github.com/paradigmxyz/etop",
@@ -7463,8 +7618,8 @@
       "version": "0.3.0",
       "created_at": "2025-04-24T09:56:09.192389Z",
       "updated_at": "2025-05-07T15:03:10.989871Z",
-      "downloads": 2252,
-      "recent_downloads": 516,
+      "downloads": 2253,
+      "recent_downloads": 517,
       "categories": [
         "development-tools",
         "command-line-utilities",
@@ -7627,8 +7782,8 @@
       "version": "0.3.0",
       "created_at": "2025-04-02T15:08:00.803187Z",
       "updated_at": "2025-10-17T13:22:05.441568Z",
-      "downloads": 1479,
-      "recent_downloads": 882,
+      "downloads": 1480,
+      "recent_downloads": 883,
       "categories": [
         "command-line-utilities",
         "text-processing",
@@ -7788,11 +7943,11 @@
       "id": "filessh",
       "name": "filessh",
       "description": "A fast and convenient TUI file browser for remote servers ",
-      "version": "0.1.9",
+      "version": "0.1.10",
       "created_at": "2025-11-11T14:52:59.886356Z",
-      "updated_at": "2025-11-14T13:24:44.053588Z",
-      "downloads": 324,
-      "recent_downloads": 324,
+      "updated_at": "2025-11-17T12:18:44.527534Z",
+      "downloads": 329,
+      "recent_downloads": 329,
       "categories": [
         "command-line-interface",
         "command-line-utilities",
@@ -7832,8 +7987,8 @@
       "version": "0.11.1",
       "created_at": "2025-10-29T09:43:31.048337Z",
       "updated_at": "2025-11-16T10:22:53.100926Z",
-      "downloads": 233,
-      "recent_downloads": 233,
+      "downloads": 234,
+      "recent_downloads": 234,
       "categories": [
         "command-line-utilities"
       ],
@@ -7889,8 +8044,8 @@
       "version": "0.3.1",
       "created_at": "2024-06-29T15:52:55.990255Z",
       "updated_at": "2025-02-16T14:18:59.612577Z",
-      "downloads": 5416,
-      "recent_downloads": 708,
+      "downloads": 5417,
+      "recent_downloads": 709,
       "categories": [],
       "repository": "https://github.com/YS-L/flamelens",
       "homepage": "https://github.com/YS-L/flamelens",
@@ -7946,8 +8101,8 @@
       "version": "0.3.0",
       "created_at": "2024-05-18T11:53:47.406081Z",
       "updated_at": "2024-11-03T13:55:02.937437Z",
-      "downloads": 12060,
-      "recent_downloads": 901,
+      "downloads": 12061,
+      "recent_downloads": 902,
       "categories": [
         "command-line-utilities"
       ],
@@ -8068,8 +8223,8 @@
       "version": "0.4.2",
       "created_at": "2024-11-16T20:05:21.803729Z",
       "updated_at": "2025-10-23T06:37:30.567931Z",
-      "downloads": 12555,
-      "recent_downloads": 3451,
+      "downloads": 12557,
+      "recent_downloads": 3453,
       "categories": [],
       "repository": "https://github.com/jvanbuel/flowrs",
       "homepage": "https://github.com/jvanbuel/flowrs",
@@ -8210,8 +8365,8 @@
       "version": "0.2.7",
       "created_at": "2024-07-01T04:08:58.910941Z",
       "updated_at": "2024-12-16T18:37:07.411652Z",
-      "downloads": 11039,
-      "recent_downloads": 1020,
+      "downloads": 11040,
+      "recent_downloads": 1021,
       "categories": [],
       "repository": "https://github.com/joshka/focusable",
       "documentation": "https://docs.rs/focusable",
@@ -8532,8 +8687,8 @@
       "version": "0.1.2",
       "created_at": "2025-07-01T14:10:07.005356Z",
       "updated_at": "2025-07-02T01:29:40.125992Z",
-      "downloads": 1041,
-      "recent_downloads": 380,
+      "downloads": 1042,
+      "recent_downloads": 381,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -8638,8 +8793,8 @@
       "version": "0.65.0",
       "created_at": "2023-10-07T16:18:53.149732Z",
       "updated_at": "2025-10-14T15:39:36.720034Z",
-      "downloads": 58314,
-      "recent_downloads": 6378,
+      "downloads": 58315,
+      "recent_downloads": 6379,
       "categories": [],
       "repository": "https://github.com/kyu08/fzf-make",
       "ratatui_dependency": {
@@ -8869,7 +9024,7 @@
       "created_at": "2024-03-02T06:45:10.861850Z",
       "updated_at": "2025-07-13T23:04:45.830098Z",
       "downloads": 15767,
-      "recent_downloads": 1658,
+      "recent_downloads": 1659,
       "categories": [
         "command-line-utilities",
         "science"
@@ -9039,8 +9194,8 @@
       "version": "0.1.1",
       "created_at": "2025-11-08T14:49:40.326043Z",
       "updated_at": "2025-11-08T14:49:40.326043Z",
-      "downloads": 24,
-      "recent_downloads": 24,
+      "downloads": 25,
+      "recent_downloads": 25,
       "categories": [
         "development-tools::debugging",
         "development-tools::profiling"
@@ -9062,8 +9217,8 @@
       "version": "0.2.1",
       "created_at": "2024-08-06T11:37:49.941952Z",
       "updated_at": "2025-03-29T20:00:31.502217Z",
-      "downloads": 2526,
-      "recent_downloads": 373,
+      "downloads": 2528,
+      "recent_downloads": 375,
       "categories": [
         "command-line-utilities",
         "text-processing"
@@ -9085,8 +9240,8 @@
       "version": "1.1.1",
       "created_at": "2023-05-23T23:21:05.849171Z",
       "updated_at": "2024-09-28T09:42:34.270888Z",
-      "downloads": 25143,
-      "recent_downloads": 1664,
+      "downloads": 25144,
+      "recent_downloads": 1665,
       "categories": [
         "development-tools"
       ],
@@ -9229,8 +9384,8 @@
       "version": "0.7.0",
       "created_at": "2025-07-04T21:08:37.645303Z",
       "updated_at": "2025-11-15T20:49:06.433319Z",
-      "downloads": 3793,
-      "recent_downloads": 1871,
+      "downloads": 3796,
+      "recent_downloads": 1874,
       "categories": [],
       "repository": "https://github.com/bircni/git-statuses",
       "ratatui_dependency": {
@@ -9382,8 +9537,8 @@
       "version": "0.1.0",
       "created_at": "2025-11-12T23:44:06.168975Z",
       "updated_at": "2025-11-13T12:50:44.094933Z",
-      "downloads": 47,
-      "recent_downloads": 47,
+      "downloads": 48,
+      "recent_downloads": 48,
       "categories": [],
       "repository": "https://github.com/unhappychoice/gitlogue",
       "ratatui_dependency": {
@@ -9460,8 +9615,8 @@
       "version": "0.8.0",
       "created_at": "2025-08-31T07:20:03.921121Z",
       "updated_at": "2025-09-24T06:20:22.796005Z",
-      "downloads": 4342,
-      "recent_downloads": 4342,
+      "downloads": 4345,
+      "recent_downloads": 4345,
       "categories": [
         "games",
         "command-line-utilities"
@@ -9483,8 +9638,8 @@
       "version": "0.39.0",
       "created_at": "2024-03-04T16:01:08.766682Z",
       "updated_at": "2025-11-12T22:08:52.031246Z",
-      "downloads": 85912,
-      "recent_downloads": 8269,
+      "downloads": 85914,
+      "recent_downloads": 8271,
       "categories": [],
       "repository": "https://github.com/altsem/gitu",
       "ratatui_dependency": {
@@ -9501,8 +9656,8 @@
       "version": "0.27.0",
       "created_at": "2020-03-24T20:35:23.705545Z",
       "updated_at": "2025-01-14T20:04:29.521561Z",
-      "downloads": 172764,
-      "recent_downloads": 10468,
+      "downloads": 172774,
+      "recent_downloads": 10478,
       "categories": [
         "command-line-utilities"
       ],
@@ -9602,8 +9757,8 @@
       "version": "0.8.1",
       "created_at": "2024-08-13T03:35:54.164344Z",
       "updated_at": "2025-09-30T10:27:21.724506Z",
-      "downloads": 16219,
-      "recent_downloads": 2558,
+      "downloads": 16227,
+      "recent_downloads": 2566,
       "categories": [],
       "repository": "https://github.com/gluesql/glues",
       "ratatui_dependency": {
@@ -9620,8 +9775,8 @@
       "version": "0.8.1",
       "created_at": "2025-09-30T07:49:03.797089Z",
       "updated_at": "2025-09-30T10:27:16.839287Z",
-      "downloads": 639,
-      "recent_downloads": 639,
+      "downloads": 646,
+      "recent_downloads": 646,
       "categories": [],
       "repository": "https://github.com/gluesql/glues",
       "ratatui_dependency": {
@@ -9698,8 +9853,8 @@
       "version": "0.0.7",
       "created_at": "2025-05-03T18:01:57.221406Z",
       "updated_at": "2025-10-27T14:43:30.654287Z",
-      "downloads": 5856,
-      "recent_downloads": 2442,
+      "downloads": 5857,
+      "recent_downloads": 2443,
       "categories": [
         "asynchronous",
         "concurrency"
@@ -9756,8 +9911,8 @@
       "version": "0.1.0",
       "created_at": "2024-04-26T14:25:17.729961Z",
       "updated_at": "2024-04-26T14:25:17.729961Z",
-      "downloads": 1529,
-      "recent_downloads": 164,
+      "downloads": 1539,
+      "recent_downloads": 174,
       "categories": [
         "command-line-utilities"
       ],
@@ -9836,8 +9991,8 @@
       "version": "0.1.17",
       "created_at": "2025-07-29T03:55:58.552723Z",
       "updated_at": "2025-10-31T18:55:37.302063Z",
-      "downloads": 4236,
-      "recent_downloads": 2727,
+      "downloads": 4237,
+      "recent_downloads": 2728,
       "categories": [
         "gui",
         "network-programming",
@@ -10029,6 +10184,28 @@
       "is_core_library": false
     },
     {
+      "id": "h5inspect",
+      "name": "h5inspect",
+      "description": "A terminal based HDF5 file inspector",
+      "version": "1.3.3",
+      "created_at": "2025-11-15T13:05:55.734952Z",
+      "updated_at": "2025-11-15T13:05:55.734952Z",
+      "downloads": 25,
+      "recent_downloads": 25,
+      "categories": [
+        "command-line-utilities",
+        "science",
+        "visualization"
+      ],
+      "repository": "https://github.com/HalFrgrd/h5inspect",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "h5v",
       "name": "h5v",
       "description": "A terminal viewer for HDF5 files with chart, image, string, matrix, attributes support",
@@ -10093,8 +10270,8 @@
       "version": "0.2.0",
       "created_at": "2024-05-28T18:24:13.551177Z",
       "updated_at": "2024-06-20T19:29:36.046761Z",
-      "downloads": 2875,
-      "recent_downloads": 392,
+      "downloads": 2876,
+      "recent_downloads": 393,
       "categories": [
         "command-line-utilities"
       ],
@@ -10115,8 +10292,8 @@
       "version": "0.2.0",
       "created_at": "2024-05-28T18:32:10.236211Z",
       "updated_at": "2024-06-20T19:33:29.366620Z",
-      "downloads": 2891,
-      "recent_downloads": 407,
+      "downloads": 2892,
+      "recent_downloads": 408,
       "categories": [
         "command-line-utilities"
       ],
@@ -10252,14 +10429,35 @@
       "is_core_library": false
     },
     {
+      "id": "hedged-rpc-client",
+      "name": "hedged-rpc-client",
+      "description": "High-performance Solana RPC client with request hedging for tail latency elimination",
+      "version": "0.1.0",
+      "created_at": "2025-11-15T21:51:28.334267Z",
+      "updated_at": "2025-11-15T21:51:28.334267Z",
+      "downloads": 16,
+      "recent_downloads": 16,
+      "categories": [
+        "asynchronous",
+        "network-programming"
+      ],
+      "repository": "https://github.com/BretasArthur1/hedged-rpc-client",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "heh",
       "name": "heh",
       "description": "A cross-platform terminal UI used for modifying file data in hex or ASCII.",
       "version": "0.6.1",
       "created_at": "2022-08-07T21:59:17.807486Z",
       "updated_at": "2024-08-20T19:26:13.027943Z",
-      "downloads": 23358,
-      "recent_downloads": 2449,
+      "downloads": 23367,
+      "recent_downloads": 2458,
       "categories": [
         "command-line-utilities",
         "text-editors"
@@ -10377,8 +10575,8 @@
       "version": "0.8.1",
       "created_at": "2024-09-23T07:11:49.804849Z",
       "updated_at": "2025-07-16T17:53:09.533850Z",
-      "downloads": 2144,
-      "recent_downloads": 395,
+      "downloads": 2145,
+      "recent_downloads": 396,
       "categories": [
         "command-line-utilities"
       ],
@@ -10418,8 +10616,8 @@
       "version": "1.0.4",
       "created_at": "2025-03-20T01:49:54.783009Z",
       "updated_at": "2025-03-21T01:50:13.017251Z",
-      "downloads": 3896,
-      "recent_downloads": 662,
+      "downloads": 3903,
+      "recent_downloads": 669,
       "categories": [
         "command-line-utilities"
       ],
@@ -10541,8 +10739,8 @@
       "version": "0.2.2",
       "created_at": "2025-08-11T19:17:05.883217Z",
       "updated_at": "2025-08-29T17:12:42.373565Z",
-      "downloads": 1184,
-      "recent_downloads": 890,
+      "downloads": 1187,
+      "recent_downloads": 893,
       "categories": [
         "command-line-interface",
         "gui"
@@ -10610,8 +10808,8 @@
       "version": "0.2.2",
       "created_at": "2025-08-11T19:18:00.591479Z",
       "updated_at": "2025-08-29T17:13:00.377072Z",
-      "downloads": 1077,
-      "recent_downloads": 770,
+      "downloads": 1078,
+      "recent_downloads": 771,
       "categories": [
         "asynchronous",
         "command-line-interface"
@@ -10637,6 +10835,26 @@
       "recent_downloads": 626,
       "categories": [],
       "repository": "https://github.com/hardliner66/homeofficetracker",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "hotpath",
+      "name": "hotpath",
+      "description": "A simple Rust profiler that shows exactly where your code spends time and allocates memory",
+      "version": "0.6.0",
+      "created_at": "2025-09-05T21:17:18.041771Z",
+      "updated_at": "2025-11-15T14:11:55.753090Z",
+      "downloads": 6719,
+      "recent_downloads": 6719,
+      "categories": [
+        "development-tools"
+      ],
+      "repository": "https://github.com/pawurb/hotpath",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -10714,8 +10932,8 @@
       "version": "0.1.4",
       "created_at": "2024-03-27T09:13:48.756804Z",
       "updated_at": "2024-03-28T12:58:38.509648Z",
-      "downloads": 5924,
-      "recent_downloads": 517,
+      "downloads": 5925,
+      "recent_downloads": 518,
       "categories": [],
       "repository": "https://github.com/helsing-ai/rust-nation",
       "ratatui_dependency": {
@@ -10732,8 +10950,8 @@
       "version": "0.1.4",
       "created_at": "2024-03-27T09:15:08.361495Z",
       "updated_at": "2024-03-28T12:57:46.918788Z",
-      "downloads": 6999,
-      "recent_downloads": 662,
+      "downloads": 7001,
+      "recent_downloads": 664,
       "categories": [],
       "repository": "https://github.com/helsing-ai/rust-nation",
       "ratatui_dependency": {
@@ -10812,8 +11030,8 @@
       "version": "0.3.19",
       "created_at": "2021-10-31T05:44:58.361561Z",
       "updated_at": "2025-03-19T00:40:17.132523Z",
-      "downloads": 38763,
-      "recent_downloads": 2517,
+      "downloads": 38768,
+      "recent_downloads": 2522,
       "categories": [],
       "repository": "https://github.com/blacknon/hwatch",
       "ratatui_dependency": {
@@ -10867,8 +11085,8 @@
       "version": "0.12.0",
       "created_at": "2025-10-29T15:41:57.642250Z",
       "updated_at": "2025-11-12T20:05:19.868897Z",
-      "downloads": 306,
-      "recent_downloads": 306,
+      "downloads": 307,
+      "recent_downloads": 307,
       "categories": [
         "emulators",
         "hardware-support",
@@ -10957,8 +11175,8 @@
       "version": "0.2.1",
       "created_at": "2024-07-12T14:12:41.198679Z",
       "updated_at": "2024-07-27T08:14:07.977231Z",
-      "downloads": 3549,
-      "recent_downloads": 384,
+      "downloads": 3550,
+      "recent_downloads": 385,
       "categories": [],
       "repository": "https://github.com/nanocryk/iforgor",
       "ratatui_dependency": {
@@ -11034,8 +11252,8 @@
       "version": "1.2.0",
       "created_at": "2022-02-16T21:45:37.683967Z",
       "updated_at": "2023-08-08T15:25:57.502524Z",
-      "downloads": 15095,
-      "recent_downloads": 944,
+      "downloads": 15096,
+      "recent_downloads": 945,
       "categories": [
         "command-line-utilities"
       ],
@@ -11162,8 +11380,8 @@
       "version": "0.4.0",
       "created_at": "2024-06-09T22:11:09.796836Z",
       "updated_at": "2025-10-16T20:14:08.178426Z",
-      "downloads": 10170,
-      "recent_downloads": 2146,
+      "downloads": 10173,
+      "recent_downloads": 2149,
       "categories": [],
       "repository": "https://github.com/pythops/impala",
       "homepage": "https://github.com/pythops/impala",
@@ -11221,8 +11439,8 @@
       "version": "0.2.5",
       "created_at": "2024-08-27T05:45:21.031662Z",
       "updated_at": "2025-04-20T09:29:10.835053Z",
-      "downloads": 7560,
-      "recent_downloads": 925,
+      "downloads": 7562,
+      "recent_downloads": 927,
       "categories": [
         "command-line-utilities",
         "multimedia::audio",
@@ -11244,8 +11462,8 @@
       "version": "0.6.1",
       "created_at": "2025-09-27T15:43:14.051485Z",
       "updated_at": "2025-11-16T14:00:45.121434Z",
-      "downloads": 5071,
-      "recent_downloads": 5071,
+      "downloads": 5074,
+      "recent_downloads": 5074,
       "categories": [],
       "repository": "https://github.com/instantOS/instantCLI",
       "homepage": "https://instantos.io",
@@ -11321,8 +11539,8 @@
       "version": "0.4.0",
       "created_at": "2024-11-15T16:24:37.719085Z",
       "updated_at": "2024-12-27T11:02:54.693051Z",
-      "downloads": 4173,
-      "recent_downloads": 749,
+      "downloads": 4176,
+      "recent_downloads": 752,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -11338,8 +11556,8 @@
       "version": "0.0.6",
       "created_at": "2024-08-15T11:37:04.103444Z",
       "updated_at": "2025-03-22T12:47:39.915020Z",
-      "downloads": 5807,
-      "recent_downloads": 825,
+      "downloads": 5810,
+      "recent_downloads": 828,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -11917,8 +12135,8 @@
       "version": "0.2.10",
       "created_at": "2025-11-02T22:49:14.597155Z",
       "updated_at": "2025-11-16T23:02:33.990125Z",
-      "downloads": 343,
-      "recent_downloads": 343,
+      "downloads": 354,
+      "recent_downloads": 354,
       "categories": [
         "command-line-utilities"
       ],
@@ -11975,8 +12193,8 @@
       "version": "0.1.12",
       "created_at": "2025-10-12T22:13:43.658791Z",
       "updated_at": "2025-11-02T16:42:50.732400Z",
-      "downloads": 2010,
-      "recent_downloads": 2010,
+      "downloads": 2011,
+      "recent_downloads": 2011,
       "categories": [
         "command-line-utilities"
       ],
@@ -12002,6 +12220,24 @@
         "command-line-utilities"
       ],
       "repository": "https://github.com/yourusername/kanbars",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "kandil_code",
+      "name": "kandil_code",
+      "description": "Intelligent development platform (CLI + TUI + Multi-Agent System)",
+      "version": "0.1.0",
+      "created_at": "2025-11-14T19:47:53.842441Z",
+      "updated_at": "2025-11-14T19:47:53.842441Z",
+      "downloads": 22,
+      "recent_downloads": 22,
+      "categories": [],
+      "repository": "https://github.com/Kandil7/kandil_code",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -12053,8 +12289,8 @@
       "version": "0.6.2",
       "created_at": "2021-04-17T19:26:58.766811Z",
       "updated_at": "2025-03-12T08:01:44.113499Z",
-      "downloads": 65134,
-      "recent_downloads": 4091,
+      "downloads": 65135,
+      "recent_downloads": 4092,
       "categories": [],
       "repository": "https://github.com/kdash-rs/kdash",
       "homepage": "https://github.com/kdash-rs/kdash",
@@ -12090,8 +12326,8 @@
       "version": "0.0.1",
       "created_at": "2024-12-02T04:48:24.280758Z",
       "updated_at": "2024-12-02T04:48:24.280758Z",
-      "downloads": 1395,
-      "recent_downloads": 376,
+      "downloads": 1398,
+      "recent_downloads": 379,
       "categories": [],
       "homepage": "https://kernelx.ai",
       "ratatui_dependency": {
@@ -12108,8 +12344,8 @@
       "version": "0.2.0",
       "created_at": "2025-02-11T17:58:44.875643Z",
       "updated_at": "2025-05-26T13:27:49.566877Z",
-      "downloads": 9035,
-      "recent_downloads": 1963,
+      "downloads": 9039,
+      "recent_downloads": 1967,
       "categories": [
         "gui",
         "config"
@@ -12117,6 +12353,27 @@
       "repository": "https://github.com/rhysd/keybinds-rs",
       "homepage": "https://github.com/rhysd/keybinds-rs#readme",
       "documentation": "https://docs.rs/keybinds",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "keyper",
+      "name": "keyper",
+      "description": "TUI password manager",
+      "version": "0.2.0",
+      "created_at": "2025-11-16T00:00:36.034239Z",
+      "updated_at": "2025-11-16T17:48:51.033472Z",
+      "downloads": 34,
+      "recent_downloads": 34,
+      "categories": [
+        "cryptography",
+        "os"
+      ],
+      "repository": "https://codeberg.org/weathered-steel/keyper",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -12150,8 +12407,8 @@
       "version": "0.11.14",
       "created_at": "2025-07-04T12:09:33.970262Z",
       "updated_at": "2025-07-06T20:04:57.373957Z",
-      "downloads": 2394,
-      "recent_downloads": 925,
+      "downloads": 2398,
+      "recent_downloads": 929,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -12294,8 +12551,8 @@
       "version": "2.13.0",
       "created_at": "2024-02-23T19:33:44.878944Z",
       "updated_at": "2025-09-05T21:43:50.005101Z",
-      "downloads": 449295,
-      "recent_downloads": 59275,
+      "downloads": 449304,
+      "recent_downloads": 59284,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -12420,8 +12677,8 @@
       "version": "0.2.0",
       "created_at": "2024-02-28T02:48:29.117661Z",
       "updated_at": "2024-03-04T08:10:48.822606Z",
-      "downloads": 6947,
-      "recent_downloads": 581,
+      "downloads": 6949,
+      "recent_downloads": 583,
       "categories": [
         "command-line-utilities"
       ],
@@ -12618,8 +12875,8 @@
       "version": "4.0.3",
       "created_at": "2025-07-21T11:03:08.619437Z",
       "updated_at": "2025-08-08T01:13:21.406808Z",
-      "downloads": 14426,
-      "recent_downloads": 6043,
+      "downloads": 14427,
+      "recent_downloads": 6044,
       "categories": [],
       "repository": "https://github.com/colonelpanic8/lastfm-edit",
       "homepage": "https://github.com/colonelpanic8/lastfm-edit",
@@ -12638,8 +12895,8 @@
       "version": "0.2.0",
       "created_at": "2024-12-12T02:19:32.746504Z",
       "updated_at": "2025-11-08T04:54:54.499823Z",
-      "downloads": 6249,
-      "recent_downloads": 2197,
+      "downloads": 6254,
+      "recent_downloads": 2202,
       "categories": [],
       "repository": "https://github.com/lusingander/laurier",
       "homepage": "https://github.com/lusingander/laurier",
@@ -12754,6 +13011,24 @@
       "is_core_library": false
     },
     {
+      "id": "lazydiff",
+      "name": "lazydiff",
+      "description": "A terminal based diff viewer",
+      "version": "0.2.1",
+      "created_at": "2025-11-14T18:25:02.394122Z",
+      "updated_at": "2025-11-15T08:57:16.935903Z",
+      "downloads": 59,
+      "recent_downloads": 59,
+      "categories": [],
+      "repository": "https://github.com/wmeints/lazydiff",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "lazygh",
       "name": "lazygh",
       "description": "A Terminal User Interface (TUI) application for managing multiple GitHub accounts easily",
@@ -12782,10 +13057,33 @@
       "version": "0.5.0",
       "created_at": "2024-05-21T19:58:31.065538Z",
       "updated_at": "2025-02-18T21:52:59.600916Z",
-      "downloads": 14914,
-      "recent_downloads": 1648,
+      "downloads": 14916,
+      "recent_downloads": 1650,
       "categories": [],
       "repository": "https://github.com/Cretezy/lazyjj",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "lazylog-framework",
+      "name": "lazylog-framework",
+      "description": "A framework for building terminal-based log viewers with vim-like navigation",
+      "version": "0.3.4",
+      "created_at": "2025-11-14T10:44:29.810022Z",
+      "updated_at": "2025-11-14T10:52:58.879760Z",
+      "downloads": 34,
+      "recent_downloads": 34,
+      "categories": [
+        "development-tools",
+        "command-line-utilities"
+      ],
+      "repository": "https://github.com/tr-nc/lazylog",
+      "homepage": "https://github.com/tr-nc/lazylog",
+      "documentation": "https://docs.rs/lazylog-framework",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -12931,8 +13229,8 @@
       "version": "0.4.0",
       "created_at": "2023-12-31T12:53:08.411739Z",
       "updated_at": "2025-02-22T09:18:58.462876Z",
-      "downloads": 28585,
-      "recent_downloads": 2183,
+      "downloads": 28589,
+      "recent_downloads": 2187,
       "categories": [
         "config"
       ],
@@ -12952,8 +13250,8 @@
       "version": "0.9.0",
       "created_at": "2024-11-03T01:30:23.243904Z",
       "updated_at": "2024-11-29T14:41:26.240524Z",
-      "downloads": 16806,
-      "recent_downloads": 1847,
+      "downloads": 16807,
+      "recent_downloads": 1848,
       "categories": [],
       "repository": "https://github.com/autoparallel/learner",
       "documentation": "https://docs.rs/learner",
@@ -12989,8 +13287,8 @@
       "version": "0.6.0",
       "created_at": "2024-01-11T09:12:49.920164Z",
       "updated_at": "2025-02-22T09:20:29.532956Z",
-      "downloads": 30199,
-      "recent_downloads": 2233,
+      "downloads": 30200,
+      "recent_downloads": 2234,
       "categories": [
         "web-programming::http-client"
       ],
@@ -13010,8 +13308,8 @@
       "version": "0.5.2",
       "created_at": "2024-04-20T15:09:27.746830Z",
       "updated_at": "2025-02-01T14:32:45.154981Z",
-      "downloads": 4490,
-      "recent_downloads": 605,
+      "downloads": 4492,
+      "recent_downloads": 607,
       "categories": [],
       "repository": "https://github.com/akarsh1995/leetcode-tui",
       "ratatui_dependency": {
@@ -13028,8 +13326,8 @@
       "version": "0.5.2",
       "created_at": "2024-04-20T15:21:27.230153Z",
       "updated_at": "2025-02-01T14:35:27.023878Z",
-      "downloads": 4062,
-      "recent_downloads": 527,
+      "downloads": 4063,
+      "recent_downloads": 528,
       "categories": [],
       "repository": "https://github.com/akarsh1995/leetcode-tui",
       "ratatui_dependency": {
@@ -13064,8 +13362,8 @@
       "version": "0.5.2",
       "created_at": "2024-04-20T15:05:39.684226Z",
       "updated_at": "2025-02-01T14:31:55.060459Z",
-      "downloads": 4741,
-      "recent_downloads": 677,
+      "downloads": 4745,
+      "recent_downloads": 681,
       "categories": [],
       "repository": "https://github.com/akarsh1995/leetcode-tui",
       "ratatui_dependency": {
@@ -13119,8 +13417,8 @@
       "version": "3.3.1",
       "created_at": "2024-12-17T20:10:15.637826Z",
       "updated_at": "2025-10-29T22:11:25.712500Z",
-      "downloads": 5786,
-      "recent_downloads": 2064,
+      "downloads": 5792,
+      "recent_downloads": 2070,
       "categories": [
         "cryptography",
         "web-programming",
@@ -13161,8 +13459,8 @@
       "version": "0.15.4",
       "created_at": "2021-04-30T13:41:02.765574Z",
       "updated_at": "2025-11-12T14:49:04.397918Z",
-      "downloads": 125903,
-      "recent_downloads": 17152,
+      "downloads": 126015,
+      "recent_downloads": 17264,
       "categories": [
         "development-tools::testing",
         "emulators",
@@ -13262,8 +13560,8 @@
       "version": "0.1.1",
       "created_at": "2025-10-02T23:08:22.358500Z",
       "updated_at": "2025-10-03T06:49:17.276720Z",
-      "downloads": 551,
-      "recent_downloads": 551,
+      "downloads": 552,
+      "recent_downloads": 552,
       "categories": [
         "development-tools",
         "command-line-interface"
@@ -13283,8 +13581,8 @@
       "version": "25.9.29",
       "created_at": "2024-09-20T00:14:35.406777Z",
       "updated_at": "2025-09-29T18:37:16.322574Z",
-      "downloads": 13455,
-      "recent_downloads": 3606,
+      "downloads": 13458,
+      "recent_downloads": 3609,
       "categories": [],
       "repository": "https://github.com/ChrisTitusTech/linutil/tree/main/tui",
       "documentation": "https://christitustech.github.io/linutil",
@@ -13384,8 +13682,8 @@
       "version": "0.2.1",
       "created_at": "2025-03-23T15:35:01.223868Z",
       "updated_at": "2025-03-23T15:35:01.223868Z",
-      "downloads": 794,
-      "recent_downloads": 225,
+      "downloads": 795,
+      "recent_downloads": 226,
       "categories": [],
       "repository": "https://github.com/intuis/lemmynator",
       "homepage": "https://github.com/intuis/lemmynator",
@@ -13805,8 +14103,8 @@
       "version": "6.4.0",
       "created_at": "2021-02-05T17:20:02.121845Z",
       "updated_at": "2024-11-03T15:43:46.847829Z",
-      "downloads": 148882,
-      "recent_downloads": 9768,
+      "downloads": 148885,
+      "recent_downloads": 9771,
       "categories": [],
       "repository": "https://github.com/Macchina-CLI/macchina",
       "ratatui_dependency": {
@@ -13929,8 +14227,8 @@
       "version": "0.14.0",
       "created_at": "2024-07-03T19:12:04.754555Z",
       "updated_at": "2025-03-21T18:53:11.050857Z",
-      "downloads": 5434,
-      "recent_downloads": 791,
+      "downloads": 5437,
+      "recent_downloads": 794,
       "categories": [],
       "repository": "https://github.com/maelstrom-software/maelstrom",
       "homepage": "https://maelstrom-software.com",
@@ -14090,8 +14388,8 @@
       "version": "0.2.1",
       "created_at": "2025-06-08T14:37:18.629961Z",
       "updated_at": "2025-06-11T14:02:09.275207Z",
-      "downloads": 1128,
-      "recent_downloads": 344,
+      "downloads": 1129,
+      "recent_downloads": 345,
       "categories": [
         "api-bindings",
         "command-line-interface",
@@ -14112,8 +14410,8 @@
       "version": "0.3.0",
       "created_at": "2024-12-26T00:38:18.454773Z",
       "updated_at": "2025-09-10T10:38:35.744785Z",
-      "downloads": 5148,
-      "recent_downloads": 4393,
+      "downloads": 5150,
+      "recent_downloads": 4395,
       "categories": [
         "command-line-interface"
       ],
@@ -14153,8 +14451,8 @@
       "version": "0.24.0",
       "created_at": "2024-11-18T21:48:22.149852Z",
       "updated_at": "2024-11-18T21:48:22.149852Z",
-      "downloads": 2577,
-      "recent_downloads": 550,
+      "downloads": 2580,
+      "recent_downloads": 553,
       "categories": [
         "command-line-interface"
       ],
@@ -14173,8 +14471,8 @@
       "version": "0.10.0",
       "created_at": "2024-08-04T15:52:18.518569Z",
       "updated_at": "2025-11-13T02:55:11.213650Z",
-      "downloads": 10454,
-      "recent_downloads": 1622,
+      "downloads": 10456,
+      "recent_downloads": 1624,
       "categories": [
         "command-line-interface"
       ],
@@ -14306,8 +14604,8 @@
       "version": "0.1.1",
       "created_at": "2022-08-09T20:23:00.066694Z",
       "updated_at": "2024-01-18T09:10:11.236338Z",
-      "downloads": 3413,
-      "recent_downloads": 386,
+      "downloads": 3414,
+      "recent_downloads": 387,
       "categories": [],
       "repository": "https://github.com/azorng/material",
       "ratatui_dependency": {
@@ -14324,8 +14622,8 @@
       "version": "0.3.4",
       "created_at": "2024-09-23T03:42:09.877020Z",
       "updated_at": "2024-09-26T06:14:06.812343Z",
-      "downloads": 6306,
-      "recent_downloads": 711,
+      "downloads": 6307,
+      "recent_downloads": 712,
       "categories": [],
       "repository": "https://github.com/lucodear/matetui",
       "homepage": "https://github.com/lucodear/matetui",
@@ -14489,8 +14787,8 @@
       "version": "0.9.1",
       "created_at": "2024-02-10T15:44:34.364041Z",
       "updated_at": "2025-09-29T15:59:46.827906Z",
-      "downloads": 44157,
-      "recent_downloads": 3999,
+      "downloads": 44160,
+      "recent_downloads": 4002,
       "categories": [
         "command-line-interface",
         "command-line-utilities"
@@ -14528,11 +14826,11 @@
       "id": "mdfried",
       "name": "mdfried",
       "description": "A markdown viewer for the terminal that renders images and big headers",
-      "version": "0.14.5",
+      "version": "0.14.6",
       "created_at": "2024-12-14T11:36:48.133369Z",
-      "updated_at": "2025-11-15T20:20:05.661377Z",
-      "downloads": 14123,
-      "recent_downloads": 3804,
+      "updated_at": "2025-11-17T09:52:02.284794Z",
+      "downloads": 14140,
+      "recent_downloads": 3821,
       "categories": [],
       "repository": "https://github.com/benjajaja/mdfried",
       "homepage": "https://github.com/benjajaja/mdfried",
@@ -14668,8 +14966,8 @@
       "version": "0.3.0",
       "created_at": "2024-10-13T21:18:19.878667Z",
       "updated_at": "2024-10-13T21:18:19.878667Z",
-      "downloads": 1279,
-      "recent_downloads": 211,
+      "downloads": 1280,
+      "recent_downloads": 212,
       "categories": [],
       "repository": "https://github.com/paulvandermeijs/memos-cli",
       "ratatui_dependency": {
@@ -14723,6 +15021,29 @@
       "is_core_library": false
     },
     {
+      "id": "mermaid-cli",
+      "name": "mermaid-cli",
+      "description": "Open-source AI pair programmer with agentic capabilities. Local-first with Ollama, native tool calling, and beautiful TUI.",
+      "version": "0.2.0",
+      "created_at": "2025-11-17T01:31:51.036676Z",
+      "updated_at": "2025-11-17T01:31:51.036676Z",
+      "downloads": 20,
+      "recent_downloads": 20,
+      "categories": [
+        "development-tools",
+        "command-line-utilities"
+      ],
+      "repository": "https://github.com/noahsabaj/mermaid-cli",
+      "homepage": "https://github.com/noahsabaj/mermaid-cli",
+      "documentation": "https://github.com/noahsabaj/mermaid-cli#readme",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "metarepo",
       "name": "metarepo",
       "description": "A powerful multi-project management tool inspired by the meta npm package - manage multiple git repositories with ease",
@@ -14752,8 +15073,8 @@
       "version": "0.10.6",
       "created_at": "2025-09-05T22:34:32.504260Z",
       "updated_at": "2025-11-13T19:55:36.062218Z",
-      "downloads": 4498,
-      "recent_downloads": 4498,
+      "downloads": 4499,
+      "recent_downloads": 4499,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -14775,8 +15096,8 @@
       "version": "0.9.2",
       "created_at": "2025-07-10T22:25:56.978383Z",
       "updated_at": "2025-11-14T02:55:31.541768Z",
-      "downloads": 5003,
-      "recent_downloads": 3523,
+      "downloads": 5004,
+      "recent_downloads": 3524,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -14907,8 +15228,8 @@
       "version": "0.0.0",
       "created_at": "2025-07-28T17:14:19.782217Z",
       "updated_at": "2025-07-28T17:14:19.782217Z",
-      "downloads": 477,
-      "recent_downloads": 268,
+      "downloads": 478,
+      "recent_downloads": 269,
       "categories": [],
       "repository": "https://github.com/yourusername/mimir",
       "ratatui_dependency": {
@@ -15034,8 +15355,8 @@
       "version": "0.1.16",
       "created_at": "2023-11-04T13:21:34.890826Z",
       "updated_at": "2023-12-02T01:27:09.703415Z",
-      "downloads": 18252,
-      "recent_downloads": 1328,
+      "downloads": 18253,
+      "recent_downloads": 1329,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -15162,8 +15483,8 @@
       "version": "0.0.24",
       "created_at": "2024-02-01T09:15:21.095729Z",
       "updated_at": "2025-08-16T23:29:50.643958Z",
-      "downloads": 15574,
-      "recent_downloads": 2485,
+      "downloads": 15575,
+      "recent_downloads": 2486,
       "categories": [],
       "repository": "https://github.com/ulyssa/modalkit",
       "homepage": "https://github.com/ulyssa/modalkit/tree/main/crates/modalkit-ratatui",
@@ -15780,8 +16101,8 @@
       "version": "0.2.2",
       "created_at": "2024-04-29T15:59:44.508689Z",
       "updated_at": "2024-05-01T15:11:24.433457Z",
-      "downloads": 12965,
-      "recent_downloads": 1089,
+      "downloads": 12972,
+      "recent_downloads": 1096,
       "categories": [],
       "repository": "https://github.com/N8BWert/nengine",
       "ratatui_dependency": {
@@ -15838,8 +16159,8 @@
       "version": "0.5.0",
       "created_at": "2023-10-24T09:18:55.357361Z",
       "updated_at": "2025-10-31T17:55:21.409504Z",
-      "downloads": 10168,
-      "recent_downloads": 2015,
+      "downloads": 10169,
+      "recent_downloads": 2016,
       "categories": [],
       "repository": "https://github.com/Neptune-Crypto/neptune-core/",
       "homepage": "https://neptune.cash/",
@@ -15967,8 +16288,8 @@
       "version": "0.5.7",
       "created_at": "2025-05-30T01:53:04.478639Z",
       "updated_at": "2025-11-13T00:51:09.613748Z",
-      "downloads": 4857,
-      "recent_downloads": 2272,
+      "downloads": 4858,
+      "recent_downloads": 2273,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -15989,8 +16310,8 @@
       "version": "0.6.3",
       "created_at": "2023-12-11T19:03:30.790301Z",
       "updated_at": "2025-03-09T01:03:26.572881Z",
-      "downloads": 34563,
-      "recent_downloads": 3155,
+      "downloads": 34567,
+      "recent_downloads": 3159,
       "categories": [],
       "repository": "https://github.com/Chleba/netscanner",
       "homepage": "https://github.com/Chleba/netscanner",
@@ -16129,8 +16450,8 @@
       "version": "0.1.0",
       "created_at": "2025-07-02T15:08:58.931963Z",
       "updated_at": "2025-07-02T15:08:58.931963Z",
-      "downloads": 596,
-      "recent_downloads": 308,
+      "downloads": 598,
+      "recent_downloads": 310,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -16582,8 +16903,8 @@
       "version": "0.108.0",
       "created_at": "2022-12-20T19:25:13.377059Z",
       "updated_at": "2025-10-15T13:08:27.759830Z",
-      "downloads": 199373,
-      "recent_downloads": 20164,
+      "downloads": 199403,
+      "recent_downloads": 20194,
       "categories": [],
       "repository": "https://github.com/nushell/nushell/tree/main/crates/nu-explore",
       "ratatui_dependency": {
@@ -16618,10 +16939,31 @@
       "version": "0.1.6",
       "created_at": "2024-04-05T13:28:01.979229Z",
       "updated_at": "2024-04-29T14:37:24.684040Z",
-      "downloads": 8444,
-      "recent_downloads": 664,
+      "downloads": 8450,
+      "recent_downloads": 670,
       "categories": [],
       "repository": "https://github.com/monishth/nucleo-ui",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "numby",
+      "name": "numby",
+      "description": "A powerful natural language calculator with a terminal user interface",
+      "version": "0.1.4",
+      "created_at": "2025-11-15T06:06:18.446765Z",
+      "updated_at": "2025-11-15T08:26:56.487451Z",
+      "downloads": 66,
+      "recent_downloads": 66,
+      "categories": [
+        "command-line-utilities",
+        "mathematics"
+      ],
+      "repository": "https://github.com/vivy-company/numby",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -16810,8 +17152,8 @@
       "version": "0.1.0",
       "created_at": "2023-06-05T08:08:58.481057Z",
       "updated_at": "2023-06-05T08:08:58.481057Z",
-      "downloads": 1910,
-      "recent_downloads": 219,
+      "downloads": 1911,
+      "recent_downloads": 220,
       "categories": [],
       "repository": "https://github.com/schwartx/octoproxy",
       "ratatui_dependency": {
@@ -16887,8 +17229,8 @@
       "version": "1.11.0",
       "created_at": "2020-03-08T07:14:47.871283Z",
       "updated_at": "2025-11-01T06:46:52.898986Z",
-      "downloads": 129732,
-      "recent_downloads": 10834,
+      "downloads": 129741,
+      "recent_downloads": 10843,
       "categories": [
         "command-line-utilities",
         "development-tools::profiling",
@@ -17085,8 +17427,8 @@
       "version": "0.10.2",
       "created_at": "2024-03-09T16:25:36.279463Z",
       "updated_at": "2025-03-07T12:57:02.573639Z",
-      "downloads": 24210,
-      "recent_downloads": 2056,
+      "downloads": 24211,
+      "recent_downloads": 2057,
       "categories": [],
       "repository": "https://github.com/zaghaghi/openapi-tui",
       "homepage": "https://github.com/zaghaghi/openapi-tui",
@@ -17104,8 +17446,8 @@
       "version": "0.1.0",
       "created_at": "2024-02-29T15:16:23.412722Z",
       "updated_at": "2024-06-10T16:50:49.027972Z",
-      "downloads": 16971,
-      "recent_downloads": 1535,
+      "downloads": 16972,
+      "recent_downloads": 1536,
       "categories": [
         "command-line-utilities",
         "science",
@@ -17288,14 +17630,35 @@
       "is_core_library": false
     },
     {
+      "id": "osatui",
+      "name": "osatui",
+      "description": "Terminal UI client for educational schedule API with interactive college, campus and group selection",
+      "version": "0.1.0",
+      "created_at": "2025-11-15T15:49:04.331975Z",
+      "updated_at": "2025-11-15T15:49:04.331975Z",
+      "downloads": 23,
+      "recent_downloads": 23,
+      "categories": [
+        "api-bindings",
+        "command-line-utilities"
+      ],
+      "repository": "https://github.com/bircoder432/osatui",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "ostool",
       "name": "ostool",
       "description": "A tool for operating system development",
       "version": "0.8.0",
       "created_at": "2024-10-23T06:43:36.567584Z",
       "updated_at": "2025-11-13T01:55:58.259072Z",
-      "downloads": 55471,
-      "recent_downloads": 9251,
+      "downloads": 55479,
+      "recent_downloads": 9259,
       "categories": [
         "development-tools",
         "os",
@@ -17339,8 +17702,8 @@
       "version": "1.1.0",
       "created_at": "2025-03-08T01:03:42.105399Z",
       "updated_at": "2025-07-08T16:25:19.874976Z",
-      "downloads": 4460,
-      "recent_downloads": 1332,
+      "downloads": 4461,
+      "recent_downloads": 1333,
       "categories": [
         "os::windows-apis"
       ],
@@ -17433,8 +17796,8 @@
       "version": "0.12.0",
       "created_at": "2022-07-23T13:57:15.048809Z",
       "updated_at": "2025-09-28T08:55:20.448634Z",
-      "downloads": 46873,
-      "recent_downloads": 5337,
+      "downloads": 46880,
+      "recent_downloads": 5344,
       "categories": [
         "command-line-utilities"
       ],
@@ -17624,8 +17987,8 @@
       "version": "0.1.0",
       "created_at": "2025-06-25T23:09:23.517912Z",
       "updated_at": "2025-06-25T23:09:23.517912Z",
-      "downloads": 1050,
-      "recent_downloads": 559,
+      "downloads": 1051,
+      "recent_downloads": 560,
       "categories": [
         "command-line-interface",
         "parser-implementations"
@@ -17896,8 +18259,8 @@
       "version": "0.27.0",
       "created_at": "2024-08-10T13:27:49.273122Z",
       "updated_at": "2025-11-12T09:58:05.513085Z",
-      "downloads": 30291,
-      "recent_downloads": 4880,
+      "downloads": 30297,
+      "recent_downloads": 4886,
       "categories": [
         "command-line-utilities"
       ],
@@ -18033,8 +18396,8 @@
       "version": "0.4.3",
       "created_at": "2023-08-01T01:41:28.250478Z",
       "updated_at": "2024-02-23T00:49:09.749678Z",
-      "downloads": 6960,
-      "recent_downloads": 911,
+      "downloads": 6961,
+      "recent_downloads": 912,
       "categories": [],
       "repository": "https://github.com/DioxusLabs/dioxus/",
       "homepage": "https://dioxuslabs.com",
@@ -18092,8 +18455,8 @@
       "version": "0.3.0",
       "created_at": "2023-11-05T03:39:59.898117Z",
       "updated_at": "2025-04-05T07:36:21.584958Z",
-      "downloads": 12989,
-      "recent_downloads": 782,
+      "downloads": 12990,
+      "recent_downloads": 783,
       "categories": [],
       "repository": "https://github.com/SOF3/plotters-ratatui-backend",
       "ratatui_dependency": {
@@ -18144,11 +18507,11 @@
       "id": "pmat",
       "name": "pmat",
       "description": "PMAT - Zero-config AI context generation and code quality toolkit (CLI, MCP, HTTP)",
-      "version": "2.195.0",
+      "version": "2.196.0",
       "created_at": "2025-07-03T14:05:27.924010Z",
-      "updated_at": "2025-11-14T11:38:07.723051Z",
-      "downloads": 61960,
-      "recent_downloads": 52779,
+      "updated_at": "2025-11-17T12:50:16.456351Z",
+      "downloads": 61989,
+      "recent_downloads": 52808,
       "categories": [
         "development-tools::testing",
         "development-tools",
@@ -18170,8 +18533,8 @@
       "version": "0.21.1",
       "created_at": "2024-02-10T15:55:42.817876Z",
       "updated_at": "2025-11-13T09:21:01.895778Z",
-      "downloads": 36692,
-      "recent_downloads": 6530,
+      "downloads": 36714,
+      "recent_downloads": 6552,
       "categories": [],
       "repository": "https://github.com/LAPKB/PMcore",
       "documentation": "https://lapkb.github.io/PMcore/pmcore/",
@@ -18568,8 +18931,8 @@
       "version": "0.30.0",
       "created_at": "2019-10-23T21:32:12.446166Z",
       "updated_at": "2025-10-31T15:13:22.173819Z",
-      "downloads": 300406,
-      "recent_downloads": 34374,
+      "downloads": 300489,
+      "recent_downloads": 34457,
       "categories": [
         "development-tools::debugging",
         "hardware-support",
@@ -18592,8 +18955,8 @@
       "version": "0.30.0",
       "created_at": "2024-05-22T22:03:53.261553Z",
       "updated_at": "2025-10-31T15:18:30.937121Z",
-      "downloads": 35668,
-      "recent_downloads": 7493,
+      "downloads": 35681,
+      "recent_downloads": 7506,
       "categories": [],
       "repository": "https://github.com/probe-rs/probe-rs",
       "homepage": "https://probe.rs",
@@ -18689,8 +19052,8 @@
       "version": "0.1.0",
       "created_at": "2025-08-14T10:14:31.964200Z",
       "updated_at": "2025-08-14T10:14:31.964200Z",
-      "downloads": 439,
-      "recent_downloads": 284,
+      "downloads": 440,
+      "recent_downloads": 285,
       "categories": [
         "network-programming"
       ],
@@ -18710,8 +19073,8 @@
       "version": "0.8.0",
       "created_at": "2022-03-10T06:26:07.876001Z",
       "updated_at": "2024-01-12T04:45:07.002208Z",
-      "downloads": 14846,
-      "recent_downloads": 1141,
+      "downloads": 14847,
+      "recent_downloads": 1142,
       "categories": [
         "command-line-utilities"
       ],
@@ -18876,8 +19239,8 @@
       "version": "0.5.0",
       "created_at": "2023-10-17T03:53:18.384092Z",
       "updated_at": "2024-01-05T05:42:11.250615Z",
-      "downloads": 11178,
-      "recent_downloads": 917,
+      "downloads": 11179,
+      "recent_downloads": 918,
       "categories": [
         "development-tools",
         "emulators",
@@ -18978,8 +19341,8 @@
       "version": "0.4.0",
       "created_at": "2024-03-29T15:24:26.935865Z",
       "updated_at": "2025-11-05T22:49:46.594831Z",
-      "downloads": 23199,
-      "recent_downloads": 3344,
+      "downloads": 23205,
+      "recent_downloads": 3351,
       "categories": [
         "network-programming",
         "web-programming"
@@ -19164,8 +19527,8 @@
       "version": "1.1.0",
       "created_at": "2024-11-11T19:21:39.133762Z",
       "updated_at": "2025-11-02T18:31:24.158696Z",
-      "downloads": 12568,
-      "recent_downloads": 2545,
+      "downloads": 12582,
+      "recent_downloads": 2559,
       "categories": [
         "command-line-utilities",
         "graphics"
@@ -19206,8 +19569,8 @@
       "version": "0.4.1",
       "created_at": "2024-05-02T06:36:44.201680Z",
       "updated_at": "2025-06-24T16:53:24.760036Z",
-      "downloads": 169949,
-      "recent_downloads": 44350,
+      "downloads": 170008,
+      "recent_downloads": 44409,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -19282,7 +19645,7 @@
       "created_at": "2024-12-26T21:24:22.120778Z",
       "updated_at": "2025-10-26T00:51:18.040357Z",
       "downloads": 12202,
-      "recent_downloads": 4901,
+      "recent_downloads": 4903,
       "categories": [
         "caching",
         "data-structures"
@@ -19468,8 +19831,8 @@
       "version": "0.3.10",
       "created_at": "2024-08-06T20:48:25.655725Z",
       "updated_at": "2025-11-07T22:36:30.802071Z",
-      "downloads": 41273,
-      "recent_downloads": 5637,
+      "downloads": 41277,
+      "recent_downloads": 5641,
       "categories": [],
       "repository": "https://github.com/achristmascarl/rainfrog",
       "ratatui_dependency": {
@@ -19506,8 +19869,8 @@
       "version": "0.5.2",
       "created_at": "2024-05-05T19:01:17.311196Z",
       "updated_at": "2024-05-20T20:05:51.448953Z",
-      "downloads": 7357,
-      "recent_downloads": 652,
+      "downloads": 7358,
+      "recent_downloads": 653,
       "categories": [
         "api-bindings"
       ],
@@ -19637,8 +20000,8 @@
       "version": "0.7.2",
       "created_at": "2025-02-10T05:02:13.688328Z",
       "updated_at": "2025-11-08T04:21:29.195809Z",
-      "downloads": 3265,
-      "recent_downloads": 1956,
+      "downloads": 3266,
+      "recent_downloads": 1957,
       "categories": [
         "command-line-interface"
       ],
@@ -19657,8 +20020,8 @@
       "version": "1.3.0",
       "created_at": "2024-05-08T17:46:50.859880Z",
       "updated_at": "2025-11-08T04:19:55.336138Z",
-      "downloads": 50480,
-      "recent_downloads": 8515,
+      "downloads": 50510,
+      "recent_downloads": 8545,
       "categories": [
         "command-line-interface"
       ],
@@ -19677,8 +20040,8 @@
       "version": "1.5.0",
       "created_at": "2024-05-18T20:08:52.428629Z",
       "updated_at": "2025-11-12T21:53:47.226544Z",
-      "downloads": 39642,
-      "recent_downloads": 8053,
+      "downloads": 39673,
+      "recent_downloads": 8084,
       "categories": [
         "command-line-interface"
       ],
@@ -19714,8 +20077,8 @@
       "version": "1.2.1",
       "created_at": "2024-05-13T03:42:27.821054Z",
       "updated_at": "2025-11-06T20:21:29.445239Z",
-      "downloads": 44227,
-      "recent_downloads": 5901,
+      "downloads": 44242,
+      "recent_downloads": 5916,
       "categories": [
         "command-line-interface"
       ],
@@ -19734,8 +20097,8 @@
       "version": "0.17.0",
       "created_at": "2024-05-03T17:28:13.842811Z",
       "updated_at": "2024-07-03T16:48:30.334622Z",
-      "downloads": 23662,
-      "recent_downloads": 1831,
+      "downloads": 23663,
+      "recent_downloads": 1832,
       "categories": [
         "command-line-interface"
       ],
@@ -19754,8 +20117,8 @@
       "version": "0.6.2",
       "created_at": "2025-01-27T08:14:08.828264Z",
       "updated_at": "2025-11-08T04:20:23.317237Z",
-      "downloads": 5976,
-      "recent_downloads": 1497,
+      "downloads": 5977,
+      "recent_downloads": 1498,
       "categories": [
         "command-line-interface"
       ],
@@ -19774,8 +20137,8 @@
       "version": "2.1.0",
       "created_at": "2024-10-08T17:49:58.238520Z",
       "updated_at": "2025-11-12T21:54:05.048687Z",
-      "downloads": 15404,
-      "recent_downloads": 3918,
+      "downloads": 15420,
+      "recent_downloads": 3934,
       "categories": [
         "command-line-interface"
       ],
@@ -19794,8 +20157,8 @@
       "version": "2.2.0",
       "created_at": "2024-10-13T18:01:22.830255Z",
       "updated_at": "2025-11-12T21:53:56.784926Z",
-      "downloads": 15015,
-      "recent_downloads": 3988,
+      "downloads": 15032,
+      "recent_downloads": 4005,
       "categories": [
         "command-line-interface"
       ],
@@ -19814,8 +20177,8 @@
       "version": "1.4.0",
       "created_at": "2024-11-01T19:51:37.236351Z",
       "updated_at": "2025-11-12T21:53:39.909647Z",
-      "downloads": 18569,
-      "recent_downloads": 5551,
+      "downloads": 18599,
+      "recent_downloads": 5581,
       "categories": [
         "command-line-interface"
       ],
@@ -19834,8 +20197,8 @@
       "version": "2.4.0",
       "created_at": "2024-06-10T18:29:37.649720Z",
       "updated_at": "2025-11-12T22:00:44.247008Z",
-      "downloads": 27372,
-      "recent_downloads": 5954,
+      "downloads": 27381,
+      "recent_downloads": 5963,
       "categories": [
         "command-line-interface"
       ],
@@ -19854,8 +20217,8 @@
       "version": "1.3.1",
       "created_at": "2024-05-18T15:32:05.407605Z",
       "updated_at": "2025-11-06T20:20:28.825760Z",
-      "downloads": 31260,
-      "recent_downloads": 6195,
+      "downloads": 31286,
+      "recent_downloads": 6221,
       "categories": [
         "command-line-interface"
       ],
@@ -19874,8 +20237,8 @@
       "version": "2.3.0",
       "created_at": "2024-08-25T16:16:14.646428Z",
       "updated_at": "2025-11-12T21:54:15.586802Z",
-      "downloads": 32537,
-      "recent_downloads": 6543,
+      "downloads": 32562,
+      "recent_downloads": 6568,
       "categories": [
         "command-line-interface"
       ],
@@ -19894,8 +20257,8 @@
       "version": "0.29.2",
       "created_at": "2024-06-15T23:00:00.577427Z",
       "updated_at": "2025-11-08T04:20:47.594222Z",
-      "downloads": 20256,
-      "recent_downloads": 3019,
+      "downloads": 20257,
+      "recent_downloads": 3020,
       "categories": [
         "command-line-interface"
       ],
@@ -19914,8 +20277,8 @@
       "version": "1.4.2",
       "created_at": "2025-01-31T04:47:29.546552Z",
       "updated_at": "2025-11-08T04:20:54.079811Z",
-      "downloads": 2801,
-      "recent_downloads": 1371,
+      "downloads": 2802,
+      "recent_downloads": 1372,
       "categories": [
         "command-line-interface"
       ],
@@ -19934,8 +20297,8 @@
       "version": "2.3.2",
       "created_at": "2025-09-30T18:52:21.760813Z",
       "updated_at": "2025-11-08T04:21:04.160918Z",
-      "downloads": 1118,
-      "recent_downloads": 1118,
+      "downloads": 1126,
+      "recent_downloads": 1126,
       "categories": [
         "command-line-interface"
       ],
@@ -19954,8 +20317,8 @@
       "version": "3.1.0",
       "created_at": "2025-11-06T20:23:18.696719Z",
       "updated_at": "2025-11-12T22:00:25.660630Z",
-      "downloads": 67,
-      "recent_downloads": 67,
+      "downloads": 68,
+      "recent_downloads": 68,
       "categories": [
         "command-line-interface"
       ],
@@ -19974,8 +20337,8 @@
       "version": "2.4.0",
       "created_at": "2024-05-20T22:04:53.111136Z",
       "updated_at": "2025-11-12T21:54:30.269516Z",
-      "downloads": 35643,
-      "recent_downloads": 6151,
+      "downloads": 35658,
+      "recent_downloads": 6166,
       "categories": [
         "command-line-interface"
       ],
@@ -20004,6 +20367,24 @@
       ],
       "repository": "https://github.com/nw-wood/rata-tetris",
       "homepage": "https://github.com/nw-wood/rata-tetris",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "ratapp",
+      "name": "ratapp",
+      "description": "A tiny framework to build multi-screen async applications with ratatui.",
+      "version": "0.4.0",
+      "created_at": "2025-11-16T03:32:29.359694Z",
+      "updated_at": "2025-11-16T07:55:48.028964Z",
+      "downloads": 50,
+      "recent_downloads": 50,
+      "categories": [],
+      "repository": "https://github.com/Nekidev/ratapp",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -20159,8 +20540,8 @@
       "version": "0.0.1",
       "created_at": "2025-10-16T12:14:17.685022Z",
       "updated_at": "2025-10-16T12:14:17.685022Z",
-      "downloads": 307,
-      "recent_downloads": 307,
+      "downloads": 316,
+      "recent_downloads": 316,
       "categories": [
         "command-line-interface",
         "text-editors"
@@ -20220,8 +20601,8 @@
       "version": "0.2.1",
       "created_at": "2024-02-19T02:06:50.565120Z",
       "updated_at": "2025-05-06T17:35:37.439390Z",
-      "downloads": 36912,
-      "recent_downloads": 11944,
+      "downloads": 37012,
+      "recent_downloads": 12044,
       "categories": [
         "command-line-interface",
         "filesystem"
@@ -20302,8 +20683,8 @@
       "version": "8.0.2",
       "created_at": "2023-09-17T11:11:09.663522Z",
       "updated_at": "2025-11-08T12:38:45.850568Z",
-      "downloads": 196810,
-      "recent_downloads": 63783,
+      "downloads": 197100,
+      "recent_downloads": 64074,
       "categories": [],
       "repository": "https://github.com/benjajaja/ratatui-image",
       "homepage": "https://github.com/benjajaja/ratatui-image",
@@ -20321,8 +20702,8 @@
       "version": "0.5.9",
       "created_at": "2025-06-09T08:55:59.337780Z",
       "updated_at": "2025-10-30T08:18:25.427499Z",
-      "downloads": 7581,
-      "recent_downloads": 4278,
+      "downloads": 7583,
+      "recent_downloads": 4280,
       "categories": [],
       "repository": "https://github.com/yexiyue/ratatui-kit",
       "ratatui_dependency": {
@@ -20360,8 +20741,8 @@
       "version": "0.1.4",
       "created_at": "2024-03-14T19:06:23.371143Z",
       "updated_at": "2024-08-09T18:52:38.687941Z",
-      "downloads": 56242,
-      "recent_downloads": 3625,
+      "downloads": 56248,
+      "recent_downloads": 3632,
       "categories": [
         "command-line-interface",
         "gui"
@@ -20437,8 +20818,8 @@
       "version": "0.4.1",
       "created_at": "2023-09-15T16:25:17.240033Z",
       "updated_at": "2024-01-22T08:52:44.202557Z",
-      "downloads": 11165,
-      "recent_downloads": 1321,
+      "downloads": 11166,
+      "recent_downloads": 1322,
       "categories": [
         "text-editors",
         "text-processing"
@@ -20765,8 +21146,8 @@
       "version": "0.3.0",
       "created_at": "2025-01-25T09:25:37.700578Z",
       "updated_at": "2025-11-08T12:50:14.110417Z",
-      "downloads": 3253,
-      "recent_downloads": 981,
+      "downloads": 3266,
+      "recent_downloads": 994,
       "categories": [],
       "repository": "https://github.com/benjajaja/mdfried/ratskin",
       "homepage": "https://github.com/benjajaja/mdfried/ratskin",
@@ -20842,8 +21223,8 @@
       "version": "0.2.0",
       "created_at": "2025-01-09T19:22:13.913585Z",
       "updated_at": "2025-09-28T14:18:56.200010Z",
-      "downloads": 13637,
-      "recent_downloads": 3839,
+      "downloads": 13651,
+      "recent_downloads": 3853,
       "categories": [
         "wasm"
       ],
@@ -20863,8 +21244,8 @@
       "version": "0.3.1",
       "created_at": "2024-05-20T23:18:43.489686Z",
       "updated_at": "2025-06-16T16:02:01.392997Z",
-      "downloads": 11268,
-      "recent_downloads": 1297,
+      "downloads": 11271,
+      "recent_downloads": 1300,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -21205,8 +21586,8 @@
       "version": "0.2.0",
       "created_at": "2025-10-31T00:32:53.136311Z",
       "updated_at": "2025-11-01T20:09:34.870997Z",
-      "downloads": 88,
-      "recent_downloads": 88,
+      "downloads": 92,
+      "recent_downloads": 92,
       "categories": [
         "asynchronous",
         "command-line-interface",
@@ -21229,8 +21610,8 @@
       "version": "0.2.0",
       "created_at": "2025-10-31T00:37:03.718822Z",
       "updated_at": "2025-11-01T20:14:07.632589Z",
-      "downloads": 68,
-      "recent_downloads": 68,
+      "downloads": 70,
+      "recent_downloads": 70,
       "categories": [
         "asynchronous",
         "command-line-interface",
@@ -21253,8 +21634,8 @@
       "version": "0.2.0",
       "created_at": "2025-10-31T00:34:51.991879Z",
       "updated_at": "2025-11-01T20:16:38.198956Z",
-      "downloads": 59,
-      "recent_downloads": 59,
+      "downloads": 60,
+      "recent_downloads": 60,
       "categories": [
         "asynchronous",
         "command-line-interface",
@@ -21277,8 +21658,8 @@
       "version": "0.2.0",
       "created_at": "2025-10-31T00:39:06.360418Z",
       "updated_at": "2025-11-01T20:20:04.787580Z",
-      "downloads": 59,
-      "recent_downloads": 59,
+      "downloads": 60,
+      "recent_downloads": 60,
       "categories": [
         "asynchronous",
         "command-line-interface",
@@ -21654,8 +22035,8 @@
       "version": "0.2.1",
       "created_at": "2024-03-26T15:41:59.277620Z",
       "updated_at": "2024-12-28T13:18:16.080825Z",
-      "downloads": 89506,
-      "recent_downloads": 64387,
+      "downloads": 90061,
+      "recent_downloads": 64956,
       "categories": [
         "command-line-utilities",
         "development-tools::profiling",
@@ -21676,8 +22057,8 @@
       "version": "0.5.1",
       "created_at": "2024-03-18T13:08:41.893766Z",
       "updated_at": "2025-01-02T11:49:36.755117Z",
-      "downloads": 8829,
-      "recent_downloads": 910,
+      "downloads": 8832,
+      "recent_downloads": 913,
       "categories": [],
       "repository": "https://github.com/intuis/rustmission",
       "homepage": "https://github.com/intuis/rustmission",
@@ -21695,8 +22076,8 @@
       "version": "0.5.1",
       "created_at": "2024-07-08T18:28:58.945845Z",
       "updated_at": "2025-01-02T11:48:58.162479Z",
-      "downloads": 6616,
-      "recent_downloads": 818,
+      "downloads": 6620,
+      "recent_downloads": 822,
       "categories": [],
       "repository": "https://github.com/intuis/rustmission",
       "homepage": "https://github.com/intuis/rustmission",
@@ -21756,8 +22137,8 @@
       "version": "0.10.0",
       "created_at": "2024-01-27T16:42:40.517073Z",
       "updated_at": "2025-11-11T18:20:05.265900Z",
-      "downloads": 16239,
-      "recent_downloads": 2402,
+      "downloads": 16245,
+      "recent_downloads": 2408,
       "categories": [],
       "repository": "https://github.com/mierak/rmpc",
       "homepage": "https://mierak.github.io/rmpc/",
@@ -21954,8 +22335,8 @@
       "version": "0.8.0",
       "created_at": "2025-10-28T01:13:14.305270Z",
       "updated_at": "2025-11-05T06:09:51.711577Z",
-      "downloads": 470,
-      "recent_downloads": 470,
+      "downloads": 471,
+      "recent_downloads": 471,
       "categories": [],
       "repository": "https://github.com/trey-herrington/roxid",
       "documentation": "https://docs.rs/roxid-tui",
@@ -22259,8 +22640,8 @@
       "version": "0.7.0",
       "created_at": "2024-07-21T22:47:58.006415Z",
       "updated_at": "2025-10-24T23:04:45.858317Z",
-      "downloads": 8081,
-      "recent_downloads": 1476,
+      "downloads": 8082,
+      "recent_downloads": 1477,
       "categories": [
         "command-line-interface"
       ],
@@ -22337,8 +22718,8 @@
       "version": "0.9.0",
       "created_at": "2023-02-21T17:05:56.329267Z",
       "updated_at": "2025-09-21T16:22:44.266450Z",
-      "downloads": 10179,
-      "recent_downloads": 1460,
+      "downloads": 10180,
+      "recent_downloads": 1461,
       "categories": [
         "algorithms",
         "science"
@@ -22358,8 +22739,8 @@
       "version": "0.0.1",
       "created_at": "2025-09-27T17:23:17.182981Z",
       "updated_at": "2025-09-28T10:15:50.145169Z",
-      "downloads": 548,
-      "recent_downloads": 548,
+      "downloads": 549,
+      "recent_downloads": 549,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -22418,8 +22799,8 @@
       "version": "0.54.6",
       "created_at": "2022-03-13T11:15:55.112362Z",
       "updated_at": "2025-10-13T16:52:37.321352Z",
-      "downloads": 1719663,
-      "recent_downloads": 355675,
+      "downloads": 1721169,
+      "recent_downloads": 357183,
       "categories": [],
       "repository": "https://github.com/warp-tech/russh",
       "homepage": "https://github.com/warp-tech/russh",
@@ -22600,8 +22981,8 @@
       "version": "0.10.2",
       "created_at": "2022-03-14T15:42:56.792189Z",
       "updated_at": "2025-11-11T22:14:02.363171Z",
-      "downloads": 40137,
-      "recent_downloads": 4120,
+      "downloads": 40138,
+      "recent_downloads": 4121,
       "categories": [
         "command-line-utilities"
       ],
@@ -22622,8 +23003,8 @@
       "version": "6.5.0",
       "created_at": "2022-04-08T07:08:57.977550Z",
       "updated_at": "2025-08-21T22:05:31.382903Z",
-      "downloads": 150990,
-      "recent_downloads": 23593,
+      "downloads": 151079,
+      "recent_downloads": 23682,
       "categories": [],
       "repository": "https://github.com/rust-lang/rustlings",
       "ratatui_dependency": {
@@ -22659,8 +23040,8 @@
       "version": "0.15.0",
       "created_at": "2025-09-12T07:42:08.762493Z",
       "updated_at": "2025-10-25T19:40:30.787392Z",
-      "downloads": 2476,
-      "recent_downloads": 2476,
+      "downloads": 2477,
+      "recent_downloads": 2477,
       "categories": [
         "command-line-utilities",
         "network-programming",
@@ -22701,8 +23082,8 @@
       "version": "0.14.2",
       "created_at": "2023-09-13T22:00:44.079737Z",
       "updated_at": "2025-05-19T19:23:15.085794Z",
-      "downloads": 84250,
-      "recent_downloads": 7635,
+      "downloads": 84255,
+      "recent_downloads": 7640,
       "categories": [],
       "repository": "https://github.com/ThomasHabets/rustradio",
       "ratatui_dependency": {
@@ -22719,8 +23100,8 @@
       "version": "0.1.4",
       "created_at": "2024-04-24T19:25:22.470257Z",
       "updated_at": "2024-08-31T20:19:33.850874Z",
-      "downloads": 7613,
-      "recent_downloads": 667,
+      "downloads": 7614,
+      "recent_downloads": 668,
       "categories": [
         "command-line-utilities"
       ],
@@ -22813,6 +23194,24 @@
       "repository": "https://github.com/softberries/s3tui",
       "homepage": "https://github.com/softberries/s3tui",
       "documentation": "https://docs.rs/s3tui",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "sabita_tui",
+      "name": "sabita_tui",
+      "description": "A TUI for the Sabita sudoku package",
+      "version": "0.1.0",
+      "created_at": "2025-11-15T12:49:54.374017Z",
+      "updated_at": "2025-11-15T12:49:54.374017Z",
+      "downloads": 19,
+      "recent_downloads": 19,
+      "categories": [],
+      "repository": "https://github.com/MikyStar/Sabita-TUI",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -22971,8 +23370,8 @@
       "version": "0.3.3",
       "created_at": "2025-11-07T10:07:47.811229Z",
       "updated_at": "2025-11-16T18:13:32.358513Z",
-      "downloads": 156,
-      "recent_downloads": 156,
+      "downloads": 165,
+      "recent_downloads": 165,
       "categories": [
         "command-line-interface",
         "config"
@@ -23017,8 +23416,8 @@
       "version": "0.9.0",
       "created_at": "2023-08-19T21:07:08.855910Z",
       "updated_at": "2025-11-12T20:51:10.854292Z",
-      "downloads": 335699,
-      "recent_downloads": 56816,
+      "downloads": 335944,
+      "recent_downloads": 57061,
       "categories": [],
       "repository": "https://github.com/arxanas/scm-record",
       "ratatui_dependency": {
@@ -23035,8 +23434,8 @@
       "version": "0.8.3",
       "created_at": "2024-11-13T19:26:40.628983Z",
       "updated_at": "2025-11-06T17:32:42.598332Z",
-      "downloads": 12910,
-      "recent_downloads": 2910,
+      "downloads": 12911,
+      "recent_downloads": 2911,
       "categories": [
         "command-line-utilities"
       ],
@@ -23075,8 +23474,8 @@
       "version": "0.3.2",
       "created_at": "2024-03-16T05:47:16.047524Z",
       "updated_at": "2025-05-22T17:19:10.122715Z",
-      "downloads": 2577,
-      "recent_downloads": 413,
+      "downloads": 2580,
+      "recent_downloads": 416,
       "categories": [],
       "repository": "https://git.alemi.dev/scope-tui.git",
       "ratatui_dependency": {
@@ -23362,8 +23761,8 @@
       "version": "1.0.6",
       "created_at": "2025-09-14T02:24:53.620823Z",
       "updated_at": "2025-09-14T03:11:27.899173Z",
-      "downloads": 709,
-      "recent_downloads": 709,
+      "downloads": 711,
+      "recent_downloads": 711,
       "categories": [
         "command-line-utilities",
         "cryptography"
@@ -23467,8 +23866,8 @@
       "version": "0.2.2",
       "created_at": "2025-02-13T22:08:18.367863Z",
       "updated_at": "2025-08-22T00:53:14.249764Z",
-      "downloads": 3031,
-      "recent_downloads": 1823,
+      "downloads": 3057,
+      "recent_downloads": 1849,
       "categories": [
         "development-tools",
         "command-line-interface"
@@ -23531,8 +23930,8 @@
       "version": "0.1.4",
       "created_at": "2025-10-18T14:50:57.749946Z",
       "updated_at": "2025-10-30T05:10:19.846852Z",
-      "downloads": 765,
-      "recent_downloads": 765,
+      "downloads": 766,
+      "recent_downloads": 766,
       "categories": [],
       "repository": "https://github.com/MoonKraken/shore",
       "homepage": "https://moonkraken.github.io/shore",
@@ -23672,8 +24071,8 @@
       "version": "0.1.0",
       "created_at": "2025-05-08T17:17:51.642599Z",
       "updated_at": "2025-05-08T17:17:51.642599Z",
-      "downloads": 686,
-      "recent_downloads": 242,
+      "downloads": 687,
+      "recent_downloads": 243,
       "categories": [
         "development-tools::testing",
         "simulation"
@@ -23769,8 +24168,8 @@
       "version": "4.2.0",
       "created_at": "2023-08-28T20:12:26.842807Z",
       "updated_at": "2025-10-14T23:43:57.301015Z",
-      "downloads": 65130,
-      "recent_downloads": 7457,
+      "downloads": 65133,
+      "recent_downloads": 7460,
       "categories": [],
       "repository": "https://github.com/LucasPickering/slumber",
       "homepage": "https://slumber.lucaspickering.me",
@@ -23788,8 +24187,8 @@
       "version": "4.2.0",
       "created_at": "2024-08-09T13:11:32.861328Z",
       "updated_at": "2025-10-14T23:40:45.007733Z",
-      "downloads": 16296,
-      "recent_downloads": 3851,
+      "downloads": 16305,
+      "recent_downloads": 3860,
       "categories": [],
       "repository": "https://github.com/LucasPickering/slumber",
       "homepage": "https://slumber.lucaspickering.me",
@@ -23807,8 +24206,8 @@
       "version": "4.2.0",
       "created_at": "2024-08-09T13:13:36.450454Z",
       "updated_at": "2025-10-14T23:43:14.675428Z",
-      "downloads": 15549,
-      "recent_downloads": 3660,
+      "downloads": 15553,
+      "recent_downloads": 3664,
       "categories": [],
       "repository": "https://github.com/LucasPickering/slumber",
       "homepage": "https://slumber.lucaspickering.me",
@@ -23851,6 +24250,26 @@
       ],
       "repository": "https://github.com/MatrixFrog/slyde",
       "homepage": "https://github.com/MatrixFrog/slyde",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "smirrors",
+      "name": "smirrors",
+      "description": "Automatic mirror list updater for Linux distributions",
+      "version": "0.1.0",
+      "created_at": "2025-11-15T18:32:48.219239Z",
+      "updated_at": "2025-11-15T18:32:48.219239Z",
+      "downloads": 16,
+      "recent_downloads": 16,
+      "categories": [
+        "command-line-utilities"
+      ],
+      "repository": "https://github.com/Aryagorjipour/smirrors",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -23925,8 +24344,8 @@
       "version": "0.2.3",
       "created_at": "2023-12-04T15:40:39.227435Z",
       "updated_at": "2025-08-06T15:17:40.262392Z",
-      "downloads": 55077,
-      "recent_downloads": 19893,
+      "downloads": 55302,
+      "recent_downloads": 20118,
       "categories": [],
       "repository": "https://github.com/axiom-crypto/snark-verifier",
       "ratatui_dependency": {
@@ -23943,8 +24362,8 @@
       "version": "0.2.3",
       "created_at": "2023-12-04T15:46:09.598106Z",
       "updated_at": "2025-08-06T15:26:45.391663Z",
-      "downloads": 54336,
-      "recent_downloads": 19289,
+      "downloads": 54560,
+      "recent_downloads": 19513,
       "categories": [],
       "repository": "https://github.com/axiom-crypto/snark-verifier",
       "ratatui_dependency": {
@@ -23961,8 +24380,8 @@
       "version": "4.3.0",
       "created_at": "2023-06-15T00:52:45.890901Z",
       "updated_at": "2025-10-27T18:19:56.903177Z",
-      "downloads": 28371,
-      "recent_downloads": 4404,
+      "downloads": 28373,
+      "recent_downloads": 4406,
       "categories": [
         "cryptography",
         "os",
@@ -24003,8 +24422,8 @@
       "version": "0.1.0",
       "created_at": "2025-05-08T12:45:38.698112Z",
       "updated_at": "2025-05-08T12:45:38.698112Z",
-      "downloads": 833,
-      "recent_downloads": 305,
+      "downloads": 835,
+      "recent_downloads": 307,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -24059,8 +24478,8 @@
       "version": "0.1.2",
       "created_at": "2025-05-01T19:57:54.920917Z",
       "updated_at": "2025-09-30T00:36:04.338555Z",
-      "downloads": 7309,
-      "recent_downloads": 3675,
+      "downloads": 7318,
+      "recent_downloads": 3684,
       "categories": [],
       "repository": "https://github.com/gold-silver-copper/soft_ratatui",
       "ratatui_dependency": {
@@ -24086,6 +24505,27 @@
       "repository": "https://github.com/vitorpy/solace",
       "homepage": "https://github.com/vitorpy/solace",
       "documentation": "https://docs.rs/solace",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "solify",
+      "name": "solify",
+      "description": "A CLI tool to generate anchor program tests for Solana",
+      "version": "0.1.1",
+      "created_at": "2025-11-15T17:43:18.161383Z",
+      "updated_at": "2025-11-15T20:30:44.051396Z",
+      "downloads": 36,
+      "recent_downloads": 36,
+      "categories": [
+        "development-tools",
+        "command-line-utilities"
+      ],
+      "repository": "https://github.com/adisehrawat/solify",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -24387,8 +24827,8 @@
       "version": "0.21.2",
       "created_at": "2021-08-15T11:37:13.472987Z",
       "updated_at": "2025-11-12T03:24:33.055751Z",
-      "downloads": 76199,
-      "recent_downloads": 9704,
+      "downloads": 76220,
+      "recent_downloads": 9726,
       "categories": [],
       "repository": "https://github.com/aome510/spotify-player",
       "ratatui_dependency": {
@@ -24865,8 +25305,8 @@
       "version": "0.8.0",
       "created_at": "2025-07-23T19:36:09.439621Z",
       "updated_at": "2025-08-28T06:07:23.780648Z",
-      "downloads": 7787,
-      "recent_downloads": 4076,
+      "downloads": 7792,
+      "recent_downloads": 4081,
       "categories": [],
       "repository": "https://github.com/brendangraham14/steer",
       "ratatui_dependency": {
@@ -24883,8 +25323,8 @@
       "version": "0.1.7",
       "created_at": "2025-10-28T15:04:05.597804Z",
       "updated_at": "2025-11-16T19:10:19.596053Z",
-      "downloads": 283,
-      "recent_downloads": 283,
+      "downloads": 290,
+      "recent_downloads": 290,
       "categories": [
         "command-line-utilities"
       ],
@@ -25019,11 +25459,11 @@
       "id": "superseedr",
       "name": "superseedr",
       "description": "A BitTorrent Client in your Terminal.",
-      "version": "0.9.24",
+      "version": "0.9.25",
       "created_at": "2025-10-22T00:52:58.275463Z",
-      "updated_at": "2025-11-16T18:56:45.110741Z",
-      "downloads": 1907,
-      "recent_downloads": 1907,
+      "updated_at": "2025-11-17T05:41:35.566579Z",
+      "downloads": 1937,
+      "recent_downloads": 1937,
       "categories": [],
       "repository": "https://github.com/Jagalite/superseedr",
       "ratatui_dependency": {
@@ -25040,8 +25480,8 @@
       "version": "0.1.2",
       "created_at": "2025-05-08T21:58:06.302428Z",
       "updated_at": "2025-06-23T21:46:01.231267Z",
-      "downloads": 55360,
-      "recent_downloads": 25047,
+      "downloads": 55393,
+      "recent_downloads": 25080,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -25238,8 +25678,8 @@
       "version": "3.0.6",
       "created_at": "2022-12-26T22:08:02.137493Z",
       "updated_at": "2025-05-09T14:10:31.936405Z",
-      "downloads": 30015,
-      "recent_downloads": 5812,
+      "downloads": 30036,
+      "recent_downloads": 5833,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -25255,8 +25695,8 @@
       "version": "0.4.0",
       "created_at": "2023-08-21T03:21:21.614576Z",
       "updated_at": "2025-01-24T05:46:18.449903Z",
-      "downloads": 30619,
-      "recent_downloads": 2743,
+      "downloads": 30620,
+      "recent_downloads": 2744,
       "categories": [],
       "repository": "https://github.com/rgwood/systemctl-tui",
       "homepage": "https://github.com/rgwood/systemctl-tui",
@@ -25313,8 +25753,8 @@
       "version": "0.11.1",
       "created_at": "2024-05-10T15:03:59.415758Z",
       "updated_at": "2025-08-26T00:42:49.694267Z",
-      "downloads": 34235,
-      "recent_downloads": 4645,
+      "downloads": 34237,
+      "recent_downloads": 4647,
       "categories": [],
       "repository": "https://github.com/shshemi/tabiew",
       "homepage": "https://github.com/shshemi/tabiew",
@@ -25355,8 +25795,8 @@
       "version": "0.20.1",
       "created_at": "2024-06-20T15:30:01.641870Z",
       "updated_at": "2025-10-19T12:43:43.950738Z",
-      "downloads": 30637,
-      "recent_downloads": 8587,
+      "downloads": 30655,
+      "recent_downloads": 8605,
       "categories": [
         "command-line-interface"
       ],
@@ -25439,8 +25879,8 @@
       "version": "0.10.0",
       "created_at": "2025-01-30T13:51:35.272214Z",
       "updated_at": "2025-09-18T02:48:20.712079Z",
-      "downloads": 14624,
-      "recent_downloads": 4949,
+      "downloads": 14698,
+      "recent_downloads": 5023,
       "categories": [
         "development-tools"
       ],
@@ -25618,8 +26058,8 @@
       "version": "0.25.1",
       "created_at": "2025-05-02T13:35:23.947773Z",
       "updated_at": "2025-11-13T03:51:35.154896Z",
-      "downloads": 19756,
-      "recent_downloads": 7545,
+      "downloads": 19757,
+      "recent_downloads": 7546,
       "categories": [],
       "repository": "https://github.com/panter-dsd/tatuin",
       "ratatui_dependency": {
@@ -25636,8 +26076,8 @@
       "version": "0.3.0",
       "created_at": "2025-09-15T18:02:40.791773Z",
       "updated_at": "2025-11-06T03:48:20.443116Z",
-      "downloads": 2863,
-      "recent_downloads": 2863,
+      "downloads": 2865,
+      "recent_downloads": 2865,
       "categories": [],
       "repository": "https://github.com/panter-dsd/tatuin",
       "ratatui_dependency": {
@@ -25654,8 +26094,8 @@
       "version": "0.4.1",
       "created_at": "2025-09-16T04:11:30.589119Z",
       "updated_at": "2025-11-11T03:27:43.667106Z",
-      "downloads": 1943,
-      "recent_downloads": 1943,
+      "downloads": 1945,
+      "recent_downloads": 1945,
       "categories": [],
       "repository": "https://github.com/panter-dsd/tatuin",
       "ratatui_dependency": {
@@ -25714,8 +26154,8 @@
       "version": "0.7.3",
       "created_at": "2025-10-30T06:26:32.713387Z",
       "updated_at": "2025-11-14T13:36:52.337696Z",
-      "downloads": 300,
-      "recent_downloads": 300,
+      "downloads": 301,
+      "recent_downloads": 301,
       "categories": [],
       "repository": "https://github.com/roblillack/tdoc",
       "ratatui_dependency": {
@@ -25787,8 +26227,8 @@
       "version": "0.13.10",
       "created_at": "2024-09-11T12:41:29.979644Z",
       "updated_at": "2025-11-16T23:37:05.753195Z",
-      "downloads": 59967,
-      "recent_downloads": 11261,
+      "downloads": 60000,
+      "recent_downloads": 11295,
       "categories": [
         "development-tools",
         "command-line-interface",
@@ -26168,8 +26608,8 @@
       "version": "0.1.2",
       "created_at": "2025-10-03T06:44:49.312835Z",
       "updated_at": "2025-10-13T21:07:14.370957Z",
-      "downloads": 898,
-      "recent_downloads": 898,
+      "downloads": 900,
+      "recent_downloads": 900,
       "categories": [
         "command-line-interface"
       ],
@@ -26219,6 +26659,26 @@
       ],
       "repository": "https://github.com/sumoduduk/terminusdm",
       "homepage": "https://github.com/sumoduduk/termusix",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
+      "id": "terraphim_agent",
+      "name": "terraphim_agent",
+      "description": "Terraphim AI Agent CLI - Command-line interface with interactive REPL and ASCII graph visualization",
+      "version": "1.0.0",
+      "created_at": "2025-11-16T16:50:16.132512Z",
+      "updated_at": "2025-11-16T16:50:16.132512Z",
+      "downloads": 17,
+      "recent_downloads": 17,
+      "categories": [],
+      "repository": "https://github.com/terraphim/terraphim-ai",
+      "homepage": "https://terraphim.ai",
+      "documentation": "https://terraphim.ai",
       "ratatui_dependency": {
         "version": "unknown",
         "optional": false,
@@ -26366,8 +26826,8 @@
       "version": "1.0.0",
       "created_at": "2024-03-08T15:36:35.644518Z",
       "updated_at": "2024-08-09T08:44:42.082652Z",
-      "downloads": 15426,
-      "recent_downloads": 1859,
+      "downloads": 15427,
+      "recent_downloads": 1860,
       "categories": [],
       "repository": "https://github.com/FedericoBruzzone/tgt",
       "homepage": "https://github.com/FedericoBruzzone/tgt",
@@ -26403,8 +26863,8 @@
       "version": "0.2.1",
       "created_at": "2025-10-17T06:08:54.297595Z",
       "updated_at": "2025-10-17T12:46:32.472881Z",
-      "downloads": 485,
-      "recent_downloads": 485,
+      "downloads": 489,
+      "recent_downloads": 489,
       "categories": [
         "development-tools"
       ],
@@ -26423,8 +26883,8 @@
       "version": "0.2.1",
       "created_at": "2024-08-22T09:19:35.523586Z",
       "updated_at": "2025-10-17T16:37:59.507522Z",
-      "downloads": 10016,
-      "recent_downloads": 1692,
+      "downloads": 10017,
+      "recent_downloads": 1693,
       "categories": [
         "command-line-utilities",
         "development-tools::build-utils"
@@ -26444,8 +26904,8 @@
       "version": "0.2.1",
       "created_at": "2025-10-17T06:12:23.761960Z",
       "updated_at": "2025-10-17T16:13:19.054323Z",
-      "downloads": 468,
-      "recent_downloads": 468,
+      "downloads": 471,
+      "recent_downloads": 471,
       "categories": [
         "development-tools",
         "command-line-utilities"
@@ -26570,8 +27030,8 @@
       "version": "0.1.1",
       "created_at": "2025-03-08T06:11:30.284707Z",
       "updated_at": "2025-03-08T06:24:05.002729Z",
-      "downloads": 1474,
-      "recent_downloads": 282,
+      "downloads": 1475,
+      "recent_downloads": 283,
       "categories": [
         "command-line-utilities",
         "text-processing"
@@ -26592,8 +27052,8 @@
       "version": "0.9.0",
       "created_at": "2022-10-09T14:48:51.918662Z",
       "updated_at": "2025-09-23T05:12:47.516093Z",
-      "downloads": 342445,
-      "recent_downloads": 96722,
+      "downloads": 342822,
+      "recent_downloads": 97100,
       "categories": [
         "command-line-utilities"
       ],
@@ -26876,6 +27336,25 @@
       "is_core_library": false
     },
     {
+      "id": "tkit",
+      "name": "tkit",
+      "description": "A customizable tool manager that works like a package manager with customizable install scripts",
+      "version": "0.1.2",
+      "created_at": "2025-09-26T01:44:21.192704Z",
+      "updated_at": "2025-11-16T01:33:52.636340Z",
+      "downloads": 534,
+      "recent_downloads": 534,
+      "categories": [],
+      "repository": "https://github.com/ThembinkosiThemba/tkit",
+      "homepage": "https://github.com/ThembinkosiThemba/tkit",
+      "ratatui_dependency": {
+        "version": "unknown",
+        "optional": false,
+        "dev_dependency": false
+      },
+      "is_core_library": false
+    },
+    {
       "id": "tmenu",
       "name": "tmenu",
       "description": "A simple TUI fuzzy finder",
@@ -26975,11 +27454,11 @@
       "id": "tmuxedo",
       "name": "tmuxedo",
       "description": "A Tmux plugin manager and configuration system",
-      "version": "0.1.9",
+      "version": "0.1.10",
       "created_at": "2025-08-09T17:12:56.694209Z",
-      "updated_at": "2025-09-05T13:06:02.785921Z",
-      "downloads": 3384,
-      "recent_downloads": 2221,
+      "updated_at": "2025-11-17T10:16:46.444725Z",
+      "downloads": 3394,
+      "recent_downloads": 2231,
       "categories": [],
       "repository": "https://github.com/AranBorkum/tmuxedo",
       "ratatui_dependency": {
@@ -27132,8 +27611,8 @@
       "version": "0.1.14",
       "created_at": "2021-12-16T23:46:22.232057Z",
       "updated_at": "2025-10-30T11:53:38.919500Z",
-      "downloads": 353895,
-      "recent_downloads": 46113,
+      "downloads": 353950,
+      "recent_downloads": 46169,
       "categories": [
         "asynchronous",
         "command-line-utilities",
@@ -27177,8 +27656,8 @@
       "version": "0.15.2",
       "created_at": "2024-06-30T00:28:12.606377Z",
       "updated_at": "2025-09-15T05:06:33.616930Z",
-      "downloads": 15112,
-      "recent_downloads": 2449,
+      "downloads": 15113,
+      "recent_downloads": 2450,
       "categories": [],
       "repository": "https://github.com/drewzemke/tongo",
       "ratatui_dependency": {
@@ -27338,8 +27817,8 @@
       "version": "0.15.0",
       "created_at": "2023-10-22T14:58:05.953994Z",
       "updated_at": "2025-11-16T15:05:15.415492Z",
-      "downloads": 72059,
-      "recent_downloads": 9245,
+      "downloads": 72062,
+      "recent_downloads": 9248,
       "categories": [
         "command-line-utilities",
         "development-tools::debugging"
@@ -27418,8 +27897,8 @@
       "version": "0.3.0",
       "created_at": "2025-02-26T17:51:53.975893Z",
       "updated_at": "2025-07-19T19:14:46.097313Z",
-      "downloads": 2466,
-      "recent_downloads": 632,
+      "downloads": 2467,
+      "recent_downloads": 633,
       "categories": [],
       "repository": "https://github.com/Levizor/tray-tui",
       "homepage": "https://github.com/Levizor/tray-tui",
@@ -27437,8 +27916,8 @@
       "version": "0.2.1",
       "created_at": "2025-11-08T16:37:36.814588Z",
       "updated_at": "2025-11-16T13:50:07.548747Z",
-      "downloads": 246,
-      "recent_downloads": 246,
+      "downloads": 247,
+      "recent_downloads": 247,
       "categories": [
         "command-line-utilities",
         "text-processing"
@@ -27497,8 +27976,8 @@
       "version": "0.13.0",
       "created_at": "2022-03-28T10:59:44.597720Z",
       "updated_at": "2025-05-05T12:49:26.665221Z",
-      "downloads": 33296,
-      "recent_downloads": 3121,
+      "downloads": 33298,
+      "recent_downloads": 3123,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -27520,8 +27999,8 @@
       "version": "0.13.0",
       "created_at": "2024-08-09T16:49:33.028224Z",
       "updated_at": "2025-05-05T12:48:10.255647Z",
-      "downloads": 11164,
-      "recent_downloads": 1694,
+      "downloads": 11167,
+      "recent_downloads": 1697,
       "categories": [
         "command-line-utilities",
         "network-programming"
@@ -27588,8 +28067,8 @@
       "version": "0.8.2",
       "created_at": "2024-11-29T12:38:29.334131Z",
       "updated_at": "2025-11-13T10:26:27.424756Z",
-      "downloads": 22238,
-      "recent_downloads": 5362,
+      "downloads": 22239,
+      "recent_downloads": 5363,
       "categories": [],
       "repository": "https://github.com/yexiyue/TRNovel",
       "ratatui_dependency": {
@@ -27665,8 +28144,8 @@
       "version": "1.6.0",
       "created_at": "2021-02-15T01:33:38.834243Z",
       "updated_at": "2024-08-12T22:28:29.248318Z",
-      "downloads": 71453,
-      "recent_downloads": 4899,
+      "downloads": 71455,
+      "recent_downloads": 4901,
       "categories": [],
       "repository": "https://github.com/max-niederman/ttyper.git",
       "homepage": "https://github.com/max-niederman/ttyper",
@@ -27765,8 +28244,8 @@
       "version": "0.4.2",
       "created_at": "2022-07-21T18:27:37.687458Z",
       "updated_at": "2025-08-11T15:42:49.119382Z",
-      "downloads": 30329,
-      "recent_downloads": 4319,
+      "downloads": 30341,
+      "recent_downloads": 4331,
       "categories": [
         "command-line-interface"
       ],
@@ -27785,8 +28264,8 @@
       "version": "0.2.0",
       "created_at": "2025-03-04T06:29:57.823686Z",
       "updated_at": "2025-11-02T22:12:49.303867Z",
-      "downloads": 1971,
-      "recent_downloads": 640,
+      "downloads": 1977,
+      "recent_downloads": 646,
       "categories": [
         "command-line-interface",
         "gui"
@@ -27807,8 +28286,8 @@
       "version": "0.7.3",
       "created_at": "2023-09-05T05:08:28.844490Z",
       "updated_at": "2025-11-02T23:11:06.194230Z",
-      "downloads": 169390,
-      "recent_downloads": 52551,
+      "downloads": 169671,
+      "recent_downloads": 52832,
       "categories": [
         "command-line-interface",
         "gui"
@@ -27829,8 +28308,8 @@
       "version": "0.2.2",
       "created_at": "2024-10-17T10:50:13.889862Z",
       "updated_at": "2025-11-02T23:11:22.155514Z",
-      "downloads": 3592,
-      "recent_downloads": 722,
+      "downloads": 3598,
+      "recent_downloads": 728,
       "categories": [
         "command-line-interface",
         "gui"
@@ -27850,8 +28329,8 @@
       "version": "0.2.4",
       "created_at": "2024-09-21T16:04:51.552326Z",
       "updated_at": "2025-11-02T23:11:30.863136Z",
-      "downloads": 5083,
-      "recent_downloads": 944,
+      "downloads": 5089,
+      "recent_downloads": 950,
       "categories": [
         "command-line-interface",
         "gui"
@@ -27892,8 +28371,8 @@
       "version": "0.4.1",
       "created_at": "2025-10-23T23:53:12.288824Z",
       "updated_at": "2025-11-16T01:23:56.371453Z",
-      "downloads": 620,
-      "recent_downloads": 620,
+      "downloads": 626,
+      "recent_downloads": 626,
       "categories": [
         "command-line-interface"
       ],
@@ -27969,8 +28448,8 @@
       "version": "0.4.0",
       "created_at": "2025-10-22T04:11:10.410606Z",
       "updated_at": "2025-11-15T03:01:41.274894Z",
-      "downloads": 606,
-      "recent_downloads": 606,
+      "downloads": 608,
+      "recent_downloads": 608,
       "categories": [
         "command-line-utilities"
       ],
@@ -28028,8 +28507,8 @@
       "version": "0.4.0",
       "created_at": "2024-10-19T16:31:51.261881Z",
       "updated_at": "2025-02-09T16:32:44.942781Z",
-      "downloads": 23408,
-      "recent_downloads": 9242,
+      "downloads": 23435,
+      "recent_downloads": 9269,
       "categories": [],
       "repository": "https://github.com/joshka/tui-framework-experiment",
       "ratatui_dependency": {
@@ -28064,8 +28543,8 @@
       "version": "0.14.0",
       "created_at": "2021-11-04T07:49:50.777129Z",
       "updated_at": "2025-07-05T11:02:21.438519Z",
-      "downloads": 892538,
-      "recent_downloads": 174819,
+      "downloads": 893274,
+      "recent_downloads": 175557,
       "categories": [],
       "repository": "https://github.com/sayanarijit/tui-input",
       "ratatui_dependency": {
@@ -28082,8 +28561,8 @@
       "version": "0.16.1",
       "created_at": "2023-05-15T20:57:05.998478Z",
       "updated_at": "2025-07-28T16:12:41.203110Z",
-      "downloads": 43868,
-      "recent_downloads": 4892,
+      "downloads": 43869,
+      "recent_downloads": 4893,
       "categories": [
         "command-line-utilities"
       ],
@@ -28102,8 +28581,8 @@
       "version": "0.17.4",
       "created_at": "2018-05-19T08:31:45.940213Z",
       "updated_at": "2025-09-28T19:50:07.230042Z",
-      "downloads": 820782,
-      "recent_downloads": 287669,
+      "downloads": 821877,
+      "recent_downloads": 288778,
       "categories": [],
       "repository": "https://github.com/gin66/tui-logger",
       "documentation": "https://docs.rs/tui-logger/latest/tui_logger/",
@@ -28121,8 +28600,8 @@
       "version": "0.3.6",
       "created_at": "2024-02-27T09:57:18.662010Z",
       "updated_at": "2025-11-03T03:05:36.628153Z",
-      "downloads": 111096,
-      "recent_downloads": 47698,
+      "downloads": 111263,
+      "recent_downloads": 47866,
       "categories": [
         "command-line-interface"
       ],
@@ -28142,8 +28621,8 @@
       "version": "0.5.0",
       "created_at": "2022-08-13T10:49:06.275934Z",
       "updated_at": "2024-10-03T18:46:42.285354Z",
-      "downloads": 11523,
-      "recent_downloads": 1125,
+      "downloads": 11525,
+      "recent_downloads": 1127,
       "categories": [
         "command-line-interface",
         "text-processing",
@@ -28166,8 +28645,8 @@
       "version": "0.3.0",
       "created_at": "2022-11-29T00:47:56.013862Z",
       "updated_at": "2024-12-09T23:10:05.224927Z",
-      "downloads": 12466,
-      "recent_downloads": 1944,
+      "downloads": 12467,
+      "recent_downloads": 1945,
       "categories": [],
       "repository": "https://github.com/shuoli84/tui-menu",
       "ratatui_dependency": {
@@ -28204,8 +28683,8 @@
       "version": "0.9.0",
       "created_at": "2022-11-13T10:50:49.029395Z",
       "updated_at": "2025-07-10T03:47:59.068593Z",
-      "downloads": 16898,
-      "recent_downloads": 2315,
+      "downloads": 16909,
+      "recent_downloads": 2326,
       "categories": [],
       "repository": "https://git.sr.ht/~jaxter184/tui-nodes",
       "documentation": "https://docs.rs/tui-nodes/0.1.1/tui-nodes/",
@@ -28241,8 +28720,8 @@
       "version": "0.3.3",
       "created_at": "2024-05-27T16:43:21.325302Z",
       "updated_at": "2025-08-17T21:35:00.901616Z",
-      "downloads": 5696,
-      "recent_downloads": 1288,
+      "downloads": 5697,
+      "recent_downloads": 1289,
       "categories": [],
       "repository": "https://github.com/0watcher/tui-pattern-highlighter",
       "ratatui_dependency": {
@@ -28259,8 +28738,8 @@
       "version": "0.2.0",
       "created_at": "2025-11-08T02:41:01.641655Z",
       "updated_at": "2025-11-16T01:22:23.941912Z",
-      "downloads": 166,
-      "recent_downloads": 166,
+      "downloads": 167,
+      "recent_downloads": 167,
       "categories": [
         "command-line-interface",
         "gui",
@@ -28284,8 +28763,8 @@
       "version": "0.6.2",
       "created_at": "2023-12-31T02:22:44.969858Z",
       "updated_at": "2025-11-02T23:11:42.301909Z",
-      "downloads": 62791,
-      "recent_downloads": 13034,
+      "downloads": 62850,
+      "recent_downloads": 13093,
       "categories": [
         "command-line-interface",
         "gui"
@@ -28306,8 +28785,8 @@
       "version": "0.5.2",
       "created_at": "2023-07-11T05:45:55.946350Z",
       "updated_at": "2025-11-02T23:11:52.467999Z",
-      "downloads": 74224,
-      "recent_downloads": 16267,
+      "downloads": 74283,
+      "recent_downloads": 16326,
       "categories": [
         "command-line-interface",
         "gui"
@@ -28327,8 +28806,8 @@
       "version": "0.1.3",
       "created_at": "2025-01-23T03:40:56.992174Z",
       "updated_at": "2025-11-02T23:12:00.720554Z",
-      "downloads": 3689,
-      "recent_downloads": 1160,
+      "downloads": 3697,
+      "recent_downloads": 1168,
       "categories": [
         "command-line-interface",
         "gui"
@@ -28349,8 +28828,8 @@
       "version": "1.0.1",
       "created_at": "2024-11-29T19:30:31.598621Z",
       "updated_at": "2024-11-29T22:22:12.812013Z",
-      "downloads": 4463,
-      "recent_downloads": 872,
+      "downloads": 4464,
+      "recent_downloads": 873,
       "categories": [],
       "repository": "https://github.com/levilutz/tui-rain",
       "homepage": "https://github.com/levilutz/tui-rain",
@@ -28368,8 +28847,8 @@
       "version": "0.1.2",
       "created_at": "2025-03-30T16:39:53.437947Z",
       "updated_at": "2025-04-05T18:46:46.985930Z",
-      "downloads": 1507,
-      "recent_downloads": 479,
+      "downloads": 1508,
+      "recent_downloads": 480,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -28385,8 +28864,8 @@
       "version": "0.5.3",
       "created_at": "2024-01-18T05:40:05.860490Z",
       "updated_at": "2025-11-02T23:12:07.468999Z",
-      "downloads": 139302,
-      "recent_downloads": 52091,
+      "downloads": 139528,
+      "recent_downloads": 52319,
       "categories": [
         "command-line-interface",
         "gui"
@@ -28430,8 +28909,8 @@
       "version": "0.2.2",
       "created_at": "2025-11-12T21:20:09.832896Z",
       "updated_at": "2025-11-17T01:19:57.704770Z",
-      "downloads": 128,
-      "recent_downloads": 128,
+      "downloads": 151,
+      "recent_downloads": 151,
       "categories": [
         "command-line-interface",
         "gui",
@@ -28471,8 +28950,8 @@
       "version": "0.1.2",
       "created_at": "2025-10-27T05:19:32.403289Z",
       "updated_at": "2025-10-27T06:48:55.251270Z",
-      "downloads": 377,
-      "recent_downloads": 377,
+      "downloads": 378,
+      "recent_downloads": 378,
       "categories": [
         "command-line-interface"
       ],
@@ -28492,8 +28971,8 @@
       "version": "0.2.0",
       "created_at": "2023-05-17T19:43:09.512417Z",
       "updated_at": "2024-10-26T07:04:50.542436Z",
-      "downloads": 415363,
-      "recent_downloads": 161308,
+      "downloads": 415735,
+      "recent_downloads": 161680,
       "categories": [
         "command-line-interface",
         "command-line-utilities"
@@ -28514,8 +28993,8 @@
       "version": "0.7.0",
       "created_at": "2022-06-19T11:56:56.327481Z",
       "updated_at": "2024-10-22T16:25:31.292864Z",
-      "downloads": 776173,
-      "recent_downloads": 195636,
+      "downloads": 777528,
+      "recent_downloads": 196993,
       "categories": [
         "text-editors",
         "text-processing"
@@ -28597,8 +29076,8 @@
       "version": "0.1.0",
       "created_at": "2025-02-08T12:35:37.785237Z",
       "updated_at": "2025-02-08T12:35:37.785237Z",
-      "downloads": 985,
-      "recent_downloads": 331,
+      "downloads": 986,
+      "recent_downloads": 332,
       "categories": [],
       "repository": "https://github.com/preiter93/tui-theme-builder",
       "ratatui_dependency": {
@@ -28615,8 +29094,8 @@
       "version": "0.1.0",
       "created_at": "2025-02-08T12:34:40.385519Z",
       "updated_at": "2025-02-08T12:34:40.385519Z",
-      "downloads": 1070,
-      "recent_downloads": 383,
+      "downloads": 1072,
+      "recent_downloads": 385,
       "categories": [],
       "repository": "https://github.com/preiter93/tui-theme-builder",
       "ratatui_dependency": {
@@ -28650,8 +29129,8 @@
       "version": "0.23.1",
       "created_at": "2020-10-31T20:33:38.408783Z",
       "updated_at": "2025-05-29T10:19:46.715891Z",
-      "downloads": 389872,
-      "recent_downloads": 41870,
+      "downloads": 389982,
+      "recent_downloads": 41980,
       "categories": [
         "command-line-interface"
       ],
@@ -28709,8 +29188,8 @@
       "version": "0.13.2",
       "created_at": "2023-04-30T19:06:08.806989Z",
       "updated_at": "2024-12-28T22:44:52.153925Z",
-      "downloads": 80452,
-      "recent_downloads": 17648,
+      "downloads": 80563,
+      "recent_downloads": 17759,
       "categories": [],
       "repository": "https://github.com/preiter93/tui-widget-list",
       "ratatui_dependency": {
@@ -28727,8 +29206,8 @@
       "version": "0.5.0",
       "created_at": "2024-07-24T01:19:13.377494Z",
       "updated_at": "2025-11-02T22:14:05.168964Z",
-      "downloads": 28062,
-      "recent_downloads": 5045,
+      "downloads": 28087,
+      "recent_downloads": 5070,
       "categories": [
         "command-line-interface",
         "gui"
@@ -28749,8 +29228,8 @@
       "version": "0.3.1",
       "created_at": "2024-01-16T23:17:13.898651Z",
       "updated_at": "2025-04-08T09:55:47.611323Z",
-      "downloads": 22028,
-      "recent_downloads": 2896,
+      "downloads": 22032,
+      "recent_downloads": 2900,
       "categories": [],
       "repository": "https://github.com/sephiroth74/tui-confirm-dialog",
       "ratatui_dependency": {
@@ -28921,8 +29400,8 @@
       "version": "3.2.0",
       "created_at": "2021-04-20T20:26:05.943017Z",
       "updated_at": "2025-11-10T20:17:04.881099Z",
-      "downloads": 132335,
-      "recent_downloads": 22676,
+      "downloads": 132523,
+      "recent_downloads": 22864,
       "categories": [
         "command-line-utilities"
       ],
@@ -29228,8 +29707,8 @@
       "version": "1.0.1",
       "created_at": "2025-08-28T20:30:21.267847Z",
       "updated_at": "2025-11-15T21:03:49.100774Z",
-      "downloads": 4377,
-      "recent_downloads": 4377,
+      "downloads": 4381,
+      "recent_downloads": 4381,
       "categories": [
         "games",
         "command-line-utilities",
@@ -29307,8 +29786,8 @@
       "version": "0.0.1",
       "created_at": "2024-11-24T09:30:07.434677Z",
       "updated_at": "2024-11-24T09:30:07.434677Z",
-      "downloads": 1098,
-      "recent_downloads": 221,
+      "downloads": 1099,
+      "recent_downloads": 222,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -29364,8 +29843,8 @@
       "version": "0.0.3",
       "created_at": "2025-03-06T13:58:35.648026Z",
       "updated_at": "2025-03-07T22:58:57.922147Z",
-      "downloads": 2283,
-      "recent_downloads": 611,
+      "downloads": 2285,
+      "recent_downloads": 613,
       "categories": [
         "cryptography",
         "cryptography::cryptocurrencies"
@@ -29721,8 +30200,8 @@
       "version": "1.3.0",
       "created_at": "2024-08-26T10:34:13.495590Z",
       "updated_at": "2024-11-28T23:50:56.526402Z",
-      "downloads": 12945,
-      "recent_downloads": 1369,
+      "downloads": 12946,
+      "recent_downloads": 1370,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -29858,8 +30337,8 @@
       "version": "0.54.0",
       "created_at": "2025-01-30T13:44:04.159643Z",
       "updated_at": "2025-10-21T18:38:27.308681Z",
-      "downloads": 14956,
-      "recent_downloads": 5069,
+      "downloads": 14957,
+      "recent_downloads": 5070,
       "categories": [
         "compression",
         "data-structures",
@@ -29898,8 +30377,8 @@
       "version": "1.3.0",
       "created_at": "2023-03-05T09:45:36.836937Z",
       "updated_at": "2025-03-09T15:16:27.313498Z",
-      "downloads": 25235,
-      "recent_downloads": 2203,
+      "downloads": 25236,
+      "recent_downloads": 2204,
       "categories": [
         "command-line-utilities"
       ],
@@ -29920,8 +30399,8 @@
       "version": "0.16.0",
       "created_at": "2024-11-14T21:07:57.802515Z",
       "updated_at": "2024-11-17T01:49:42.609531Z",
-      "downloads": 17922,
-      "recent_downloads": 6257,
+      "downloads": 17947,
+      "recent_downloads": 6282,
       "categories": [
         "command-line-interface",
         "encoding"
@@ -29939,11 +30418,11 @@
       "id": "vtcode",
       "name": "vtcode",
       "description": "A Rust-based terminal coding agent with modular architecture supporting multiple LLM providers",
-      "version": "0.45.0",
+      "version": "0.45.4",
       "created_at": "2025-09-18T15:48:49.802510Z",
-      "updated_at": "2025-11-16T16:08:54.483780Z",
-      "downloads": 21250,
-      "recent_downloads": 21250,
+      "updated_at": "2025-11-17T10:44:57.108163Z",
+      "downloads": 21291,
+      "recent_downloads": 21291,
       "categories": [
         "development-tools",
         "api-bindings",
@@ -29963,11 +30442,11 @@
       "id": "vtcode-core",
       "name": "vtcode-core",
       "description": "Core library for VTCode - a Rust-based terminal coding agent",
-      "version": "0.45.0",
+      "version": "0.45.4",
       "created_at": "2025-09-18T15:42:10.762557Z",
-      "updated_at": "2025-11-16T16:07:14.185165Z",
-      "downloads": 24181,
-      "recent_downloads": 24181,
+      "updated_at": "2025-11-17T10:43:35.588166Z",
+      "downloads": 24233,
+      "recent_downloads": 24233,
       "categories": [
         "development-tools",
         "api-bindings"
@@ -30049,8 +30528,8 @@
       "version": "0.1.0",
       "created_at": "2025-09-06T23:58:23.243067Z",
       "updated_at": "2025-09-06T23:58:23.243067Z",
-      "downloads": 397,
-      "recent_downloads": 397,
+      "downloads": 398,
+      "recent_downloads": 398,
       "categories": [
         "development-tools",
         "wasm"
@@ -30237,8 +30716,8 @@
       "version": "0.1.3",
       "created_at": "2025-08-31T14:00:38.772937Z",
       "updated_at": "2025-09-15T12:21:20.840601Z",
-      "downloads": 1127,
-      "recent_downloads": 1127,
+      "downloads": 1129,
+      "recent_downloads": 1129,
       "categories": [
         "command-line-interface",
         "gui"
@@ -30260,8 +30739,8 @@
       "version": "0.1.3",
       "created_at": "2025-08-31T14:33:26.321932Z",
       "updated_at": "2025-09-15T12:25:04.889433Z",
-      "downloads": 1013,
-      "recent_downloads": 1013,
+      "downloads": 1014,
+      "recent_downloads": 1014,
       "categories": [
         "development-tools"
       ],
@@ -30282,8 +30761,8 @@
       "version": "0.10.18",
       "created_at": "2023-07-09T05:26:04.413383Z",
       "updated_at": "2025-10-21T04:43:10.277875Z",
-      "downloads": 175410,
-      "recent_downloads": 19137,
+      "downloads": 175412,
+      "recent_downloads": 19139,
       "categories": [
         "science",
         "text-processing"
@@ -30441,8 +30920,8 @@
       "version": "0.7.1",
       "created_at": "2023-09-21T16:47:52.561806Z",
       "updated_at": "2024-10-27T19:24:13.816601Z",
-      "downloads": 20454,
-      "recent_downloads": 2019,
+      "downloads": 20456,
+      "recent_downloads": 2021,
       "categories": [],
       "repository": "https://github.com/TheEmeraldBee/widgetui",
       "ratatui_dependency": {
@@ -30459,8 +30938,8 @@
       "version": "0.9.1",
       "created_at": "2021-10-16T11:41:38.697588Z",
       "updated_at": "2024-12-05T12:11:58.605762Z",
-      "downloads": 37574,
-      "recent_downloads": 2896,
+      "downloads": 37575,
+      "recent_downloads": 2897,
       "categories": [],
       "repository": "https://github.com/builditluc/wiki-tui",
       "homepage": "https://wiki-tui.net",
@@ -30533,8 +31012,8 @@
       "version": "0.2.3",
       "created_at": "2024-08-17T17:14:25.245503Z",
       "updated_at": "2025-01-01T15:11:58.927279Z",
-      "downloads": 8823,
-      "recent_downloads": 1256,
+      "downloads": 8825,
+      "recent_downloads": 1258,
       "categories": [],
       "repository": "https://github.com/preiter93/wireman",
       "ratatui_dependency": {
@@ -30551,8 +31030,8 @@
       "version": "0.8.0",
       "created_at": "2025-04-29T03:02:30.143346Z",
       "updated_at": "2025-11-13T03:22:36.794941Z",
-      "downloads": 5159,
-      "recent_downloads": 2000,
+      "downloads": 5160,
+      "recent_downloads": 2001,
       "categories": [
         "command-line-utilities",
         "multimedia::audio"
@@ -30677,8 +31156,8 @@
       "version": "0.2.3",
       "created_at": "2025-04-01T09:38:07.986063Z",
       "updated_at": "2025-11-16T17:34:36.730065Z",
-      "downloads": 3565,
-      "recent_downloads": 1715,
+      "downloads": 3569,
+      "recent_downloads": 1719,
       "categories": [
         "command-line-utilities",
         "text-processing"
@@ -30698,8 +31177,8 @@
       "version": "0.7.3",
       "created_at": "2025-03-29T07:41:21.864282Z",
       "updated_at": "2025-08-28T07:33:19.002364Z",
-      "downloads": 12101,
-      "recent_downloads": 7583,
+      "downloads": 12110,
+      "recent_downloads": 7592,
       "categories": [
         "command-line-utilities"
       ],
@@ -30720,8 +31199,8 @@
       "version": "0.7.3",
       "created_at": "2025-08-09T13:32:28.884213Z",
       "updated_at": "2025-08-28T07:33:10.169207Z",
-      "downloads": 3903,
-      "recent_downloads": 2987,
+      "downloads": 3913,
+      "recent_downloads": 2997,
       "categories": [
         "command-line-utilities"
       ],
@@ -30800,8 +31279,8 @@
       "version": "0.53.0",
       "created_at": "2024-02-07T16:32:18.587006Z",
       "updated_at": "2025-09-19T15:33:50.295695Z",
-      "downloads": 74978,
-      "recent_downloads": 9779,
+      "downloads": 74979,
+      "recent_downloads": 9780,
       "categories": [],
       "repository": "https://github.com/medialab/xan",
       "homepage": "https://github.com/medialab/xan",
@@ -30838,8 +31317,8 @@
       "version": "0.7.0",
       "created_at": "2025-08-04T04:57:40.192759Z",
       "updated_at": "2025-11-10T11:29:44.797858Z",
-      "downloads": 3230,
-      "recent_downloads": 2009,
+      "downloads": 3231,
+      "recent_downloads": 2010,
       "categories": [],
       "ratatui_dependency": {
         "version": "unknown",
@@ -30855,8 +31334,8 @@
       "version": "0.1.0",
       "created_at": "2025-11-09T02:24:20.050690Z",
       "updated_at": "2025-11-09T02:24:20.050690Z",
-      "downloads": 204,
-      "recent_downloads": 204,
+      "downloads": 221,
+      "recent_downloads": 221,
       "categories": [
         "command-line-utilities",
         "visualization"
@@ -31073,8 +31552,8 @@
       "version": "25.5.31",
       "created_at": "2024-08-01T09:43:26.370597Z",
       "updated_at": "2025-05-30T17:45:10.392937Z",
-      "downloads": 50349,
-      "recent_downloads": 7554,
+      "downloads": 50374,
+      "recent_downloads": 7579,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31111,8 +31590,8 @@
       "version": "25.5.31",
       "created_at": "2023-10-22T07:49:11.537690Z",
       "updated_at": "2025-05-30T17:43:17.008211Z",
-      "downloads": 70394,
-      "recent_downloads": 8487,
+      "downloads": 70422,
+      "recent_downloads": 8515,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31130,8 +31609,8 @@
       "version": "25.5.31",
       "created_at": "2023-10-22T07:54:45.894099Z",
       "updated_at": "2025-05-30T18:24:13.559595Z",
-      "downloads": 65067,
-      "recent_downloads": 7710,
+      "downloads": 65086,
+      "recent_downloads": 7729,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31149,8 +31628,8 @@
       "version": "25.5.31",
       "created_at": "2023-10-22T07:58:07.990268Z",
       "updated_at": "2025-05-30T18:25:33.345184Z",
-      "downloads": 74930,
-      "recent_downloads": 8695,
+      "downloads": 74951,
+      "recent_downloads": 8716,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31168,8 +31647,8 @@
       "version": "25.5.31",
       "created_at": "2024-08-01T09:42:56.512894Z",
       "updated_at": "2025-05-30T17:41:37.974419Z",
-      "downloads": 49408,
-      "recent_downloads": 7723,
+      "downloads": 49437,
+      "recent_downloads": 7752,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31187,8 +31666,8 @@
       "version": "25.5.31",
       "created_at": "2023-10-22T07:55:49.906399Z",
       "updated_at": "2025-05-30T17:49:41.455158Z",
-      "downloads": 66339,
-      "recent_downloads": 7985,
+      "downloads": 66361,
+      "recent_downloads": 8007,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31206,8 +31685,8 @@
       "version": "25.5.31",
       "created_at": "2023-10-22T05:41:44.600322Z",
       "updated_at": "2025-05-30T17:40:09.527617Z",
-      "downloads": 71433,
-      "recent_downloads": 8837,
+      "downloads": 71465,
+      "recent_downloads": 8869,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31225,8 +31704,8 @@
       "version": "25.5.31",
       "created_at": "2025-04-08T13:20:11.785149Z",
       "updated_at": "2025-05-30T17:50:55.823455Z",
-      "downloads": 17548,
-      "recent_downloads": 5701,
+      "downloads": 17568,
+      "recent_downloads": 5721,
       "categories": [],
       "repository": "https://github.com/sxyazi/yazi",
       "homepage": "https://yazi-rs.github.io",
@@ -31244,8 +31723,8 @@
       "version": "0.1.0",
       "created_at": "2024-03-27T08:18:10.259039Z",
       "updated_at": "2025-01-04T22:14:47.109115Z",
-      "downloads": 3720,
-      "recent_downloads": 523,
+      "downloads": 3721,
+      "recent_downloads": 524,
       "categories": [
         "command-line-interface",
         "command-line-utilities",
@@ -31309,8 +31788,8 @@
       "version": "0.9.3",
       "created_at": "2022-05-28T15:44:23.398314Z",
       "updated_at": "2025-10-20T13:01:13.602550Z",
-      "downloads": 40635,
-      "recent_downloads": 6160,
+      "downloads": 40643,
+      "recent_downloads": 6168,
       "categories": [
         "command-line-interface",
         "command-line-utilities"
@@ -31353,8 +31832,8 @@
       "version": "0.0.18",
       "created_at": "2024-12-10T14:54:42.045108Z",
       "updated_at": "2025-11-04T14:44:40.486893Z",
-      "downloads": 9916,
-      "recent_downloads": 3191,
+      "downloads": 9918,
+      "recent_downloads": 3193,
       "categories": [
         "development-tools",
         "command-line-utilities",
