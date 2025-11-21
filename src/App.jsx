@@ -110,7 +110,7 @@ const CoreLibraries = ({ corePackages }) => {
 /* -------------------------
    HomePage component (hero + stats)
    ------------------------- */
-const HomePage = ({ allPackages, newsletterEmail, setNewsletterEmail, handleNewsletterSignup }) => {
+const HomePage = ({ allPackages }) => {
   // total packages
   const totalPackages = allPackages.length;
 
@@ -302,8 +302,8 @@ const HomePage = ({ allPackages, newsletterEmail, setNewsletterEmail, handleNews
       <section className="container mx-auto px-4 py-8">
         <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 text-center">
           <h4 className="text-white font-semibold mb-2">Documentation</h4>
-          <p className="text-gray-300 text-sm mb-3">Explore docs and examples.</p>
-          <a href="https://quarto.org/" target="_blank" rel="noopener noreferrer" className="text-white text-sm bg-green-600 px-3 py-1 rounded">Explore Docs</a>
+          <p className="text-gray-300 text-sm mb-3">Coming Soon.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-sm bg-green-600 px-3 py-1 rounded">Explore Docs</a>
         </div>
       </section>
     </>
@@ -617,7 +617,7 @@ const App = () => {
           <div className="hidden md:flex items-center space-x-6">
             <a href="#package-list-page" onClick={() => setCurrentPage("packages")} className="text-gray-300 hover:text-white">Packages</a>
             <a href="#stats" onClick={() => { setCurrentPage("home"); window.location.hash = "#stats"; }} className="text-gray-300 hover:text-white">Stats</a>
-            <a href="https://qubitai.in" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Docs</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Docs</a>
           </div>
 
           {/* Mobile hamburger */}
