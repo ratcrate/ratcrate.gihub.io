@@ -303,7 +303,7 @@ const HomePage = ({ allPackages }) => {
         <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 text-center">
           <h4 className="text-white font-semibold mb-2">Documentation</h4>
           <p className="text-gray-300 text-sm mb-3">Coming Soon.</p>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-sm bg-green-600 px-3 py-1 rounded">Explore Docs</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-sm bg-green-600 px-3 py-1 rounded">Coming Soon</a>
         </div>
       </section>
     </>
@@ -639,7 +639,7 @@ const App = () => {
           <div className="px-4 pb-4 flex flex-col">
             <a href="#package-list-page" onClick={() => { setCurrentPage("packages"); setMobileOpen(false); }} className="py-3 border-b border-gray-800 text-center text-lg">Packages</a>
             <a href="#stats" onClick={() => { setCurrentPage("home"); window.location.hash = "#stats"; setMobileOpen(false); }} className="py-3 border-b border-gray-800 text-center text-lg">Stats</a>
-            <a href="https://qubitai.in" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="py-3 border-b border-gray-800 text-center text-lg">Docs</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="py-3 border-b border-gray-800 text-center text-lg">Docs</a>
           </div>
         </div>
       </nav>
