@@ -151,7 +151,12 @@ const Footer = ({
         {/* Left: small project + copyright */}
         <div className="flex-1 text-sm">
           <div className="text-gray-300 font-medium">Ratcrate </div>
-          <div className="mt-1 text-xs text-gray-500">© {new Date().getFullYear()} QuBiTAi Creation. All rights reserved.</div>
+          <div className="mt-1 text-xs text-gray-500">© {new Date().getFullYear()} 
+            <a href="https://qubitai.in" 
+            target="_blank" 
+            rel="noopener noreferrer" className="hover:text-white ml-1">
+              QuBiTAi </a> Creation. All rights reserved.
+          </div>
         </div>
 
         {/* Center: links */}
