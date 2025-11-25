@@ -3,10 +3,47 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
+# .github/dependabot.yml
+
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # -----------------------------------------------------
+  # 1. Configuration for Node.js (website repo: ratcrate)
+  # -----------------------------------------------------
+  - package-ecosystem: "npm" 
+    directory: "/" # Location of package.json
+    schedule:
+      interval: "weekly" # Check for updates weekly
+      day: "monday"
+    # Create PRs for version updates for both development and production dependencies
+    groups:
+      dev-dependencies:
+        patterns:
+          - "*" # Match all dependencies not explicitly excluded
+        dependency-type: "development"
+      prod-dependencies:
+        patterns:
+          - "*"
+        dependency-type: "production"
+    # Limit to 5 open PRs to prevent overwhelming the maintainer (you!)
+    open-pull-requests-limit: 5
+
+  # -----------------------------------------------------
+  # 2. Configuration for Rust (CLI/TUI repos)
+  # -----------------------------------------------------
+  - package-ecosystem: "cargo" 
+    directory: "/" # Location of Cargo.toml
     schedule:
       interval: "weekly"
+      day: "monday"
+    # Rust often uses frequent updates, weekly is a good starting point
+    open-pull-requests-limit: 5 
 
+  # -----------------------------------------------------
+  # 3. Configuration for GitHub Actions (All 3 repos)
+  # -----------------------------------------------------
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of .github/workflows
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
