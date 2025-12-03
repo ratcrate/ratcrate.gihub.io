@@ -45,7 +45,7 @@ jobs:
   
   # 2. TEST JOB: Runs only if the 'build' job succeeds.
   test:
-    needs: [build, test]  
+    needs: [build]  
     runs-on: ubuntu-latest
     permissions:
       contents: read
